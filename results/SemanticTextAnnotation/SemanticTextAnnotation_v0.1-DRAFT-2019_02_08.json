@@ -1,0 +1,462 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "breadcrumblist": {
+                        "@type": "schema:BreadcrumbList",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "properties": {
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "type": "object"
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "event": {
+                        "@type": "bioschemas:Event",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "language": {
+                        "@type": "schema:Language",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "properties": {
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "properties": {
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "scholarlypublication": {
+                        "@type": "schema:ScholarlyPublication",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "softwareapplication": {
+                        "@type": "schema:SoftwareApplication",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "dateModified",
+                    "identifier",
+                    "inLanguage",
+                    "isAccessibleForFree",
+                    "license"
+                ],
+                "properties": {
+                    "commentCount": {
+                        "description": "Number of times this annotation is found in the associated scholarly article. The number of comments this CreativeWork (e.g. Article, Question or Answer) has received. This is most applicable to works published in Web sites with commenting system; additional comments may exist elsewhere.",
+                        "type": "integer"
+                    },
+                    "creator": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/softwareapplication"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/softwareapplication"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Person, organization or software application used to create this annotation. The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork."
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "dateModified": {
+                        "anyOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "date",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/datetime"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."
+                    },
+                    "identifier": {
+                        "description": "If available. The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "inLanguage": {
+                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/language"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "isAccessibleForFree": {
+                        "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
+                        "type": "boolean"
+                    },
+                    "license": {
+                        "description": " A license document that applies to this content, typically indicated by URL.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "mainEntity": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Ontology terms associated to this annotation. On the DefinedTerm, use additionalType to link to a Unified Medical Language System (UMLS) semantic type (TUI) or group, and sameAs to link to the corresponding concept unique identifier (CUI), if available. Indicates the primary entity described in some page or other CreativeWork.\n Inverse property: mainEntityOfPage."
+                    },
+                    "position": {
+                        "description": "A list of links that can help a user understand and navigate to a section or paragraph in the scholarly article where this annotation is located. If a text is used, different steps on the list should be separated with the character '>', being the sentence where the annotation is found the last element. If a URL is used, it should identify the section or paragraph where this annoation is found. The position of an item in a series or sequence of items.",
+                        "oneOf": [
+                            {
+                                "type": "integer"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/breadcrumblist"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "subjectOf": {
+                        "description": "The ScholarlyPublication where this annotation is found. A CreativeWork or Event about this Thing.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/event"
+                            },
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "$ref": "#/definitions/scholarlypublication"
+                            }
+                        ]
+                    },
+                    "text": {
+                        "description": "Expression found in the text corresponding to this annotation. The textual content of this CreativeWork.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    }
+                },
+                "recommended": [
+                    "subjectOf",
+                    "commentCount",
+                    "creator",
+                    "dateCreated",
+                    "position"
+                ],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:SemanticTextAnnotation",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a semantic annotation associated to a piece of text in a ScholarlyArticle in Life Sciences. A SemanticTExtAnnotation currently corresponds to an expression identified in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents other than ScholarlyArticle, for instant patents and so. Version: 0.1-DRAFT-2019_02_08",
+            "rdfs:label": "SemanticTextAnnotation",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/SemanticTextAnnotation/0.1-DRAFT-2019_02_08"
+            ]
+        }
+    ]
+}

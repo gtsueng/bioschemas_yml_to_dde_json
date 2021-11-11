@@ -1,0 +1,438 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "properties": {
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "type": "object"
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "taxon": {
+                        "@type": "bioschemas:Taxon",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "taxonRank": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "items": {
+                                            "$ref": "#/definitions/propertyvalue"
+                                        },
+                                        "type": "array"
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "items": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "taxonRank"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "additionalType",
+                    "alternateName",
+                    "childTaxon",
+                    "sameAs",
+                    "scientificName",
+                    "scientificNameAuthorship",
+                    "vernacularName"
+                ],
+                "properties": {
+                    "additionalType": {
+                        "description": "A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "alternateName": {
+                        "description": "Scientific name, possibly including authorship and date information, of a synonym of the currently valid (zoological) or accepted (botanical) taxon. An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "childTaxon": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/taxon"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/taxon"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Direct, most proximate lower-rank child taxa "
+                    },
+                    "name": {
+                        "description": "Taxon name without authorship nor date information of the currently valid (zoological) or accepted (botanical) taxon. The name of the item.",
+                        "type": "string"
+                    },
+                    "parentTaxon": {
+                        "description": "Direct, most proximate higher-rank parent taxon ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/taxon"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "sameAs": {
+                        "description": "URL of third-party webpages describing the same taxon URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "scientificName": {
+                        "description": "Full scientific name, with authorship and date information if know, of the currently valid (zoological) or accepted (botanical) taxon. ",
+                        "type": "string"
+                    },
+                    "scientificNameAuthorship": {
+                        "description": "Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: \"(Torr.) J.T. Howell\", \"(Martinovsk\u00fd) Tzvelev\", \"(Gy\u00f6rfi, 1952)\" ",
+                        "type": "string"
+                    },
+                    "taxonRank": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs) "
+                    },
+                    "url": {
+                        "description": "Link to the webpage associated to this taxon URL of the item.",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "vernacularName": {
+                        "description": "A vernacular (common) name of the taxon ",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    }
+                },
+                "recommended": [
+                    "parentTaxon",
+                    "taxonRank",
+                    "url"
+                ],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:Taxon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.3-DRAFT-2018_11_09",
+            "rdfs:label": "Taxon",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Taxon/0.3-DRAFT-2018_11_09"
+            ]
+        },
+        {
+            "@id": "bioschemas:childTaxon",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Direct, most proximate lower-rank child taxa",
+            "rdfs:label": "childTaxon",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:parentTaxon",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Direct, most proximate higher-rank parent taxon",
+            "rdfs:label": "parentTaxon",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "scientificName",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Full scientific name, with authorship and date information if know, of the currently valid (zoological) or accepted (botanical) taxon.",
+            "rdfs:label": "scientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "scientificNameAuthorship",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: \"(Torr.) J.T. Howell\", \"(Martinovsk\u00fd) Tzvelev\", \"(Gy\u00f6rfi, 1952)\"",
+            "rdfs:label": "scientificNameAuthorship",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:taxonRank",
+            "@type": "rdf:Property",
+            "rdfs:comment": " The taxonomic rank of this taxon given preferably as a URI from a controlled vocabulary (typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs)",
+            "rdfs:label": "taxonRank",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "vernacularName",
+            "@type": "rdf:Property",
+            "rdfs:comment": " A vernacular (common) name of the taxon",
+            "rdfs:label": "vernacularName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        }
+    ]
+}

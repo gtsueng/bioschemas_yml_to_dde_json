@@ -1,0 +1,470 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "properties": {
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "type": "object"
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "alternateName",
+                    "bioChemInteraction",
+                    "bioChemSimilarity",
+                    "biologicalRole",
+                    "chemicalRole",
+                    "description",
+                    "disambiguatingDescription",
+                    "image",
+                    "potentialUse",
+                    "sameAs"
+                ],
+                "properties": {
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "bioChemInteraction": {
+                        "description": "Interaction of the molecular entity with other BioChemical entities. A BioChemEntity that is known to interact with this item.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "bioChemSimilarity": {
+                        "description": " A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "biologicalRole": {
+                        "description": " A role played by the BioChemEntity within a biological context.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "chemicalComposition": {
+                        "description": "For substances this often cannot be accurately determined, an approximation is acceptable. The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance.",
+                        "type": "string"
+                    },
+                    "chemicalRole": {
+                        "description": "A role played by the molecular entity within a chemical context. A role played by the BioChemEntity within a chemical context.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "disambiguatingDescription": {
+                        "description": " A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+                        "type": "string"
+                    },
+                    "hasBioChemEntityPart": {
+                        "description": " Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.\nInverse property:isPartOfBioChemEntity.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/biochementity"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/biochementity"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "image": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/imageobject"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject."
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "potentialUse": {
+                        "description": " Intended use of the BioChemEntity by humans.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "sameAs": {
+                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    }
+                },
+                "recommended": [
+                    "chemicalComposition",
+                    "hasBioChemEntityPart"
+                ],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:ChemicalSubstance",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile describing a ChemicalEntity This profile describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: <a href='https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999'>ChEBI:59999</a>). <h4>Summary of Changes</h4> This is the first release of the ChemicalSubstance profile. There are no changes from the previous draft.  Version: 0.4-RELEASE",
+            "rdfs:label": "ChemicalSubstance",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/ChemicalSubstance/0.4-RELEASE"
+            ]
+        },
+        {
+            "@id": "bioschemas:bioChemInteraction",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A BioChemEntity that is known to interact with this item. Interaction of the molecular entity with other BioChemical entities.",
+            "rdfs:label": "bioChemInteraction",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:bioChemSimilarity",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A similar BioChemEntity, e.g., obtained by fingerprint similarity algorithms. ",
+            "rdfs:label": "bioChemSimilarity",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:biologicalRole",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A role played by the BioChemEntity within a biological context. ",
+            "rdfs:label": "biologicalRole",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:chemicalComposition",
+            "@type": "rdf:Property",
+            "rdfs:comment": "The chemical composition describes the identity and relative ratio of the chemical elements that make up the substance. For substances this often cannot be accurately determined, an approximation is acceptable.",
+            "rdfs:label": "chemicalComposition",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:chemicalRole",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A role played by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context.",
+            "rdfs:label": "chemicalRole",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:hasBioChemEntityPart",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.\nInverse property:isPartOfBioChemEntity. ",
+            "rdfs:label": "hasBioChemEntityPart",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:potentialUse",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Intended use of the BioChemEntity by humans. ",
+            "rdfs:label": "potentialUse",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ChemicalSubstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
+        }
+    ]
+}

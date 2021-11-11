@@ -1,0 +1,658 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "audience": {
+                        "@type": "schema:Audience",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "properties": {
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "type": "object"
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "duration": {
+                        "@type": "schema:Duration",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "event": {
+                        "@type": "bioschemas:Event",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "language": {
+                        "@type": "schema:Language",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "properties": {
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "properties": {
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "accessibilitySummary",
+                    "contributor",
+                    "creativeWorkStatus",
+                    "dateCreated",
+                    "dateModified",
+                    "datePublished",
+                    "hasPart",
+                    "isPartOf",
+                    "recordedAt",
+                    "version",
+                    "workTranslation"
+                ],
+                "properties": {
+                    "about": {
+                        "description": "The subject of this Training Material. Use the DefinedTerm type to add a\n controlled vocabulary term to describe the topic (such as from the EDAM\n ontology) The subject matter of the content.\n Inverse property: subjectOf.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "abstract": {
+                        "description": " An abstract is a short description that summarizes a CreativeWork.",
+                        "type": "string"
+                    },
+                    "accessibilitySummary": {
+                        "description": " A human-readable summary of specific accessibility features or deficiencies, consistent with the other accessibility metadata but expressing subtleties such as \"short descriptions are present but long descriptions will be needed for non-visual users\" or \"short descriptions are present and no long descriptions are needed.\"",
+                        "type": "string"
+                    },
+                    "audience": {
+                        "description": "A succinct description of the intended target audience for your materials: e.g., graduates, postgraduates, clinicians. An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/audience"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/audience"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "author": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " Those involved in the preparation, creation and/or presentation of the published work, specifically writing the initial draft The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably."
+                    },
+                    "contributor": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Contributors are those that made non-authorship contributions e.g. critical review, commentary or revision A secondary contributor to the CreativeWork or Event."
+                    },
+                    "creativeWorkStatus": {
+                        "description": "The status of a training material. If this is not filled in it will be regarded as Active.\n\nOptions are 'Active', 'Under development', and 'Archived'. The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "dateModified": {
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "datePublished": {
+                        "description": " Date of first broadcast/publication.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "educationalLevel": {
+                        "description": "The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced'. The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "hasPart": {
+                        "description": "A sub-training material or externally referenced training material\n Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "An identifier for this resource such as a DOI or compact URI\n The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details."
+                    },
+                    "inLanguage": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/language"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/language"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Defaults to English if not specified. Please choose a value from [IETF BCP 47 standard](http://tools.ietf.org/html/bcp47).\nYou can add multiple languages if the Training Material offers different translations The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language."
+                    },
+                    "isPartOf": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "The Course this Training Material was/will be used in. Or a training material this training material is a part of (for example, if this is a module in a book, isPartOf can describe the book).\n\nInverse property: hasPart\n\nIf this varies in CourseInstances, use the workFeatured property  Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart."
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "learningResourceType": {
+                        "description": "This may include things such as video lecture, e-Learning module, or tutorial. The predominant type or kind characterizing the learning resource. For example, 'presentation', 'handout'.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "license": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "If there is a licence it must be added. A license document that applies to this content, typically indicated by URL."
+                    },
+                    "mentions": {
+                        "description": "Datasets, tools, technologies, entities etc, which are referred to by this training material or actively used in this training material. Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "recordedAt": {
+                        "description": "The course instance or event where this training material was or will be featured. \n\nUse isPartOf to refer to a Course, unless this training material is unique to a specific Course Instance. The Event where the CreativeWork was recorded. The CreativeWork may capture all or part of the event.\nInverse property: recordedIn.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/event"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/event"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "teaches": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " The item being described is intended to help a person learn the competency or learning outcome defined by the referenced term."
+                    },
+                    "timeRequired": {
+                        "$ref": "#/definitions/duration",
+                        "description": "The estimated time it takes to work through this resource.\n\nPlease specify in [ISO 8601 duration format](https://en.wikipedia.org/wiki/ISO_8601). Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'PT30M', 'PT1H25M'."
+                    },
+                    "url": {
+                        "description": "The preferred URL of the Training Material. You must provide this value if it is known. URL of the item.",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "If this training material is versioned, its strongly recommended you use this property to list the version being displayed The version of the CreativeWork embodied by a specified resource.",
+                        "oneOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "workTranslation": {
+                        "description": " A work that is a translation of the content of this work. e.g. \u897f\u904a\u8a18 has an English workTranslation \u201cJourney to the West\u201d,a German workTranslation \u201cMonkeys Pilgerfahrt\u201d and a Vietnamese translation T\u00e2y du k\u00fd b\u00ecnh kh\u1ea3o.\nInverse property: translationOfWork.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    }
+                },
+                "recommended": [
+                    "about",
+                    "abstract",
+                    "audience",
+                    "author",
+                    "educationalLevel",
+                    "identifier",
+                    "inLanguage",
+                    "learningResourceType",
+                    "license",
+                    "mentions",
+                    "teaches",
+                    "timeRequired",
+                    "url"
+                ],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:TrainingMaterial",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A specification for describing training materials in life sciences. The Life Science Training Materials specification provides a way to describe bioscience training material on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent events in Web pages and applications. The goal of the specification is to make it easier to discover, exchange and integrate life science training material information across the Internet.<h4>Summary of Changes</h4>    Changes since previous draft 0.7 of the TrainingMaterials profile:    <ul>      <li>Changes learningOutcomes (non existant property) to teaches</li>      <li>Changes featuredInEvent (non existant property) to recordedIn</li>      <li>Removes uses (non existant property, used for works used by this TtrainingMaterial) and reuses mentions for this purpose(before it was used only for other works referenced by this TrainingMaterial</li>      <li>Changes skillLevel (non existant property) to educationalLevel</li>      <li>Changes status (non existant property) to creativeWorkStatus</li>      <li>Changes tranlastedInto (non existant property) to workTranslation</li>      <li>Changes parent type to LearningResource, it was before CreativeWork, LearningResource extends it and is more appropriate</li>      <li>Changes prepared by L. Garcia</li>    </ul> Version: 0.8-DRAFT-2020_10_06",
+            "rdfs:label": "TrainingMaterial",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/TrainingMaterial/0.8-DRAFT-2020_10_06"
+            ]
+        }
+    ]
+}

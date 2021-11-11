@@ -1,0 +1,838 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "properties": {
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "type": "object"
+                    },
+                    "computerlanguage": {
+                        "@type": "schema:ComputerLanguage",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "formalparameter": {
+                        "@type": "bioschemas:FormalParameter",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "grant": {
+                        "@type": "schema:Grant",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "properties": {
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "properties": {
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "softwareapplication": {
+                        "@type": "schema:SoftwareApplication",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "alternateName",
+                    "conditionsOfAccess",
+                    "dateModified",
+                    "datePublished",
+                    "encodingFormat",
+                    "identifier",
+                    "image"
+                ],
+                "properties": {
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "citation": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+                    },
+                    "conditionsOfAccess": {
+                        "description": " Conditions that affect the availability of, or method(s) of access to, an item. Typically used for real world items such as an ArchiveComponent held by an ArchiveOrganization. This property is not suitable for use as a general Web access control mechanism. It is expressed only in natural language.\n\nFor example \"Available by appointment from the Reading Room\" or \"Accessible only from logged-in accounts \".",
+                        "type": "string"
+                    },
+                    "contributor": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " A secondary contributor to the CreativeWork or Event."
+                    },
+                    "creativeWorkStatus": {
+                        "description": " The status of a creative work in terms of its stage in a lifecycle. Example terms include Incomplete, Draft, Published, Obsolete. Some organizations define a set of terms for the stages of their publication lifecycle.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "creator": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork."
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "dateModified": {
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "datePublished": {
+                        "description": " Date of first broadcast/publication.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "documentation": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Documentation describing the ComputationalWorkflow and its use. Documentation describing the ComputationalWorkflow and its use."
+                    },
+                    "encodingFormat": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Should be the type of the workflow Media type typically expressed using a MIME format (see IANA siteand MDN reference) e.g. application/zip for a SoftwareApplication binary, audio/mpeg for .mp3 etc.).\n\nIn cases where a CreativeWork has several media type representations, encoding can be used to indicate each MediaObject alongside particular encodingFormat information.\n\nUnregistered or niche encoding and file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia/Wikidata entry. Supersedes fileFormat."
+                    },
+                    "funding": {
+                        "description": " The funding for the workflow",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/grant"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/grant"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "hasPart": {
+                        "description": "The tools/scripts that are (potentially) used by the ComputationalWorkflow when it is executed,\n\nThe parts are not ordered; they normally correspond to steps in the workflow, there is no specified mapping. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\nInverse property: isPartOf.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details."
+                    },
+                    "image": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/imageobject"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject."
+                    },
+                    "input": {
+                        "description": " An input required to use the computational workflow (eg. Excel spreadsheet, BAM file)",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/formalparameter"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/formalparameter"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "isBasedOn": {
+                        "description": "This is normnally another ComputationalWorkflow, but may also be, for example, a paper or a lab protocol. A resource from which this work is derived or from which it is a modification or adaption. Supersedes isBasedOnUrl.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "license": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " A license document that applies to this content, typically indicated by URL."
+                    },
+                    "maintainer": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " A maintainer of a Dataset, software package (SoftwareApplication), or other Project. A maintainer is a Person or Organization that manages contributions to, and/or publication of, some (typically complex) artifact. It is common for distributions of software and data to be based on \"upstream\" sources. When maintainer is applied to a specific version of something e.g. a particular version or packaging of a Dataset, it is always possible that the upstream source has a different maintainer. The isBasedOn property can be used to indicate such relationships between datasets to make the different maintenance roles clear. Similarly in the case of software, a package may have dedicated maintainers working on integration into software distributions such as Ubuntu, as well as upstream maintainers of the underlying work."
+                    },
+                    "name": {
+                        "description": "The name of the item as input The name of the item.",
+                        "type": "string"
+                    },
+                    "output": {
+                        "description": " An output produced by the workflow",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/formalparameter"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/formalparameter"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "producer": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " The person or organization who produced the workflow"
+                    },
+                    "programmingLanguage": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/computerlanguage"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/computerlanguage"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " The computer programming language.\n"
+                    },
+                    "publisher": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Where it came came from, e.g. Galaxy, github, or WF Hub if uploaded The publisher of the creative work."
+                    },
+                    "runtimePlatform": {
+                        "description": " Runtime platform or script interpreter dependencies (Example - Java v1, Python2.3, .Net Framework 3.0). Supersedes runtime.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "sdPublisher": {
+                        "description": "The host site for the ComputationalWorkflow Indicates the party responsible for generating and publishing the current structured data markup, typically in cases where the structured data is derived automatically from existing published content but published on a different site. For example, student projects and open data initiatives often re-publish existing content with more explicitly structured metadata. The sdPublisherproperty helps make such practices more explicit.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            }
+                        ]
+                    },
+                    "softwareRequirements": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Renaming schema.org/requirements as softwareRequirements Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements."
+                    },
+                    "targetProduct": {
+                        "description": " Target Operating System / Product to which the code applies. If applies to several versions, just the product name can be used.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/softwareapplication"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/softwareapplication"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "version": {
+                        "description": "Version is a release. The date modified may not warrant a release, but last date modified and access to all versions is important The version of the CreativeWork embodied by a specified resource.",
+                        "oneOf": [
+                            {
+                                "type": "number"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "recommended": [
+                    "citation",
+                    "contributor",
+                    "creativeWorkStatus",
+                    "description",
+                    "documentation",
+                    "funding",
+                    "hasPart",
+                    "isBasedOn",
+                    "keywords",
+                    "maintainer",
+                    "producer",
+                    "publisher",
+                    "runtimePlatform",
+                    "softwareRequirements",
+                    "targetProduct"
+                ],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:ComputationalWorkflow",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a Computational Workflow A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. Version: 1.0-RELEASE",
+            "rdfs:label": "ComputationalWorkflow",
+            "rdfs:subClassOf": {
+                "@id": "schema:SoftwareSourceCode"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/ComputationalWorkflow/1.0-RELEASE"
+            ]
+        },
+        {
+            "@id": "bioschemas:input",
+            "@type": "rdf:Property",
+            "rdfs:comment": "An input required to use the computational workflow (eg. Excel spreadsheet, BAM file) ",
+            "rdfs:label": "input",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:output",
+            "@type": "rdf:Property",
+            "rdfs:comment": "An output produced by the workflow ",
+            "rdfs:label": "output",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalWorkflow"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        }
+    ]
+}

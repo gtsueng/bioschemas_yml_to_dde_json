@@ -1,0 +1,17 @@
+no mapping in yml for: Journal_v0.1-DRAFT-2019_01_29.json
+error parsing yml for: Organization_v0.2-DRAFT-2019_07_17.json
+no mapping in yml for: Organization_v0.2-DRAFT-2019_07_17.json
+error parsing yml for: Sample_v0.1-DRAFT-2018_02_25.json
+no mapping in yml for: Sample_v0.1-DRAFT-2018_02_25.json
+error parsing yml for: Sample_v0.2-DRAFT-2018_11_09.json
+no mapping in yml for: Sample_v0.2-DRAFT-2018_11_09.json
+error parsing yml for: Sample_v0.2-DRAFT-2018_11_10.json
+no mapping in yml for: Sample_v0.2-DRAFT-2018_11_10.json
+error parsing yml for: Sample_v0.2-RELEASE-2018_11_10.json
+no mapping in yml for: Sample_v0.2-RELEASE-2018_11_10.json
+error parsing yml for: Tool_v0.3-DRAFT-2018_11_21.json
+no mapping in yml for: Tool_v0.3-DRAFT-2018_11_21.json
+error parsing yml for: Tool_v0.3-DRAFT-2019_07_18.json
+no mapping in yml for: Tool_v0.3-DRAFT-2019_07_18.json
+error parsing yml for: TrainingMaterial_v0.7-DRAFT-2019_11_08.json
+no mapping in yml for: TrainingMaterial_v0.7-DRAFT-2019_11_08.json

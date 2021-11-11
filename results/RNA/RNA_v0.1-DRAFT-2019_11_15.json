@@ -1,0 +1,538 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "properties": {
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ],
+                        "type": "object"
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "dna": {
+                        "@type": "schema:DNA",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "gene": {
+                        "@type": "bioschemas:Gene",
+                        "properties": {
+                            "identifier": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "medicalcondition": {
+                        "@type": "MedicalCondition",
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ],
+                        "properties": {
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ],
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "type": "object"
+                    },
+                    "rna": {
+                        "@type": "bioschemas:RNA",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "sequenceannotation": {
+                        "@type": "schema:SequenceAnnotation",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "sequencematchingmodel": {
+                        "@type": "schema:SequenceMatchingModel",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "taxon": {
+                        "@type": "bioschemas:Taxon",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "taxonRank": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "items": {
+                                            "$ref": "#/definitions/propertyvalue"
+                                        },
+                                        "type": "array"
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "items": {
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    },
+                                    {
+                                        "format": "uri",
+                                        "type": "string"
+                                    },
+                                    {
+                                        "items": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        },
+                                        "type": "array"
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "taxonRank"
+                        ],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "additionalType",
+                    "alternateName",
+                    "associatedDisease",
+                    "bioChemInteraction",
+                    "bioChemSimilarity",
+                    "biologicalRole",
+                    "description",
+                    "disambiguatingDescription",
+                    "encodesBioChemEntity",
+                    "hasBioChemEntityPart",
+                    "hasMolecularFunction",
+                    "hasRepresentation",
+                    "hasSequence",
+                    "hasSequenceAnnotation",
+                    "identifier",
+                    "image",
+                    "isCodingRNA",
+                    "isEncodedByBioChemEntity",
+                    "isInvolvedInBiologicalProcess",
+                    "isLocatedInSubcellularLocation",
+                    "isMatchedBy",
+                    "isPartOfBioChemEntity",
+                    "name",
+                    "sameAs",
+                    "taxonomicRange",
+                    "url"
+                ],
+                "properties": {
+                    "additionalType": {
+                        "description": " An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "type": "string"
+                    },
+                    "associatedDisease": {
+                        "description": " Disease associated to this BioChemEntity. Such disease can be a MedicalCondition or a URL. If you want to add an evidence supporting the association, please use PropertyValue.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/medicalcondition"
+                            },
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "bioChemInteraction": {
+                        "$ref": "#/definitions/biochementity",
+                        "description": " A BioChemEntity that is known to interact with this item."
+                    },
+                    "bioChemSimilarity": {
+                        "$ref": "#/definitions/biochementity",
+                        "description": " A similar molecular entity, e.g., obtained by fingerprint similarity algorithms."
+                    },
+                    "biologicalRole": {
+                        "$ref": "#/definitions/definedterm",
+                        "description": " A role played by the molecular entity within a biological context."
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "disambiguatingDescription": {
+                        "description": " A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+                        "type": "string"
+                    },
+                    "encodesBioChemEntity": {
+                        "$ref": "#/definitions/biochementity",
+                        "description": " Another BioChemEntity encoded by this one.\nInverse property:isEncodedByBioChemEntity."
+                    },
+                    "hasBioChemEntityPart": {
+                        "$ref": "#/definitions/biochementity",
+                        "description": " Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.\nInverse property:isPartOfBioChemEntity."
+                    },
+                    "hasMolecularFunction": {
+                        "description": " Molecular function performed by this BioChemEntity; please use PropertyValue if you want to include any evidence.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "hasRepresentation": {
+                        "description": " A common representation such as a protein sequence or chemical structure for this entity. For images use schema.org/image.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "hasSequence": {
+                        "description": " Nucleotide or amino acid sequence.",
+                        "type": "string"
+                    },
+                    "hasSequenceAnnotation": {
+                        "description": " Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "$ref": "#/definitions/sequenceannotation"
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind ofThing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. Seebackground notesfor more details.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "image": {
+                        "description": " An image of the item. This can be aURLor a fully describedImageObject.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "isCodingRNA": {
+                        "description": " Indicates whether or not this RNA is a coding one.",
+                        "type": "boolean"
+                    },
+                    "isEncodedByBioChemEntity": {
+                        "description": " Another BioChemEntity encoding by this one.\nInverse property:encodesBioChemEntity.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/gene"
+                            },
+                            {
+                                "$ref": "#/definitions/rna"
+                            },
+                            {
+                                "$ref": "#/definitions/dna"
+                            }
+                        ]
+                    },
+                    "isInvolvedInBiologicalProcess": {
+                        "description": " Biological process this BioChemEntity is involved in; please use PropertyValue if you want to include any evidence.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "isLocatedInSubcellularLocation": {
+                        "description": " Subcellular location where this BioChemEntity is located; please use PropertyValue if you want to include any evidence.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "isMatchedBy": {
+                        "$ref": "#/definitions/sequencematchingmodel",
+                        "description": " A model matching this BioChemEntity."
+                    },
+                    "isPartOfBioChemEntity": {
+                        "$ref": "#/definitions/biochementity",
+                        "description": " Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity.\nInverse property:hasBioChemEntityPart."
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "sameAs": {
+                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "taxonomicRange": {
+                        "description": " The taxonomic grouping of the organism that expresses, encodes, or in someway related to the BioChemEntity.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/taxon"
+                            },
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "format": "uri",
+                        "type": "string"
+                    }
+                },
+                "recommended": [],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:RNA",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "  Version: 0.1-DRAFT-2019_11_15",
+            "rdfs:label": "RNA",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/RNA/0.1-DRAFT-2019_11_15"
+            ]
+        }
+    ]
+}

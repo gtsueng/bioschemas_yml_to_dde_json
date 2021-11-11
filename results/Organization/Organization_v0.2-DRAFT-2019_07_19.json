@@ -1,0 +1,682 @@
+{
+    "@context": {
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+        "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "schema": "http://schema.org/"
+    },
+    "@graph": [
+        {
+            "$validation": {
+                "$schema": "http://json-schema.org/draft-07/schema#",
+                "definitions": {
+                    "contactpoint": {
+                        "@type": "schema:ContactPoint",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "offer": {
+                        "@type": "schema:Offer",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "properties": {
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "ownershipinfo": {
+                        "@type": "schema:OwnershipInfo",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "properties": {
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ],
+                        "type": "object"
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "properties": {
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "postaladdress": {
+                        "@type": "PostalAddress",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        },
+                        "type": "object"
+                    },
+                    "pricespecification": {
+                        "@type": "schema:PriceSpecification",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    },
+                    "programmembership": {
+                        "@type": "schema:ProgramMembership",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [],
+                        "type": "object"
+                    }
+                },
+                "optional": [
+                    "attachment",
+                    "budget",
+                    "dateModified",
+                    "department",
+                    "dissolutionDate",
+                    "founderMember",
+                    "foundingDate",
+                    "owns",
+                    "parentOrganization",
+                    "socialMedia",
+                    "subOrganization"
+                ],
+                "properties": {
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "type": "string"
+                    },
+                    "attachment": {
+                        "description": "Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ... ",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "budget": {
+                        "$ref": "#/definitions/pricespecification",
+                        "description": "The annual (or total - for a project) budget for the organization. "
+                    },
+                    "contactPoint": {
+                        "description": " A contact point for a person or organization. Supersedes contactPoints.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/contactpoint"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/contactpoint"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "dateModified": {
+                        "description": "The date when the organization information was last modified. The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "oneOf": [
+                            {
+                                "format": "date",
+                                "type": "string"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "department": {
+                        "description": " A relationship between an organization and a department of that organization, also described as an organization (allowing different urls, logos, opening hours). For example: a store with a pharmacy, or a bakery with a cafe.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "dissolutionDate": {
+                        "description": " The date that this organization was dissolved.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "founderMember": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "For an alliance or collaboration or project, the founding members. NOTE: schema/Organization has founder but this has a type of Person not Person and Organization "
+                    },
+                    "foundingDate": {
+                        "description": " The date that this organization was founded.",
+                        "format": "date",
+                        "type": "string"
+                    },
+                    "fundingModel": {
+                        "description": "A description of how the organization is funded. ",
+                        "type": "string"
+                    },
+                    "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "legalName": {
+                        "description": " The official name of the organization, e.g. the registered company name.",
+                        "type": "string"
+                    },
+                    "location": {
+                        "description": " The location of for example where the event is happening, an organization is located, or where an action takes place.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/place"
+                            },
+                            {
+                                "$ref": "#/definitions/postaladdress"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "logo": {
+                        "description": " An associated logo.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "member": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " A member of an Organization or a ProgramMembership. Organizations can be members of organizations; ProgramMembership is typically for individuals. Supersedes members, musicGroupMember.\nInverse property: memberOf."
+                    },
+                    "memberOf": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/programmembership"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/programmembership"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " An Organization (or ProgramMembership) to which this Person or Organization belongs.\nInverse property: member."
+                    },
+                    "membershipCategory": {
+                        "description": "Defines a membership category and associated fees (for projects and alliances etc.). ",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/offer"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/offer"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "owns": {
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/ownershipinfo"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/ownershipinfo"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "$ref": "#/definitions/product"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/product"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": " Products owned by the organization or person."
+                    },
+                    "parentOrganization": {
+                        "$ref": "#/definitions/organization",
+                        "description": " The larger organization that this organization is a subOrganization of, if any. Supersedes branchOf.\nInverse property: subOrganization."
+                    },
+                    "sameAs": {
+                        "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
+                        "format": "uri",
+                        "type": "string"
+                    },
+                    "socialMedia": {
+                        "description": "Link to social media websites like twitter or facebook. ",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "status": {
+                        "description": "To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.\nNote: There is a health-lifesci.status, but this is not related to the current status property ",
+                        "type": "string"
+                    },
+                    "subOrganization": {
+                        "description": " A relationship between two organizations where the first includes the second, e.g., as a subsidiary. See also: the more specific 'department' property.\nInverse property: parentOrganization.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    },
+                    "topic": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic. "
+                    },
+                    "type": {
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            },
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ],
+                        "description": "The type of the organization should be selected from the Controlled Vocabulary column. "
+                    },
+                    "url": {
+                        "description": " URL of the item.",
+                        "oneOf": [
+                            {
+                                "format": "uri",
+                                "type": "string"
+                            },
+                            {
+                                "items": {
+                                    "format": "uri",
+                                    "type": "string"
+                                },
+                                "type": "array"
+                            }
+                        ]
+                    }
+                },
+                "recommended": [
+                    "alternateName",
+                    "contactPoint",
+                    "fundingModel",
+                    "keywords",
+                    "location",
+                    "logo",
+                    "member",
+                    "memberOf",
+                    "membershipCategory",
+                    "status",
+                    "url"
+                ],
+                "required": [],
+                "type": "object"
+            },
+            "@id": "bioschemas:Organization",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a Organization in the life-science. Provides a way to describe bioscience organizations on the World Wide Web. It defines metadata terms that can be used in the code of web pages and applications, and builds on top of existing technologies and standards. The goal of the specification is to make it easier to discover, exchange and integrate life science organization profiles across the Internet. Version: 0.2-DRAFT-2019_07_19",
+            "rdfs:label": "Organization",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            },
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Organization/0.2-DRAFT-2019_07_19"
+            ]
+        },
+        {
+            "@id": "bioschemas:attachment",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Any files or related websites which give more information about this organization, e.g., flyers, third party sites, ...",
+            "rdfs:label": "attachment",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:budget",
+            "@type": "rdf:Property",
+            "rdfs:comment": " The annual (or total - for a project) budget for the organization.",
+            "rdfs:label": "budget",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PriceSpecification"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:fundingModel",
+            "@type": "rdf:Property",
+            "rdfs:comment": " A description of how the organization is funded.",
+            "rdfs:label": "fundingModel",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:membershipCategory",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Defines a membership category and associated fees (for projects and alliances etc.).",
+            "rdfs:label": "membershipCategory",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Offer"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:socialMedia",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Link to social media websites like twitter or facebook.",
+            "rdfs:label": "socialMedia",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:status",
+            "@type": "rdf:Property",
+            "rdfs:comment": " To record if the organization is still alive, and if it were are project or alliance, what the outcome was, or if it has closed down or merged, why and when.\nNote: There is a health-lifesci.status, but this is not related to the current status property",
+            "rdfs:label": "status",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:topic",
+            "@type": "rdf:Property",
+            "rdfs:comment": " Scientific topics that describe the organization and its activities, ideally using an ontology term from EDAM:Topic.",
+            "rdfs:label": "topic",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:type",
+            "@type": "rdf:Property",
+            "rdfs:comment": " The type of the organization should be selected from the Controlled Vocabulary column.",
+            "rdfs:label": "type",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Organization"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        }
+    ]
+}
