@@ -188,7 +188,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "url",
+                    "volumeNumber"
+                ],
                 "recommended": [
                     "hasPart",
                     "identifier",

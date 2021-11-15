@@ -201,7 +201,15 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "courseMode",
+                    "instructor",
+                    "location",
+                    "name",
+                    "offers",
+                    "startDate",
+                    "url"
+                ],
                 "recommended": [
                     "description",
                     "duration",

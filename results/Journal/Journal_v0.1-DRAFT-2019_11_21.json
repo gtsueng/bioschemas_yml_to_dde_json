@@ -218,7 +218,9 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "name"
+                ],
                 "recommended": [
                     "hasPart",
                     "issn",

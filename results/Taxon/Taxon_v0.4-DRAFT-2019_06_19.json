@@ -188,7 +188,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "name",
+                    "taxonRank"
+                ],
                 "recommended": [
                     "parentTaxon",
                     "url"

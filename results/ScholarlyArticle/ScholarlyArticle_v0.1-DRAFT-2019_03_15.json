@@ -447,7 +447,10 @@
                         "type": "integer"
                     }
                 },
-                "required": [],
+                "required": [
+                    "headline",
+                    "identifier"
+                ],
                 "recommended": [
                     "alternateName",
                     "author",

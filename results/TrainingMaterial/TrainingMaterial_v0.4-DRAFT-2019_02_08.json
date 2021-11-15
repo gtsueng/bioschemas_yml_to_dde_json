@@ -381,7 +381,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "keywords",
+                    "name"
+                ],
                 "recommended": [
                     "about",
                     "audience",

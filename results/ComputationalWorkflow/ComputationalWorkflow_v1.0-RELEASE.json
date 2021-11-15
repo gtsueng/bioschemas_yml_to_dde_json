@@ -538,7 +538,18 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "creator",
+                    "dateCreated",
+                    "input",
+                    "license",
+                    "name",
+                    "output",
+                    "programmingLanguage",
+                    "sdPublisher",
+                    "url",
+                    "version"
+                ],
                 "recommended": [
                     "citation",
                     "contributor",

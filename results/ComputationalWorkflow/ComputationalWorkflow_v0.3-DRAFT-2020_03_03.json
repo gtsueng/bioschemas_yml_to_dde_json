@@ -320,7 +320,17 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "creator",
+                    "dateCreated",
+                    "input",
+                    "name",
+                    "output",
+                    "programmingLanguage",
+                    "sdPublisher",
+                    "url",
+                    "version"
+                ],
                 "recommended": [
                     "contributor",
                     "description",

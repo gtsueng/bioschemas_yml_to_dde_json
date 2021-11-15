@@ -453,7 +453,17 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "contact",
+                    "description",
+                    "endDate",
+                    "eventType",
+                    "hostInstitution",
+                    "location",
+                    "name",
+                    "type",
+                    "startDate"
+                ],
                 "recommended": [
                     "accreditation",
                     "alternateName",

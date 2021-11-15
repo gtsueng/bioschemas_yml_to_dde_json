@@ -208,7 +208,11 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "issn",
+                    "name"
+                ],
                 "recommended": [
                     "hasPart",
                     "keywords",

@@ -151,7 +151,15 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "dataset",
+                    "name",
+                    "potentialAction",
+                    "provider",
+                    "type",
+                    "supportedRefs",
+                    "url"
+                ],
                 "recommended": [
                     "aggregator",
                     "description",

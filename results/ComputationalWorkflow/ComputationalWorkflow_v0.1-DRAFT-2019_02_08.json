@@ -128,7 +128,11 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "description",
                     "image"

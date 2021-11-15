@@ -204,7 +204,10 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "headline"
+                ],
                 "recommended": [
                     "hasPart",
                     "isAccessibleForFree",

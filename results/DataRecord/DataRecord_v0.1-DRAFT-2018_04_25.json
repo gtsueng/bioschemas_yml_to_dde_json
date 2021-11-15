@@ -296,7 +296,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "mainEntity",
+                    "type"
+                ],
                 "recommended": [
                     "additionalType"
                 ],

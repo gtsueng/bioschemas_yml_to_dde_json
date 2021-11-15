@@ -254,7 +254,10 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "name",
+                    "taxonRank"
+                ],
                 "recommended": [
                     "parentTaxon",
                     "scientificName",

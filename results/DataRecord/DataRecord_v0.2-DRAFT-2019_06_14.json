@@ -291,7 +291,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "mainEntity"
+                ],
                 "recommended": [
                     "additionalType"
                 ],

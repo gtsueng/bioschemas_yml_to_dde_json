@@ -228,7 +228,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "inChI",
                     "inChIKey",

@@ -182,7 +182,9 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "name"
+                ],
                 "recommended": [
                     "parentTaxon",
                     "taxonRank",

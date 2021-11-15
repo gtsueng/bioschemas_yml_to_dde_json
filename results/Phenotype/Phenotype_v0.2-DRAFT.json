@@ -324,7 +324,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name"
+                ],
                 "recommended": [
                     "bioChemAssociation",
                     "description",

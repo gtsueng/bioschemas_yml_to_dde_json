@@ -259,7 +259,12 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "identifier",
+                    "name",
+                    "url"
+                ],
                 "recommended": [],
                 "optional": [
                     "additionalProperty",

@@ -339,7 +339,9 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier"
+                ],
                 "recommended": [
                     "alternateName",
                     "boundMolecule",

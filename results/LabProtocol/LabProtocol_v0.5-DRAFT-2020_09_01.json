@@ -534,7 +534,14 @@
                         "$ref": "#/definitions/duration"
                     }
                 },
-                "required": [],
+                "required": [
+                    "bioSampleUsed",
+                    "headline",
+                    "keywords",
+                    "labEquipmentUsed",
+                    "protocolPurpose",
+                    "reagentUsed"
+                ],
                 "recommended": [
                     "author",
                     "citation",

@@ -357,7 +357,14 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "legalName",
+                    "name",
+                    "sameAs",
+                    "topic",
+                    "type"
+                ],
                 "recommended": [
                     "alternateName",
                     "contactPoint",

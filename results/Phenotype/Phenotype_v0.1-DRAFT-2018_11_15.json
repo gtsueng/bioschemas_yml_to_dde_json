@@ -165,7 +165,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name"
+                ],
                 "recommended": [
                     "description",
                     "image",

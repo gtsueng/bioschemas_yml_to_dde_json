@@ -448,7 +448,16 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "contact",
+                    "description",
+                    "endDate",
+                    "eventType",
+                    "hostInstitution",
+                    "location",
+                    "name",
+                    "startDate"
+                ],
                 "recommended": [
                     "accreditation",
                     "alternateName",

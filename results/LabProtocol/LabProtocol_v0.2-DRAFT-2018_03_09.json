@@ -305,7 +305,14 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "reagent",
+                    "instrument",
+                    "keywords",
+                    "purpose",
+                    "type",
+                    "sample"
+                ],
                 "recommended": [
                     "citation",
                     "duration",

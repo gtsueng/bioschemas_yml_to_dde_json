@@ -215,7 +215,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "mainEntity",
+                    "text"
+                ],
                 "recommended": [
                     "subjectOf",
                     "commentCount",

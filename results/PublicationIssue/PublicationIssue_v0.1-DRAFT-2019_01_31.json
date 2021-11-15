@@ -187,7 +187,9 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "issueNumber"
+                ],
                 "recommended": [
                     "hasPart",
                     "identifier",

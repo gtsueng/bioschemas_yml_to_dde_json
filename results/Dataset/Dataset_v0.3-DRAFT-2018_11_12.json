@@ -218,7 +218,13 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "identifier",
+                    "keywords",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "citation",
                     "creator",

@@ -203,7 +203,14 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "author",
+                    "datePublished",
+                    "description",
+                    "identifier",
+                    "name",
+                    "studyDomain"
+                ],
                 "recommended": [
                     "about",
                     "additionalProperty",

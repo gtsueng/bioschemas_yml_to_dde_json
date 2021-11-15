@@ -321,7 +321,13 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "featureList",
+                    "name",
+                    "softwareVersion",
+                    "url"
+                ],
                 "recommended": [
                     "alternateName",
                     "citation",

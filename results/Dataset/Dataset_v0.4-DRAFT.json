@@ -362,7 +362,14 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "identifier",
+                    "keywords",
+                    "license",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "alternateName",
                     "citation",

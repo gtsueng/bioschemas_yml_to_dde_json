@@ -518,7 +518,11 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "additionalType",
                     "applicationCategory",

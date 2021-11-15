@@ -222,7 +222,14 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "keywords",
+                    "name",
+                    "provider",
+                    "type",
+                    "url"
+                ],
                 "recommended": [
                     "alternateName",
                     "citation",

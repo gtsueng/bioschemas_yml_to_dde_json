@@ -361,7 +361,10 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name"
+                ],
                 "recommended": [
                     "description",
                     "encodes",

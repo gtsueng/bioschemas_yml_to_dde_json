@@ -246,7 +246,13 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "keywords",
+                    "name",
+                    "provider",
+                    "url"
+                ],
                 "recommended": [
                     "about",
                     "alternateName",

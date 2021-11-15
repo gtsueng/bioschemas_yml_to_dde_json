@@ -328,7 +328,11 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "keywords",
+                    "name"
+                ],
                 "recommended": [
                     "about",
                     "coursePrerequisites",

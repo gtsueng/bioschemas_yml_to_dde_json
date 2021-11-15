@@ -272,7 +272,15 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "author",
+                    "dateCreated",
+                    "input",
+                    "name",
+                    "output",
+                    "programmingLanguage",
+                    "url"
+                ],
                 "recommended": [
                     "contributor",
                     "description",

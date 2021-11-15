@@ -208,7 +208,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "chemicalComposition",
                     "hasBioChemEntityPart"

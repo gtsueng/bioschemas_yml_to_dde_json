@@ -325,7 +325,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "courseMode",
+                    "inLanguage",
+                    "location"
+                ],
                 "recommended": [
                     "endDate",
                     "instructor",

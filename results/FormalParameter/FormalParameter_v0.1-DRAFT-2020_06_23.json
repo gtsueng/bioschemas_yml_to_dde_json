@@ -102,7 +102,11 @@
                         "type": "boolean"
                     }
                 },
-                "required": [],
+                "required": [
+                    "additionalType",
+                    "encodingFormat",
+                    "name"
+                ],
                 "recommended": [
                     "description"
                 ],

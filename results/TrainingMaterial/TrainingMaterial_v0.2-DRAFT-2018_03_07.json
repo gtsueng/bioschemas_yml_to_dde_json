@@ -289,7 +289,13 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "about",
+                    "audience",
+                    "genre",
+                    "name",
+                    "type"
+                ],
                 "recommended": [
                     "author",
                     "contributor",

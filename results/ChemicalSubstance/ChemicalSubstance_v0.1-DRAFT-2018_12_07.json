@@ -219,7 +219,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "identifier",
+                    "name",
+                    "url"
+                ],
                 "recommended": [
                     "hasBioChemEntityPart",
                     "molecularFormula"

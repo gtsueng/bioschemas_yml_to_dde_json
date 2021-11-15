@@ -157,7 +157,9 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "name"
+                ],
                 "recommended": [
                     "author",
                     "taxonRank",

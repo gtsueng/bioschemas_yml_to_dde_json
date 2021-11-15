@@ -294,7 +294,15 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "author",
+                    "datePublished",
+                    "description",
+                    "identifier",
+                    "name",
+                    "studyDomain",
+                    "studySubject"
+                ],
                 "recommended": [
                     "about",
                     "additionalProperty",

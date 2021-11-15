@@ -218,7 +218,10 @@
                         "format": "uri"
                     }
                 },
-                "required": [],
+                "required": [
+                    "issn",
+                    "name"
+                ],
                 "recommended": [
                     "hasPart",
                     "keywords",

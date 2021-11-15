@@ -285,7 +285,11 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "description",
+                    "mainEntityOfPage",
+                    "name"
+                ],
                 "recommended": [
                     "email",
                     "expertise",

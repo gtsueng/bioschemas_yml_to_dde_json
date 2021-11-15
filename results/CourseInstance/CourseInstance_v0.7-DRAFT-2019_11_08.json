@@ -342,7 +342,10 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "courseMode",
+                    "location"
+                ],
                 "recommended": [
                     "endDate",
                     "inLanguage",

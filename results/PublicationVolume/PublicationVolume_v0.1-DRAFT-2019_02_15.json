@@ -177,7 +177,9 @@
                         ]
                     }
                 },
-                "required": [],
+                "required": [
+                    "volumeNumber"
+                ],
                 "recommended": [
                     "hasPart",
                     "identifier",
