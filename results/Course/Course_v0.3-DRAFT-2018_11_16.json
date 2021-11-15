@@ -1,178 +1,346 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Course",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Specification describing a course.  This specification must be used in tandem with a courseInstance. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held.  Version: 0.3-DRAFT-2018_11_16",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Course/0.3-DRAFT-2018_11_16"
+            ],
+            "rdfs:label": "Course",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "alignmentobject": {
-                        "@type": "schema:AlignmentObject",
-                        "properties": {
-                            "name": {
-                                "type": "string"
+                "type": "object",
+                "properties": {
+                    "about": {
+                        "description": "The subject of this Training Material. List the topics, datasets, tools, etc which this material is about. The subject matter of the content.\nInverse property: subjectOf.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                }
                             }
-                        },
-                        "required": [],
-                        "type": "object"
+                        ]
+                    },
+                    "alternateName": {
+                        "description": " An alias for the item.",
+                        "oneOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
                     },
                     "audience": {
-                        "@type": "schema:Audience",
-                        "properties": {
-                            "name": {
-                                "type": "string"
+                        "description": " An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/audience"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/audience"
+                                }
                             }
-                        },
-                        "required": [],
-                        "type": "object"
+                        ]
                     },
-                    "course": {
-                        "@type": "bioschemas:Course",
-                        "properties": {
-                            "name": {
+                    "courseCode": {
+                        "description": "The identifier for the Course used by the course provider (e.g. CS101 or 6.001). The identifier for the Course used by the course provider (e.g. CS101 or 6.001).",
+                        "oneOf": [
+                            {
                                 "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
                             }
-                        },
-                        "required": [],
-                        "type": "object"
+                        ]
                     },
-                    "courseinstance": {
-                        "@type": "bioschemas:CourseInstance",
-                        "properties": {
-                            "name": {
+                    "coursePrerequisites": {
+                        "description": "Pre-requisite requirments before you can take this course. Requirements for taking the Course. May be completion of another Course or a textual description like \"permission of instructor\". Requirements may be a pre-requisite competency, referenced using AlignmentObject.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/course"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/course"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/alignmentobject"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/alignmentobject"
+                                }
+                            },
+                            {
                                 "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
                             }
-                        },
-                        "required": [],
-                        "type": "object"
+                        ]
                     },
-                    "creativework": {
-                        "@type": "CreativeWork",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "datetime": {
-                        "@type": "schema:DateTime",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "definedterm": {
-                        "@type": "DefinedTerm",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "inDefinedTermSet": {
-                                "$ref": "#/definitions/definedtermset"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "termCode": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "duration": {
-                        "@type": "schema:Duration",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "imageobject": {
-                        "@type": "ImageObject",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
+                    "creator": {
+                        "description": " The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork.",
+                        "anyOf": [
+                            {
                                 "$ref": "#/definitions/organization"
                             },
-                            "name": {
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "dateCreated": {
+                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "dateModified": {
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
+                        "oneOf": [
+                            {
+                                "type": "string",
+                                "format": "date"
+                            },
+                            {
+                                "$ref": "#/definitions/datetime"
+                            }
+                        ]
+                    },
+                    "description": {
+                        "description": " A description of the item.",
+                        "type": "string"
+                    },
+                    "educationalCredentialAwarded": {
+                        "description": " A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course.",
+                        "anyOf": [
+                            {
                                 "type": "string"
                             },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
+                        ]
                     },
-                    "thing": {
-                        "@type": "schema:Thing",
-                        "properties": {
-                            "name": {
+                    "educationalLevel": {
+                        "description": " The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/definedterm"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/definedterm"
+                                }
+                            },
+                            {
                                 "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        },
-                        "required": [],
-                        "type": "object"
+                        ]
+                    },
+                    "hasCourseInstance": {
+                        "description": " An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/courseinstance"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/courseinstance"
+                                }
+                            }
+                        ]
+                    },
+                    "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/imageobject"
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        ]
+                    },
+                    "keywords": {
+                        "description": "Keywords describing course Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
+                        "type": "string"
+                    },
+                    "mainEntityOfPage": {
+                        "description": "List different URLs that can be used to access the course Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.\nInverse property: mainEntity.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/creativework"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/creativework"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "mentions": {
+                        "description": "Datasets, tools, etc, to which are used by or referred to by this course Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
+                        "oneOf": [
+                            {
+                                "$ref": "#/definitions/thing"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/thing"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "provider": {
+                        "description": "Identify the Organization which is responsible for providing the educational input for the course, e.g. providing content, educational events, assessments, accreditation etc.\nNote: providing a course goes beyond creating it as it implies some degree of academic responsibility for accrediting the content of the course, perhaps running assessments etc. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/organization"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/organization"
+                                }
+                            },
+                            {
+                                "$ref": "#/definitions/person"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/person"
+                                }
+                            }
+                        ]
+                    },
+                    "thumbnailUrl": {
+                        "description": " A thumbnail image relevant to the Thing.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "timeRequired": {
+                        "description": "The typical learning time of a course. Can be used in conjunction or instead of duration in CourseInstance Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'.",
+                        "$ref": "#/definitions/duration"
+                    },
+                    "url": {
+                        "description": "The preferred URL of the course page. You must provide this value if it is known URL of the item.",
+                        "type": "string",
+                        "format": "uri"
                     }
                 },
+                "required": [],
+                "recommended": [
+                    "about",
+                    "coursePrerequisites",
+                    "educationalLevel",
+                    "hasCourseInstance",
+                    "mentions",
+                    "provider",
+                    "timeRequired",
+                    "url"
+                ],
                 "optional": [
                     "alternateName",
                     "audience",
@@ -185,344 +353,176 @@
                     "mainEntityOfPage",
                     "thumbnailUrl"
                 ],
-                "properties": {
-                    "about": {
-                        "description": "The subject of this Training Material. List the topics, datasets, tools, etc which this material is about. The subject matter of the content.\nInverse property: subjectOf.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/thing"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/thing"
-                                },
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "alternateName": {
-                        "description": " An alias for the item.",
-                        "oneOf": [
-                            {
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
                                 "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
                             }
-                        ]
+                        },
+                        "required": []
                     },
                     "audience": {
-                        "description": " An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/audience"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/audience"
-                                },
-                                "type": "array"
+                        "@type": "schema:Audience",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
                             }
-                        ]
+                        },
+                        "required": []
                     },
-                    "courseCode": {
-                        "description": "The identifier for the Course used by the course provider (e.g. CS101 or 6.001). The identifier for the Course used by the course provider (e.g. CS101 or 6.001).",
-                        "oneOf": [
-                            {
+                    "course": {
+                        "@type": "bioschemas:Course",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "alignmentobject": {
+                        "@type": "schema:AlignmentObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
                                 "type": "string"
                             },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "coursePrerequisites": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/course"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/course"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "$ref": "#/definitions/alignmentobject"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/alignmentobject"
-                                },
-                                "type": "array"
-                            },
-                            {
+                            "alternateName": {
                                 "type": "string"
                             },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
                             }
-                        ],
-                        "description": "Pre-requisite requirments before you can take this course. Requirements for taking the Course. May be completion of another Course or a textual description like \"permission of instructor\". Requirements may be a pre-requisite competency, referenced using AlignmentObject."
+                        }
                     },
-                    "creator": {
-                        "anyOf": [
-                            {
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
                                 "$ref": "#/definitions/organization"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "$ref": "#/definitions/person"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
                             }
-                        ],
-                        "description": " The creator/author of this CreativeWork. This is the same as the Author property for CreativeWork."
-                    },
-                    "dateCreated": {
-                        "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
-                        "oneOf": [
-                            {
-                                "format": "date",
-                                "type": "string"
-                            },
-                            {
-                                "$ref": "#/definitions/datetime"
-                            }
+                        },
+                        "required": [
+                            "name"
                         ]
                     },
-                    "dateModified": {
-                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
-                        "oneOf": [
-                            {
-                                "format": "date",
-                                "type": "string"
-                            },
-                            {
-                                "$ref": "#/definitions/datetime"
-                            }
-                        ]
-                    },
-                    "description": {
-                        "description": " A description of the item.",
-                        "type": "string"
-                    },
-                    "educationalCredentialAwarded": {
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "format": "uri",
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            }
-                        ],
-                        "description": " A description of the qualification, award, certificate, diploma or other educational credential awarded as a consequence of successful completion of this course."
-                    },
-                    "educationalLevel": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/definedterm"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "format": "uri",
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            }
-                        ],
-                        "description": " The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators."
-                    },
-                    "hasCourseInstance": {
-                        "description": " An offering of the course at a specific time and place or through specific media or mode of study or to a specific section of students.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/courseinstance"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/courseinstance"
-                                },
-                                "type": "array"
-                            }
-                        ]
-                    },
-                    "image": {
-                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/imageobject"
-                            },
-                            {
-                                "format": "uri",
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
                                 "type": "string"
                             }
-                        ]
+                        },
+                        "required": []
                     },
-                    "keywords": {
-                        "description": "Keywords describing course Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
-                        "type": "string"
-                    },
-                    "mainEntityOfPage": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/creativework"
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
                             },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "format": "uri",
+                            "name": {
                                 "type": "string"
                             },
-                            {
-                                "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
                             }
-                        ],
-                        "description": "List different URLs that can be used to access the course Indicates a page (or other CreativeWork) for which this thing is the main entity being described. See background notes for details.\nInverse property: mainEntity."
+                        },
+                        "required": []
                     },
-                    "mentions": {
-                        "description": "Datasets, tools, etc, to which are used by or referred to by this course Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept.",
-                        "oneOf": [
-                            {
-                                "$ref": "#/definitions/thing"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/thing"
-                                },
-                                "type": "array"
+                    "courseinstance": {
+                        "@type": "bioschemas:CourseInstance",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
                             }
-                        ]
+                        },
+                        "required": []
                     },
-                    "name": {
-                        "description": " The name of the item.",
-                        "type": "string"
-                    },
-                    "provider": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/organization"
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
                             },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "$ref": "#/definitions/person"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
                             }
-                        ],
-                        "description": "Identify the Organization which is responsible for providing the educational input for the course, e.g. providing content, educational events, assessments, accreditation etc.\nNote: providing a course goes beyond creating it as it implies some degree of academic responsibility for accrediting the content of the course, perhaps running assessments etc. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier."
+                        },
+                        "required": []
                     },
-                    "thumbnailUrl": {
-                        "description": " A thumbnail image relevant to the Thing.",
-                        "format": "uri",
-                        "type": "string"
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
                     },
-                    "timeRequired": {
-                        "$ref": "#/definitions/duration",
-                        "description": "The typical learning time of a course. Can be used in conjunction or instead of duration in CourseInstance Approximate or typical time it takes to work with or through this learning resource for the typical intended target audience, e.g. 'P30M', 'P1H25M'."
-                    },
-                    "url": {
-                        "description": "The preferred URL of the course page. You must provide this value if it is known URL of the item.",
-                        "format": "uri",
-                        "type": "string"
+                    "duration": {
+                        "@type": "schema:Duration",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
                     }
-                },
-                "recommended": [
-                    "about",
-                    "coursePrerequisites",
-                    "educationalLevel",
-                    "hasCourseInstance",
-                    "mentions",
-                    "provider",
-                    "timeRequired",
-                    "url"
-                ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Course",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Specification describing a course.  This specification must be used in tandem with a courseInstance. A course is used to describe the broad, common aspects of a recurring training event - whereas a course instance is about the specific times and location of when that course is held.  Version: 0.3-DRAFT-2018_11_16",
-            "rdfs:label": "Course",
-            "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Course/0.3-DRAFT-2018_11_16"
-            ]
+                }
+            }
         },
         {
             "@id": "bioschemas:educationalLevel",
-            "@type": "rdf:Property",
             "rdfs:comment": "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators. ",
+            "@type": "rdf:Property",
             "rdfs:label": "educationalLevel",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Course"

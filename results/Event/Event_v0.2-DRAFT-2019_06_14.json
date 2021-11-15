@@ -1,268 +1,39 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Event",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Specification for describing an event in the Life Sciences Specification for describing a Life Science event. This includes conferences, workshops, meetings, courses, receptions, networking and prizegivings.         Version: 0.2-DRAFT-2019_06_14",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Event/0.2-DRAFT-2019_06_14"
+            ],
+            "rdfs:label": "Event",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "datetime": {
-                        "@type": "schema:DateTime",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "event": {
-                        "@type": "bioschemas:Event",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "eventtype": {
-                        "@type": "schema:EventType",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "offer": {
-                        "@type": "schema:Offer",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "place": {
-                        "@type": "Place",
-                        "properties": {
-                            "address": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "$ref": "#/definitions/postaladdress"
-                                    }
-                                ]
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "postaladdress": {
-                        "@type": "PostalAddress",
-                        "properties": {
-                            "addressCountry": {
-                                "type": "string"
-                            },
-                            "addressLocality": {
-                                "type": "string"
-                            },
-                            "addressRegion": {
-                                "type": "string"
-                            },
-                            "postOfficeBoxNumber": {
-                                "type": "string"
-                            },
-                            "postalCode": {
-                                "type": "string"
-                            },
-                            "streetAddress": {
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    },
-                    "review": {
-                        "@type": "schema:Review",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "acceptanceNotificationDate",
-                    "attachment",
-                    "dateModified",
-                    "identifier",
-                    "offers",
-                    "performer",
-                    "registrationStatus",
-                    "review",
-                    "socialMedia",
-                    "sponsor",
-                    "subEvent",
-                    "submitter",
-                    "superEvent"
-                ],
+                "type": "object",
                 "properties": {
                     "acceptanceNotificationDate": {
                         "description": "Date for the host to confirm acceptance to applicants. ",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "date",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "date"
+                                }
                             }
                         ]
                     },
@@ -285,15 +56,15 @@
                         "description": "Any files or related websites which give more information about this event. e.g. flyers, third party sites handling tickets. ",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -301,47 +72,47 @@
                         "description": "The scientific background the participants should be from. Please use a term from [EDAM: Topic](http://edamontology.org/topic_0003).\n\n**Note:** Bioschemas have changed the Expected Types from [Audience](http://schema.org/Audience) to [URL](http://schema.org/URL). An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
                     "contact": {
+                        "description": "Main point of contact that can be contacted for general queries. This would be an event organizer or an administrator. ",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "Main point of contact that can be contacted for general queries. This would be an event organizer or an administrator. "
+                        ]
                     },
                     "dateModified": {
                         "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -349,29 +120,29 @@
                         ]
                     },
                     "deadline": {
+                        "description": "Deadlines dates for this event e.g. application deadline, poster submission, paper submission, early registration ",
                         "anyOf": [
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": "Deadlines dates for this event e.g. application deadline, poster submission, paper submission, early registration "
+                        ]
                     },
                     "description": {
                         "description": " A description of the item.",
@@ -380,10 +151,10 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -394,10 +165,10 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -405,8 +176,8 @@
                         "description": " The end date and time of the item (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date format).",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -420,10 +191,10 @@
                                 "$ref": "#/definitions/eventtype"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/eventtype"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -434,10 +205,10 @@
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -451,8 +222,8 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -485,39 +256,39 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "offers": {
-                        "$ref": "#/definitions/offer",
-                        "description": " An offer to provide this item\u2014for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event."
+                        "description": " An offer to provide this item\u2014for example, an offer to sell a product, rent the DVD of a movie, perform a service, or give away tickets to an event.",
+                        "$ref": "#/definitions/offer"
                     },
                     "performer": {
+                        "description": " A performer at the event\u2014for example, a presenter, musician, musical group or actor. Supersedes performers.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " A performer at the event\u2014for example, a presenter, musician, musical group or actor. Supersedes performers."
+                        ]
                     },
                     "prerequisite": {
                         "description": "A list of prerequisites to be able to attend the event ",
@@ -526,10 +297,10 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -540,8 +311,8 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -556,10 +327,10 @@
                                 "$ref": "#/definitions/review"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/review"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -567,47 +338,47 @@
                         "description": "Link to social media websites like twitter or facebook ",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
                     "sponsor": {
+                        "description": "The organizations or institutions providing sponsorship for the event. A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "The organizations or institutions providing sponsorship for the event. A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event."
+                        ]
                     },
                     "startDate": {
                         "description": " The start date and time of the item (in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601) date format).",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -621,62 +392,63 @@
                                 "$ref": "#/definitions/event"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/event"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "submitter": {
+                        "description": "The person or organization who submits an event to a repository or registry of events (such as iAnn, ISCB). ",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "The person or organization who submits an event to a repository or registry of events (such as iAnn, ISCB). "
+                        ]
                     },
                     "superEvent": {
-                        "$ref": "#/definitions/event",
-                        "description": " An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.\nInverse property: subEvent."
+                        "description": " An event that this event is a part of. For example, a collection of individual music performances might each have a music festival as their superEvent.\nInverse property: subEvent.",
+                        "$ref": "#/definitions/event"
                     },
                     "topic": {
                         "description": "The scientific topic the event is about. Please use a term from [EDAM: Topic](http://edamontology.org/topic_0003). ",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
                     "url": {
                         "description": "It is recommended you specify the URL even if it is the same as the current page. URL of the item.",
-                        "format": "uri",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     }
                 },
+                "required": [],
                 "recommended": [
                     "accreditation",
                     "alternateName",
@@ -690,24 +462,252 @@
                     "topic",
                     "url"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Event",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Specification for describing an event in the Life Sciences Specification for describing a Life Science event. This includes conferences, workshops, meetings, courses, receptions, networking and prizegivings.         Version: 0.2-DRAFT-2019_06_14",
-            "rdfs:label": "Event",
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Event/0.2-DRAFT-2019_06_14"
-            ]
+                "optional": [
+                    "acceptanceNotificationDate",
+                    "attachment",
+                    "dateModified",
+                    "identifier",
+                    "offers",
+                    "performer",
+                    "registrationStatus",
+                    "review",
+                    "socialMedia",
+                    "sponsor",
+                    "subEvent",
+                    "submitter",
+                    "superEvent"
+                ],
+                "definitions": {
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "eventtype": {
+                        "@type": "schema:EventType",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "place": {
+                        "@type": "Place",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "address": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "$ref": "#/definitions/postaladdress"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "postaladdress": {
+                        "@type": "PostalAddress",
+                        "type": "object",
+                        "properties": {
+                            "addressCountry": {
+                                "type": "string"
+                            },
+                            "addressLocality": {
+                                "type": "string"
+                            },
+                            "addressRegion": {
+                                "type": "string"
+                            },
+                            "postOfficeBoxNumber": {
+                                "type": "string"
+                            },
+                            "postalCode": {
+                                "type": "string"
+                            },
+                            "streetAddress": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "offer": {
+                        "@type": "schema:Offer",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "review": {
+                        "@type": "schema:Review",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "event": {
+                        "@type": "bioschemas:Event",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         },
         {
             "@id": "bioschemas:acceptanceNotificationDate",
-            "@type": "rdf:Property",
             "rdfs:comment": " Date for the host to confirm acceptance to applicants.",
+            "@type": "rdf:Property",
             "rdfs:label": "acceptanceNotificationDate",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -720,8 +720,8 @@
         },
         {
             "@id": "bioschemas:accreditation",
-            "@type": "rdf:Property",
             "rdfs:comment": " Type if accrediation or organisation that accredits the event",
+            "@type": "rdf:Property",
             "rdfs:label": "accreditation",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -737,8 +737,8 @@
         },
         {
             "@id": "bioschemas:attachment",
-            "@type": "rdf:Property",
             "rdfs:comment": " Any files or related websites which give more information about this event. e.g. flyers, third party sites handling tickets.",
+            "@type": "rdf:Property",
             "rdfs:label": "attachment",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -751,8 +751,8 @@
         },
         {
             "@id": "bioschemas:audience",
-            "@type": "rdf:Property",
             "rdfs:comment": "An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience. The scientific background the participants should be from. Please use a term from [EDAM: Topic](http://edamontology.org/topic_0003).\n\n**Note:** Bioschemas have changed the Expected Types from [Audience](http://schema.org/Audience) to [URL](http://schema.org/URL).",
+            "@type": "rdf:Property",
             "rdfs:label": "audience",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -765,8 +765,8 @@
         },
         {
             "@id": "bioschemas:contact",
-            "@type": "rdf:Property",
             "rdfs:comment": " Main point of contact that can be contacted for general queries. This would be an event organizer or an administrator.",
+            "@type": "rdf:Property",
             "rdfs:label": "contact",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -782,8 +782,8 @@
         },
         {
             "@id": "bioschemas:deadline",
-            "@type": "rdf:Property",
             "rdfs:comment": " Deadlines dates for this event e.g. application deadline, poster submission, paper submission, early registration",
+            "@type": "rdf:Property",
             "rdfs:label": "deadline",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -799,8 +799,8 @@
         },
         {
             "@id": "bioschemas:eligibility",
-            "@type": "rdf:Property",
             "rdfs:comment": " Defines the type of eligibility to attend this event e.g. first come first served. Please use one of the values from the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
             "rdfs:label": "eligibility",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -813,8 +813,8 @@
         },
         {
             "@id": "bioschemas:eventType",
-            "@type": "rdf:Property",
             "rdfs:comment": " This can be one of 4 options. Please see controlled vocabulary",
+            "@type": "rdf:Property",
             "rdfs:label": "eventType",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -827,8 +827,8 @@
         },
         {
             "@id": "bioschemas:hostInstitution",
-            "@type": "rdf:Property",
             "rdfs:comment": " The organization or institution responsible for hosting the event (not necessarily responsible for organizing).",
+            "@type": "rdf:Property",
             "rdfs:label": "hostInstitution",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -841,8 +841,8 @@
         },
         {
             "@id": "bioschemas:prerequisite",
-            "@type": "rdf:Property",
             "rdfs:comment": " A list of prerequisites to be able to attend the event",
+            "@type": "rdf:Property",
             "rdfs:label": "prerequisite",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -855,8 +855,8 @@
         },
         {
             "@id": "bioschemas:programme",
-            "@type": "rdf:Property",
             "rdfs:comment": " A plan or schedule of activities or procedures to be followed.",
+            "@type": "rdf:Property",
             "rdfs:label": "programme",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -872,8 +872,8 @@
         },
         {
             "@id": "bioschemas:registrationStatus",
-            "@type": "rdf:Property",
             "rdfs:comment": " The status of registration for an event; choose a value from the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
             "rdfs:label": "registrationStatus",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -886,8 +886,8 @@
         },
         {
             "@id": "bioschemas:socialMedia",
-            "@type": "rdf:Property",
             "rdfs:comment": " Link to social media websites like twitter or facebook",
+            "@type": "rdf:Property",
             "rdfs:label": "socialMedia",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -900,8 +900,8 @@
         },
         {
             "@id": "bioschemas:submitter",
-            "@type": "rdf:Property",
             "rdfs:comment": " The person or organization who submits an event to a repository or registry of events (such as iAnn, ISCB).",
+            "@type": "rdf:Property",
             "rdfs:label": "submitter",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"
@@ -917,8 +917,8 @@
         },
         {
             "@id": "bioschemas:topic",
-            "@type": "rdf:Property",
             "rdfs:comment": " The scientific topic the event is about. Please use a term from [EDAM: Topic](http://edamontology.org/topic_0003).",
+            "@type": "rdf:Property",
             "rdfs:label": "topic",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Event"

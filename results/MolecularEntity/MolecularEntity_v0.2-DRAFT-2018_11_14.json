@@ -1,168 +1,25 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:MolecularEntity",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile describing a MolecularEntity This specification describes a MolecularEntity which is any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. Version: 0.2-DRAFT-2018_11_14",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/MolecularEntity/0.2-DRAFT-2018_11_14"
+            ],
+            "rdfs:label": "MolecularEntity",
+            "rdfs:subClassOf": {
+                "@id": "schema:BioChemEntity"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "definedterm": {
-                        "@type": "DefinedTerm",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "inDefinedTermSet": {
-                                "$ref": "#/definitions/definedtermset"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "termCode": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "imageobject": {
-                        "@type": "ImageObject",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "alternateName",
-                    "biochemicalInteraction",
-                    "biochemicalSimilarity",
-                    "biologicalRole",
-                    "chemicalRole",
-                    "description",
-                    "disambiguatingDescription",
-                    "image",
-                    "monoisotopicMolecularWeight",
-                    "potentialUse",
-                    "sameAs"
-                ],
+                "type": "object",
                 "properties": {
                     "alternateName": {
                         "description": " An alias for the item.",
@@ -171,10 +28,10 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -185,10 +42,10 @@
                                 "$ref": "#/definitions/biochementity"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/biochementity"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -199,10 +56,10 @@
                                 "$ref": "#/definitions/biochementity"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/biochementity"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -213,10 +70,10 @@
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -227,10 +84,10 @@
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -252,35 +109,35 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
                     "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/imageobject"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/imageobject"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " An image of the item. This can be a URL or a fully described ImageObject."
+                        ]
                     },
                     "inChI": {
                         "description": "Non-proprietary identifier for chemical substances that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations. ",
@@ -317,10 +174,10 @@
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -328,15 +185,15 @@
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -347,10 +204,10 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -358,19 +215,20 @@
                         "description": " URL of the item.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     }
                 },
+                "required": [],
                 "recommended": [
                     "inChI",
                     "inChIKey",
@@ -379,24 +237,166 @@
                     "molecularWeight",
                     "smiles"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:MolecularEntity",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile describing a MolecularEntity This specification describes a MolecularEntity which is any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. Version: 0.2-DRAFT-2018_11_14",
-            "rdfs:label": "MolecularEntity",
-            "rdfs:subClassOf": {
-                "@id": "schema:BioChemEntity"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/MolecularEntity/0.2-DRAFT-2018_11_14"
-            ]
+                "optional": [
+                    "alternateName",
+                    "biochemicalInteraction",
+                    "biochemicalSimilarity",
+                    "biologicalRole",
+                    "chemicalRole",
+                    "description",
+                    "disambiguatingDescription",
+                    "image",
+                    "monoisotopicMolecularWeight",
+                    "potentialUse",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         },
         {
             "@id": "bioschemas:biochemicalInteraction",
-            "@type": "rdf:Property",
             "rdfs:comment": " A BioChemEntity that is known to interact with the item.",
+            "@type": "rdf:Property",
             "rdfs:label": "biochemicalInteraction",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -409,8 +409,8 @@
         },
         {
             "@id": "bioschemas:biochemicalSimilarity",
-            "@type": "rdf:Property",
             "rdfs:comment": " A similar molecular entity, e.g., obtained by fingerprint similarity algorithms.",
+            "@type": "rdf:Property",
             "rdfs:label": "biochemicalSimilarity",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -423,8 +423,8 @@
         },
         {
             "@id": "bioschemas:biologicalRole",
-            "@type": "rdf:Property",
             "rdfs:comment": " A role played by the molecular entity within a biological context.",
+            "@type": "rdf:Property",
             "rdfs:label": "biologicalRole",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -437,8 +437,8 @@
         },
         {
             "@id": "bioschemas:chemicalRole",
-            "@type": "rdf:Property",
             "rdfs:comment": " A role played by the molecular entity within a chemical context.",
+            "@type": "rdf:Property",
             "rdfs:label": "chemicalRole",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -451,8 +451,8 @@
         },
         {
             "@id": "bioschemas:inChI",
-            "@type": "rdf:Property",
             "rdfs:comment": " Non-proprietary identifier for chemical substances that can be used in printed and electronic data sources thus enabling easier linking of diverse data compilations.",
+            "@type": "rdf:Property",
             "rdfs:label": "inChI",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -465,8 +465,8 @@
         },
         {
             "@id": "bioschemas:inChIKey",
-            "@type": "rdf:Property",
             "rdfs:comment": " InChIKey is a hashed version of the full InChI (using the SHA-256 algorithm)",
+            "@type": "rdf:Property",
             "rdfs:label": "inChIKey",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -479,8 +479,8 @@
         },
         {
             "@id": "bioschemas:iupacName",
-            "@type": "rdf:Property",
             "rdfs:comment": " Systematic method of naming organic chemical compounds as recommended by the International Union of Pure and Applied Chemistry (IUPAC).",
+            "@type": "rdf:Property",
             "rdfs:label": "iupacName",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -493,8 +493,8 @@
         },
         {
             "@id": "bioschemas:molecularFormula",
-            "@type": "rdf:Property",
             "rdfs:comment": " The empirical formula is the simplest whole number ratio of all the atoms in a molecule.",
+            "@type": "rdf:Property",
             "rdfs:label": "molecularFormula",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -507,8 +507,8 @@
         },
         {
             "@id": "bioschemas:molecularWeight",
-            "@type": "rdf:Property",
             "rdfs:comment": " This is the molecular weight of the entity being described, not of the parent. ",
+            "@type": "rdf:Property",
             "rdfs:label": "molecularWeight",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -521,8 +521,8 @@
         },
         {
             "@id": "bioschemas:monoisotopicMolecularWeight",
-            "@type": "rdf:Property",
             "rdfs:comment": " The monoisotopic mass is the sum of the masses of the atoms in a molecule using the unbound, ground-state, rest mass of the principal (most abundant) isotope for each element instead of the isotopic average mass.",
+            "@type": "rdf:Property",
             "rdfs:label": "monoisotopicMolecularWeight",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -535,8 +535,8 @@
         },
         {
             "@id": "bioschemas:potentialUse",
-            "@type": "rdf:Property",
             "rdfs:comment": " Intended use of the molecular entity by humans.",
+            "@type": "rdf:Property",
             "rdfs:label": "potentialUse",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"
@@ -549,8 +549,8 @@
         },
         {
             "@id": "bioschemas:smiles",
-            "@type": "rdf:Property",
             "rdfs:comment": " A specification in form of a line notation for describing the structure of chemical species using short ASCII strings",
+            "@type": "rdf:Property",
             "rdfs:label": "smiles",
             "schema:domainIncludes": {
                 "@id": "bioschemas:MolecularEntity"

@@ -1,130 +1,25 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Workflow",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a workflow in the Life Sciences A workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms. (source Wikipedia.org). Version: 0.1-DRAFT-2019_02_08",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Workflow/0.1-DRAFT-2019_02_08"
+            ],
+            "rdfs:label": "Workflow",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "audience": {
-                        "@type": "schema:Audience",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "imageobject": {
-                        "@type": "ImageObject",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "accessibilityAPI",
-                    "audience",
-                    "sameAs"
-                ],
+                "type": "object",
                 "properties": {
                     "accessibilityAPI": {
                         "description": "If an API is available for the whole workflow, all the available commands should be name Indicates that the resource is compatible with the referenced accessibility API (WebSchemas wiki lists possible values).",
@@ -133,35 +28,35 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "audience": {
+                        "description": "Domain of field this workflow is intended for, e.g., life sciences, software devloper, genomics researchers, medical sciences An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/audience"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/audience"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "Domain of field this workflow is intended for, e.g., life sciences, software devloper, genomics researchers, medical sciences An intended audience, i.e. a group for whom something was created. Supersedes serviceAudience."
+                        ]
                     },
                     "description": {
                         "description": " A description of the item.",
@@ -177,35 +72,35 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
                     "image": {
+                        "description": " An image of the item. This can be a URL or a fully described ImageObject.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/imageobject"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/imageobject"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " An image of the item. This can be a URL or a fully described ImageObject."
+                        ]
                     },
                     "name": {
                         "description": " The name of the item.",
@@ -215,41 +110,146 @@
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
                     "url": {
                         "description": " URL of the item.",
-                        "format": "uri",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     }
                 },
+                "required": [],
                 "recommended": [
                     "description",
                     "image"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Workflow",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a workflow in the Life Sciences A workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information. It can be depicted as a sequence of operations, the work of a person or group, the work of an organization of staff, or one or more simple or complex mechanisms. (source Wikipedia.org). Version: 0.1-DRAFT-2019_02_08",
-            "rdfs:label": "Workflow",
-            "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Workflow/0.1-DRAFT-2019_02_08"
-            ]
+                "optional": [
+                    "accessibilityAPI",
+                    "audience",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "audience": {
+                        "@type": "schema:Audience",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "imageobject": {
+                        "@type": "ImageObject",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         }
     ]
 }

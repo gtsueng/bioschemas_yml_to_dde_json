@@ -1,445 +1,139 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:LabProtocol",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile describing a LabProtocol in Life Sciences. An experimental LabProtocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas. This LabProtocol profile specification presents the markup for describing a LabProtocol type according to Bioschemas. An experimental LabProtocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.<h4>Summary of Changes</h4>    Changes since previous draft 0.5 of the LabProtocols profile:    <ul>      <li>Keywords range updated as per changes on schema.org</li>    </ul> Version: 0.6-DRAFT-2020_12_08",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/LabProtocol/0.6-DRAFT-2020_12_08"
+            ],
+            "rdfs:label": "LabProtocol",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "biosample": {
-                        "@type": "bioschemas:BioSample",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "chemicalsubstance": {
-                        "@type": "bioschemas:ChemicalSubstance",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "creativework": {
-                        "@type": "CreativeWork",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "datetime": {
-                        "@type": "schema:DateTime",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "definedterm": {
-                        "@type": "DefinedTerm",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "inDefinedTermSet": {
-                                "$ref": "#/definitions/definedtermset"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "termCode": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "duration": {
-                        "@type": "schema:Duration",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "howtosection": {
-                        "@type": "schema:HowToSection",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "howtostep": {
-                        "@type": "schema:HowToStep",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "molecularentity": {
-                        "@type": "bioschemas:MolecularEntity",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    },
-                    "softwareapplication": {
-                        "@type": "schema:SoftwareApplication",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "taxon": {
-                        "@type": "bioschemas:Taxon",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            },
-                            "taxonRank": {
-                                "anyOf": [
-                                    {
-                                        "$ref": "#/definitions/propertyvalue"
-                                    },
-                                    {
-                                        "items": {
-                                            "$ref": "#/definitions/propertyvalue"
-                                        },
-                                        "type": "array"
-                                    },
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "items": {
-                                            "type": "string"
-                                        },
-                                        "type": "array"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    },
-                                    {
-                                        "items": {
-                                            "format": "uri",
-                                            "type": "string"
-                                        },
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "taxonRank"
-                        ],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "dateCreated",
-                    "dateModified",
-                    "datePublished",
-                    "description",
-                    "isBasedOn",
-                    "performTime",
-                    "prepTime"
-                ],
+                "type": "object",
                 "properties": {
                     "author": {
+                        "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably."
+                        ]
                     },
                     "bioSampleUsed": {
+                        "description": " BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. ",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/biosample"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/biosample"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/taxon"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/taxon"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/biochementity"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/biochementity"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. "
+                        ]
                     },
                     "citation": {
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+                        ]
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -450,8 +144,8 @@
                         "description": "Last modified date The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -462,15 +156,15 @@
                         "description": "Many is used to cover original printed and electronic publication dates. Date of first broadcast/publication.",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "date",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "date"
+                                }
                             }
                         ]
                     },
@@ -492,60 +186,60 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
                     "isBasedOn": {
+                        "description": "Note: Bioschemas has removed Product from the Expected Types A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": "Note: Bioschemas has removed Product from the Expected Types A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl."
+                        ]
                     },
                     "isPartOf": {
+                        "description": " Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of. Inverse property: hasPart."
+                        ]
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
@@ -557,44 +251,44 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
                     "labEquipmentUsed": {
+                        "description": " A laboratory equipment used by a person to follow one or more steps described in this LabProtocol. ",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " A laboratory equipment used by a person to follow one or more steps described in this LabProtocol. "
+                        ]
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -603,110 +297,110 @@
                                 "$ref": "#/definitions/creativework"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
                     "performTime": {
-                        "$ref": "#/definitions/duration",
-                        "description": " The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in ISO 8601 duration format."
+                        "description": " The length of time it takes to perform instructions or a direction (not including time to prepare the supplies), in ISO 8601 duration format.",
+                        "$ref": "#/definitions/duration"
                     },
                     "prepTime": {
-                        "$ref": "#/definitions/duration",
-                        "description": " The length of time it takes to prepare the items to be used in instructions or a direction, in ISO 8601 duration format."
+                        "description": " The length of time it takes to prepare the items to be used in instructions or a direction, in ISO 8601 duration format.",
+                        "$ref": "#/definitions/duration"
                     },
                     "protocolAdvantage": {
+                        "description": " Situations where the Protocol has been successfully employed including advantageous elements (e.g. better yield, shorter running time) (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol\">here</a>)",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " Situations where the Protocol has been successfully employed including advantageous elements (e.g. better yield, shorter running time) (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol\">here</a>)"
+                        ]
                     },
                     "protocolApplication": {
+                        "description": " Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information  <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol\">here</a>)",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information  <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol\">here</a>)"
+                        ]
                     },
                     "protocolLimitation": {
+                        "description": " Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol\">here</a>)",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol\">here</a>)"
+                        ]
                     },
                     "protocolOutcome": {
+                        "description": " Outcome or expected result by a protocol execution (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol\">here</a>)",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " Outcome or expected result by a protocol execution (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol\">here</a>)"
+                        ]
                     },
                     "protocolPurpose": {
                         "description": " The purpose of the protocol enables readers to make a decision as to the suitability of the protocol to their experimental problem. (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol\">here</a>)",
@@ -720,137 +414,138 @@
                         ]
                     },
                     "reagentUsed": {
+                        "description": " Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as 'A substance used in a chemical reaction to detect, measure, examine, or produce other substances' in <a href=\"https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893\">CHEBI:33893</a>",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/molecularentity"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/molecularentity"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/chemicalsubstance"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/chemicalsubstance"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/biochementity"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/biochementity"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as 'A substance used in a chemical reaction to detect, measure, examine, or produce other substances' in <a href=\"https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893\">CHEBI:33893</a>"
+                        ]
                     },
                     "softwareUsed": {
+                        "description": " Software or tool used as part of the lab protocol to complete a part of it.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/softwareapplication"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/softwareapplication"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " Software or tool used as part of the lab protocol to complete a part of it."
+                        ]
                     },
                     "step": {
+                        "description": " A single step item (as HowToStep, text, document, video, etc.) or a HowToSection.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/howtosection"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/howtosection"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/howtostep"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/howtostep"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " A single step item (as HowToStep, text, document, video, etc.) or a HowToSection."
+                        ]
                     },
                     "totalTime": {
-                        "$ref": "#/definitions/duration",
-                        "description": " The total time required to perform instructions or a direction (including time to prepare the supplies), in ISO 8601 duration format."
+                        "description": " The total time required to perform instructions or a direction (including time to prepare the supplies), in ISO 8601 duration format.",
+                        "$ref": "#/definitions/duration"
                     }
                 },
+                "required": [],
                 "recommended": [
                     "author",
                     "citation",
@@ -865,24 +560,329 @@
                     "step",
                     "totalTime"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:LabProtocol",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile describing a LabProtocol in Life Sciences. An experimental LabProtocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas. This LabProtocol profile specification presents the markup for describing a LabProtocol type according to Bioschemas. An experimental LabProtocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas.<h4>Summary of Changes</h4>    Changes since previous draft 0.5 of the LabProtocols profile:    <ul>      <li>Keywords range updated as per changes on schema.org</li>    </ul> Version: 0.6-DRAFT-2020_12_08",
-            "rdfs:label": "LabProtocol",
-            "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/LabProtocol/0.6-DRAFT-2020_12_08"
-            ]
+                "optional": [
+                    "dateCreated",
+                    "dateModified",
+                    "datePublished",
+                    "description",
+                    "isBasedOn",
+                    "performTime",
+                    "prepTime"
+                ],
+                "definitions": {
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "taxon": {
+                        "@type": "bioschemas:Taxon",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "taxonRank": {
+                                "anyOf": [
+                                    {
+                                        "$ref": "#/definitions/propertyvalue"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/propertyvalue"
+                                        }
+                                    },
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string"
+                                        }
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "taxonRank"
+                        ]
+                    },
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    },
+                    "biosample": {
+                        "@type": "bioschemas:BioSample",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "duration": {
+                        "@type": "schema:Duration",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "molecularentity": {
+                        "@type": "bioschemas:MolecularEntity",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "chemicalsubstance": {
+                        "@type": "bioschemas:ChemicalSubstance",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "softwareapplication": {
+                        "@type": "schema:SoftwareApplication",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "howtosection": {
+                        "@type": "schema:HowToSection",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "howtostep": {
+                        "@type": "schema:HowToStep",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         },
         {
             "@id": "bioschemas:bioSampleUsed",
-            "@type": "rdf:Property",
             "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used.  ",
+            "@type": "rdf:Property",
             "rdfs:label": "bioSampleUsed",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -910,8 +910,8 @@
         },
         {
             "@id": "bioschemas:labEquipmentUsed",
-            "@type": "rdf:Property",
             "rdfs:comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol.  ",
+            "@type": "rdf:Property",
             "rdfs:label": "labEquipmentUsed",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -930,8 +930,8 @@
         },
         {
             "@id": "bioschemas:protocolAdvantage",
-            "@type": "rdf:Property",
             "rdfs:comment": "Situations where the Protocol has been successfully employed including advantageous elements (e.g. better yield, shorter running time) (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#AdvantageOfTheProtocol\">here</a>) ",
+            "@type": "rdf:Property",
             "rdfs:label": "protocolAdvantage",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -947,8 +947,8 @@
         },
         {
             "@id": "bioschemas:protocolApplication",
-            "@type": "rdf:Property",
             "rdfs:comment": "Applications of the protocol list the full diversity of the applications of the method and support if is possible to extend the range of applications of the protocol. e.g. northern blot assays, sequencing, etc. (see more information  <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#ApplicationOfTheProtocol\">here</a>) ",
+            "@type": "rdf:Property",
             "rdfs:label": "protocolApplication",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -964,8 +964,8 @@
         },
         {
             "@id": "bioschemas:protocolLimitation",
-            "@type": "rdf:Property",
             "rdfs:comment": "Situations where the Protocol would be unreliable or otherwise unsuccessful (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#LimitationOfTheProtocol\">here</a>) ",
+            "@type": "rdf:Property",
             "rdfs:label": "protocolLimitation",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -981,8 +981,8 @@
         },
         {
             "@id": "bioschemas:protocolOutcome",
-            "@type": "rdf:Property",
             "rdfs:comment": "Outcome or expected result by a protocol execution (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#OutcomeOfTheProtocol\">here</a>) ",
+            "@type": "rdf:Property",
             "rdfs:label": "protocolOutcome",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -998,8 +998,8 @@
         },
         {
             "@id": "bioschemas:protocolPurpose",
-            "@type": "rdf:Property",
             "rdfs:comment": "The purpose of the protocol enables readers to make a decision as to the suitability of the protocol to their experimental problem. (see more information <a href=\"http://vocab.linkeddata.es/SMARTProtocols/myDocumentation_SPdoc_18Abril2017/index_SPdoc_V4.0.html#PurposeOfProtocol\">here</a>) ",
+            "@type": "rdf:Property",
             "rdfs:label": "protocolPurpose",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -1015,8 +1015,8 @@
         },
         {
             "@id": "bioschemas:reagentUsed",
-            "@type": "rdf:Property",
             "rdfs:comment": "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. A reagent is defined as 'A substance used in a chemical reaction to detect, measure, examine, or produce other substances' in <a href=\"https://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:33893\">CHEBI:33893</a> ",
+            "@type": "rdf:Property",
             "rdfs:label": "reagentUsed",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"
@@ -1044,8 +1044,8 @@
         },
         {
             "@id": "bioschemas:softwareUsed",
-            "@type": "rdf:Property",
             "rdfs:comment": "Software or tool used as part of the lab protocol to complete a part of it. ",
+            "@type": "rdf:Property",
             "rdfs:label": "softwareUsed",
             "schema:domainIncludes": {
                 "@id": "bioschemas:LabProtocol"

@@ -1,134 +1,29 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Journal",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a Journal in Life Sciences. For markup purposes, we are keeping the schema:Periodical type so it will be easily recognized and parsed by search engines. A Journal is a collection of publication issues, publication volumes or scholarly articles, or possibly, although no commonly, any mix from those mentioned.  Version: 0.1-DRAFT-2019_03_15",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Journal/0.1-DRAFT-2019_03_15"
+            ],
+            "rdfs:label": "Journal",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "creativework": {
-                        "@type": "CreativeWork",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "language": {
-                        "@type": "schema:Language",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "publicationissue": {
-                        "@type": "bioschemas:PublicationIssue",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "publicationvolume": {
-                        "@type": "bioschemas:PublicationVolume",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "scholarlyarticle": {
-                        "@type": "bioschemas:ScholarlyArticle",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "thing": {
-                        "@type": "schema:Thing",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "about",
-                    "alternateName",
-                    "editor",
-                    "inLanguage",
-                    "isAccessibleForFree",
-                    "publishingPrinciples",
-                    "sameAs"
-                ],
+                "type": "object",
                 "properties": {
                     "about": {
-                        "$ref": "#/definitions/thing",
-                        "description": "Describes what this Journal is about. The subject matter of the content.\n Inverse property: subjectOf."
+                        "description": "Describes what this Journal is about. The subject matter of the content.\n Inverse property: subjectOf.",
+                        "$ref": "#/definitions/thing"
                     },
                     "alternateName": {
                         "description": " An alias for the item.",
@@ -137,10 +32,10 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -151,71 +46,44 @@
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "hasPart": {
+                        "description": "A Journal has part a PublicationVolume or PublicationIssue or \nScholaryArticle. We recommend to at least include the highest level \n'hasPart', e.g., PublicationVolume. It is also possible, i.e., optional,\n to 'hasPart' to link as well directly to PublicationIssue and \nScholarlyArticle, making it easier to find articles in this journal. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/publicationissue"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/publicationissue"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/publicationvolume"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/publicationvolume"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/scholarlyarticle"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/scholarlyarticle"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "A Journal has part a PublicationVolume or PublicationIssue or \nScholaryArticle. We recommend to at least include the highest level \n'hasPart', e.g., PublicationVolume. It is also possible, i.e., optional,\n to 'hasPart' to link as well directly to PublicationIssue and \nScholarlyArticle, making it easier to find articles in this journal. Indicates an item or CreativeWork that is part of this item, or CreativeWork (in some sense).\n Inverse property: isPartOf."
-                    },
-                    "inLanguage": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/language"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/language"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            }
-                        ],
-                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language."
-                    },
-                    "isAccessibleForFree": {
-                        "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
-                        "type": "boolean"
+                        ]
                     },
                     "issn": {
                         "description": "We recommend to use here the form namespace:id. For instance, issn:2041-1480. The International Standard Serial Number (ISSN) that identifies this serial publication. You can repeat this property to identify different formats of, or the linking ISSN (ISSN-L) for, this serial publication.",
@@ -224,10 +92,37 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
+                    },
+                    "inLanguage": {
+                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/language"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/language"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            }
+                        ]
+                    },
+                    "isAccessibleForFree": {
+                        "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
+                        "type": "boolean"
                     },
                     "keywords": {
                         "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
@@ -240,8 +135,8 @@
                                 "$ref": "#/definitions/creativework"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -250,27 +145,27 @@
                         "type": "string"
                     },
                     "publisher": {
+                        "description": " The publisher of the creative work.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " The publisher of the creative work."
+                        ]
                     },
                     "publishingPrinciples": {
                         "description": " The publishingPrinciples property indicates (typically via URL) a document describing the editorial principles of an Organization (or individual e.g. a Person writing a blog) that relate to their activities as a publisher, e.g. ethics or diversity policies. When applied to a CreativeWork (e.g. NewsArticle) the principles are those of the party primarily responsible for the creation of the CreativeWork.\n\n While such policies are most typically expressed in natural language, sometimes related information (e.g. indicating a funder) can be expressed using schema.org terminology.",
@@ -279,8 +174,8 @@
                                 "$ref": "#/definitions/creativework"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -288,24 +183,25 @@
                         "description": " URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
                     "url": {
                         "description": " URL of the item.",
-                        "format": "uri",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     }
                 },
+                "required": [],
                 "recommended": [
                     "hasPart",
                     "keywords",
@@ -313,19 +209,123 @@
                     "publisher",
                     "url"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Journal",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a Journal in Life Sciences. For markup purposes, we are keeping the schema:Periodical type so it will be easily recognized and parsed by search engines. A Journal is a collection of publication issues, publication volumes or scholarly articles, or possibly, although no commonly, any mix from those mentioned.  Version: 0.1-DRAFT-2019_03_15",
-            "rdfs:label": "Journal",
-            "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Journal/0.1-DRAFT-2019_03_15"
-            ]
+                "optional": [
+                    "about",
+                    "alternateName",
+                    "editor",
+                    "inLanguage",
+                    "isAccessibleForFree",
+                    "publishingPrinciples",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "publicationissue": {
+                        "@type": "bioschemas:PublicationIssue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "publicationvolume": {
+                        "@type": "bioschemas:PublicationVolume",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "scholarlyarticle": {
+                        "@type": "bioschemas:ScholarlyArticle",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "language": {
+                        "@type": "schema:Language",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    }
+                }
+            }
         }
     ]
 }

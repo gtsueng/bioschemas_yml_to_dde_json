@@ -1,162 +1,25 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Beacon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A convention for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Beacon/0.2-DRAFT-2018_04_23"
+            ],
+            "rdfs:label": "Beacon",
+            "rdfs:subClassOf": {
+                "@id": "schema:CreativeWork"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "action": {
-                        "@type": "schema:Action",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "datacatalog": {
-                        "@type": "bioschemas:DataCatalog",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "sameAs"
-                ],
+                "type": "object",
                 "properties": {
                     "aggregator": {
                         "description": "True if Beacon is an agregator of other Beacon Datasets. ",
@@ -169,10 +32,10 @@
                                 "$ref": "#/definitions/datacatalog"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/datacatalog"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -190,8 +53,8 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -206,49 +69,54 @@
                                 "$ref": "#/definitions/action"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/action"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "provider": {
+                        "description": "Contact information for this Beacon. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes [carrier](http://schema.org/carrier).",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "Contact information for this Beacon. The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes [carrier](http://schema.org/carrier)."
+                        ]
+                    },
+                    "type": {
+                        "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
+                        "type": "string",
+                        "format": "uri"
                     },
                     "sameAs": {
                         "description": "Alternative URL for this Beacon. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -259,22 +127,17 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
-                    "type": {
-                        "description": "This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column. ",
-                        "format": "uri",
-                        "type": "string"
-                    },
                     "url": {
                         "description": "Welcome Page of this Beacon. URL of the item.",
-                        "format": "uri",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     },
                     "version": {
                         "description": "Beacon API version number. The version of the CreativeWork embodied by a specified resource.",
@@ -288,30 +151,167 @@
                         ]
                     }
                 },
+                "required": [],
                 "recommended": [
                     "aggregator",
                     "description",
                     "identifier",
                     "version"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Beacon",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A convention for beacon to self-describe.  In this document we propose a simple way for a beacons to self-describe their genetic variant cardinality service for better integration with other beacons within the beacon-network. It builds upon the Beacon service API and uses existing schema.org entities and properties.  Version: 0.2-DRAFT-2018_04_23",
-            "rdfs:label": "Beacon",
-            "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Beacon/0.2-DRAFT-2018_04_23"
-            ]
+                "optional": [
+                    "sameAs"
+                ],
+                "definitions": {
+                    "datacatalog": {
+                        "@type": "bioschemas:DataCatalog",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "action": {
+                        "@type": "schema:Action",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    }
+                }
+            }
         },
         {
             "@id": "bioschemas:aggregator",
-            "@type": "rdf:Property",
             "rdfs:comment": " True if Beacon is an agregator of other Beacon Datasets.",
+            "@type": "rdf:Property",
             "rdfs:label": "aggregator",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Beacon"
@@ -324,8 +324,8 @@
         },
         {
             "@id": "rdf:type",
-            "@type": "rdf:Property",
             "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
             "rdfs:label": "type",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Beacon"
@@ -338,8 +338,8 @@
         },
         {
             "@id": "bioschemas:supportedRefs",
-            "@type": "rdf:Property",
             "rdfs:comment": " Supported Genome ID references.",
+            "@type": "rdf:Property",
             "rdfs:label": "supportedRefs",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Beacon"

@@ -1,200 +1,25 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Study",
+            "@type": "rdfs:Class",
+            "rdfs:comment": " This Study profile presents the marckup when describing a Study Version: 0.1-DRAFT-2018_11_15",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Study/0.1-DRAFT-2018_11_15"
+            ],
+            "rdfs:label": "Study",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "creativework": {
-                        "@type": "CreativeWork",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "datetime": {
-                        "@type": "schema:DateTime",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    },
-                    "study": {
-                        "@type": "bioschemas:Study",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "thing": {
-                        "@type": "schema:Thing",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "trip": {
-                        "@type": "schema:Trip",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "isPartOf",
-                    "relatedStudy"
-                ],
+                "type": "object",
                 "properties": {
                     "about": {
                         "description": "Use to link to the Protein, Gene, etc that the study is about The subject matter of the content.\nInverse property: subjectOf.",
@@ -203,10 +28,10 @@
                                 "$ref": "#/definitions/thing"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/thing"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -217,10 +42,10 @@
                                 "$ref": "#/definitions/propertyvalue"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/propertyvalue"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -250,8 +75,8 @@
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -260,8 +85,8 @@
                     },
                     "datePublished": {
                         "description": " Date of first broadcast/publication.",
-                        "format": "date",
-                        "type": "string"
+                        "type": "string",
+                        "format": "date"
                     },
                     "description": {
                         "description": " A description of the item.",
@@ -277,8 +102,8 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -302,38 +127,38 @@
                         "type": "string"
                     },
                     "relatedStudy": {
+                        "description": " Other related studies.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/study"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/study"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/thing"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/thing"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " Other related studies."
+                        ]
                     },
                     "studyDomain": {
                         "description": "For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121 Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference.",
@@ -342,42 +167,43 @@
                                 "type": "string"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
                     "studyProcess": {
+                        "description": "For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427 A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to.",
                         "anyOf": [
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": "For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427 A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to."
+                        ]
                     },
                     "url": {
                         "description": " URL of the item.",
-                        "format": "uri",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     }
                 },
+                "required": [],
                 "recommended": [
                     "about",
                     "additionalProperty",
@@ -387,24 +213,198 @@
                     "studyProcess",
                     "url"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Study",
-            "@type": "rdfs:Class",
-            "rdfs:comment": " This Study profile presents the marckup when describing a Study Version: 0.1-DRAFT-2018_11_15",
-            "rdfs:label": "Study",
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Study/0.1-DRAFT-2018_11_15"
-            ]
+                "optional": [
+                    "isPartOf",
+                    "relatedStudy"
+                ],
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "trip": {
+                        "@type": "schema:Trip",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "study": {
+                        "@type": "bioschemas:Study",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         },
         {
             "@id": "bioschemas:relatedStudy",
-            "@type": "rdf:Property",
             "rdfs:comment": "Other related studies. ",
+            "@type": "rdf:Property",
             "rdfs:label": "relatedStudy",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"
@@ -423,8 +423,8 @@
         },
         {
             "@id": "bioschemas:studyDomain",
-            "@type": "rdf:Property",
             "rdfs:comment": "Define the domain of the study. For example, the domain could be astrophysics, functional genomics or earth science. Those domains can also have an ontology reference. For example, in the life sciences  we could have\nFunctional Genomics: http://edamontology.org/topic_0085\nProtemics: http://edamontology.org/topic_0121",
+            "@type": "rdf:Property",
             "rdfs:label": "studyDomain",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"
@@ -440,8 +440,8 @@
         },
         {
             "@id": "bioschemas:studyProcess",
-            "@type": "rdf:Property",
             "rdfs:comment": "A process performed as part of an experiment or wider study, i.e. intentionally designed.\nThese processes can have ontology URL attached to. For example, in the life sciences  we could have \nRNA-seq of coding RNA from single cells: http://www.ebi.ac.uk/efo/EFO_0005684\ncase control design: http://www.ebi.ac.uk/efo/EFO_0001427",
+            "@type": "rdf:Property",
             "rdfs:label": "studyProcess",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"

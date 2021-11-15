@@ -1,60 +1,132 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:FormalParameter",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow  Version: 0.1-DRAFT-2020_06_23",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/FormalParameter/0.1-DRAFT-2020_06_23"
+            ],
+            "rdfs:label": "FormalParameter",
+            "rdfs:subClassOf": {
+                "@id": "schema:Intangible"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
+                "type": "object",
+                "properties": {
+                    "additionalType": {
+                        "description": " An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
+                        "type": "string",
+                        "format": "uri"
+                    },
+                    "defaultValue": {
+                        "description": " The default value for the FormalParameter. This is commonly only used for Inputs.",
+                        "$ref": "#/definitions/thing"
+                    },
+                    "description": {
+                        "description": "The description may include verbatim the Workflow's description of the FormalParameter and its type A description of the item.",
+                        "type": "string"
+                    },
+                    "encodingFormat": {
+                        "description": " URLs to accepted formats",
+                        "anyOf": [
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "identifier": {
+                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.",
+                        "anyOf": [
+                            {
+                                "$ref": "#/definitions/propertyvalue"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "$ref": "#/definitions/propertyvalue"
+                                }
+                            },
+                            {
+                                "type": "string"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string"
+                                }
+                            },
+                            {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            {
+                                "type": "array",
+                                "items": {
+                                    "type": "string",
+                                    "format": "uri"
+                                }
+                            }
+                        ]
+                    },
+                    "name": {
+                        "description": " The name of the item.",
+                        "type": "string"
+                    },
+                    "valueRequired": {
+                        "description": " If the FormalParameter must be specified. This is commonly only used for Inputs",
+                        "type": "boolean"
+                    }
+                },
+                "required": [],
+                "recommended": [
+                    "description"
+                ],
+                "optional": [
+                    "defaultValue",
+                    "identifier",
+                    "valueRequired"
+                ],
                 "definitions": {
-                    "categorycode": {
-                        "@type": "CategoryCode",
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
                         "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
                             "name": {
-                                "type": "string"
-                            },
-                            "url": {
                                 "type": "string"
                             }
                         },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
+                        "required": []
                     },
                     "propertyvalue": {
                         "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
+                        "type": "object",
                         "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
                             "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
                                 "type": "string"
                             },
                             "value": {
@@ -70,145 +142,73 @@
                                     }
                                 ]
                             },
+                            "identifier": {
+                                "type": "string"
+                            },
                             "valuereference": {
                                 "oneOf": [
                                     {
                                         "$ref": "#/definitions/categorycode"
                                     },
                                     {
+                                        "type": "array",
                                         "items": [
                                             {
                                                 "$ref": "#/definitions/categorycode"
                                             }
-                                        ],
-                                        "type": "array"
+                                        ]
                                     }
                                 ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
                             }
                         },
-                        "recommended": [
-                            "valueReference"
-                        ],
                         "required": [
                             "name",
                             "value"
                         ],
-                        "type": "object"
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
                     },
-                    "thing": {
-                        "@type": "schema:Thing",
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
                         "properties": {
                             "name": {
                                 "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
                             }
                         },
-                        "required": [],
-                        "type": "object"
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
                     }
-                },
-                "optional": [
-                    "defaultValue",
-                    "identifier",
-                    "valueRequired"
-                ],
-                "properties": {
-                    "additionalType": {
-                        "description": " An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.",
-                        "format": "uri",
-                        "type": "string"
-                    },
-                    "defaultValue": {
-                        "$ref": "#/definitions/thing",
-                        "description": " The default value for the FormalParameter. This is commonly only used for Inputs."
-                    },
-                    "description": {
-                        "description": "The description may include verbatim the Workflow's description of the FormalParameter and its type A description of the item.",
-                        "type": "string"
-                    },
-                    "encodingFormat": {
-                        "anyOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "format": "uri",
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            }
-                        ],
-                        "description": " URLs to accepted formats"
-                    },
-                    "identifier": {
-                        "anyOf": [
-                            {
-                                "$ref": "#/definitions/propertyvalue"
-                            },
-                            {
-                                "items": {
-                                    "$ref": "#/definitions/propertyvalue"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            },
-                            {
-                                "format": "uri",
-                                "type": "string"
-                            },
-                            {
-                                "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
-                            }
-                        ],
-                        "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details."
-                    },
-                    "name": {
-                        "description": " The name of the item.",
-                        "type": "string"
-                    },
-                    "valueRequired": {
-                        "description": " If the FormalParameter must be specified. This is commonly only used for Inputs",
-                        "type": "boolean"
-                    }
-                },
-                "recommended": [
-                    "description"
-                ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:FormalParameter",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow  Version: 0.1-DRAFT-2020_06_23",
-            "rdfs:label": "FormalParameter",
-            "rdfs:subClassOf": {
-                "@id": "schema:Intangible"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/FormalParameter/0.1-DRAFT-2020_06_23"
-            ]
+                }
+            }
         }
     ]
 }

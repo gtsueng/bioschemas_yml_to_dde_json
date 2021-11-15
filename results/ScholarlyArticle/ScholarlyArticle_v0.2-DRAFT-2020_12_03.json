@@ -1,274 +1,25 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:ScholarlyArticle",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a ScholarlyArticle in Life Sciences. A ScholarlyArticle is an article commonly reporting a scientific research, for instance a journal article or thesis. DOI is recommended as official idnetifier (e.g., \"@id\" in JSON-LD)<h4>Summary of Changes</h4>    Changes since previous draft 0.1 of the ScholarlyArticle profile:    <ul>      <li>Add examples</li>      <li>Updates identifier property to MANY so multiple identifiers can be included</li>      <li>Uses name for the title (as per schema.org examples) and keeps headline (optional) for compatibility purposes</li>      <li>Simplifies the profile by removing alternateName and alternativeHeadline as they are not commonly used</li>      <li>Changes sameAs so it is used only for machine-readable representations</li>      <li>Changes url so it is used for any (MANY) web page displaying this article</li>      <li>Changes about to link to SemanticTextAnnotation (rather than SemanticAnnotation as only those based on text are currently supported)</li>      <li>Uses abstract rather than backstory to store the article abstract</li>      <li>Simplifies the profile by removing copyrightHolder and copyrightYear are they are not commonly used</li>      <li>Adds correction so it is possible to link to corrections of this article</li>      <li>Adds editor and funder</li>      <li>Changes isAccessibleForFree to optional as license is more common and has more information</li>      <li>Changes isBasedOn to optional as it is not that common</li>      <li>Changes keywords to MANY as DefinedTerm and URL would require them to be separated in a list rather by only commas</li>      <li>Adds publisher as recommended (mandatory for Google Structured Data)</li>      <li>Removes version</li>      <li>Removes article section as it referes to sports, culture and so in a magazine</li>      <li>Makes pageStart and pageEnd optional</li>      <li>Removes wordCount as not that common</li>      <li>Double checks the property range as some has been updated in schema.org</li>      <li>Changes prepared by L. Garcia</li>    </ul> Version: 0.2-DRAFT-2020_12_03",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/ScholarlyArticle/0.2-DRAFT-2020_12_03"
+            ],
+            "rdfs:label": "ScholarlyArticle",
+            "rdfs:subClassOf": {
+                "@id": "schema:Article"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "categorycode": {
-                        "@type": "CategoryCode",
-                        "properties": {
-                            "codeValue": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "codeValue",
-                            "url"
-                        ],
-                        "type": "object"
-                    },
-                    "correctioncomment": {
-                        "@type": "schema:CorrectionComment",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "creativework": {
-                        "@type": "CreativeWork",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "datetime": {
-                        "@type": "schema:DateTime",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "definedterm": {
-                        "@type": "DefinedTerm",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "inDefinedTermSet": {
-                                "$ref": "#/definitions/definedtermset"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "termCode": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "language": {
-                        "@type": "schema:Language",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "organization": {
-                        "@type": "Organization",
-                        "properties": {
-                            "alternateName": {
-                                "type": "string"
-                            },
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "type": "object"
-                    },
-                    "periodical": {
-                        "@type": "schema:Periodical",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "person": {
-                        "@type": "Person",
-                        "properties": {
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [
-                            "name"
-                        ],
-                        "type": "object"
-                    },
-                    "product": {
-                        "@type": "schema:Product",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "propertyvalue": {
-                        "@type": "PropertyValue",
-                        "optional": [
-                            "unitCode",
-                            "unitText"
-                        ],
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "unitCode": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "format": "uri",
-                                        "type": "string"
-                                    }
-                                ]
-                            },
-                            "unitText": {
-                                "type": "string"
-                            },
-                            "value": {
-                                "oneOf": [
-                                    {
-                                        "type": "string"
-                                    },
-                                    {
-                                        "type": "boolean"
-                                    },
-                                    {
-                                        "type": "number"
-                                    }
-                                ]
-                            },
-                            "valuereference": {
-                                "oneOf": [
-                                    {
-                                        "$ref": "#/definitions/categorycode"
-                                    },
-                                    {
-                                        "items": [
-                                            {
-                                                "$ref": "#/definitions/categorycode"
-                                            }
-                                        ],
-                                        "type": "array"
-                                    }
-                                ]
-                            }
-                        },
-                        "recommended": [
-                            "valueReference"
-                        ],
-                        "required": [
-                            "name",
-                            "value"
-                        ],
-                        "type": "object"
-                    },
-                    "publicationissue": {
-                        "@type": "bioschemas:PublicationIssue",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "publicationvolume": {
-                        "@type": "bioschemas:PublicationVolume",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    },
-                    "thing": {
-                        "@type": "schema:Thing",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "about",
-                    "articleBody",
-                    "correction",
-                    "editor",
-                    "funder",
-                    "headline",
-                    "inLanguage",
-                    "isAccessibleForFree",
-                    "isBasedOn",
-                    "pageEnd",
-                    "pageStart",
-                    "pagination",
-                    "sameAs"
-                ],
+                "type": "object",
                 "properties": {
                     "about": {
                         "description": "SemanticTextAnnotations derived (manually or automatically) from the text of this article The subject matter of the content.\n Inverse property: subjectOf.",
@@ -277,10 +28,10 @@
                                 "$ref": "#/definitions/thing"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/thing"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -295,99 +46,99 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "author": {
+                        "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably."
+                        ]
                     },
                     "citation": {
+                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " A citation or reference to another creative work, such as another publication, web page, scholarly article, etc."
+                        ]
                     },
                     "correction": {
+                        "description": " Indicates a correction to a CreativeWork, either via a CorrectionComment, textually or in another document.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/correctioncomment"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/correctioncomment"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " Indicates a correction to a CreativeWork, either via a CorrectionComment, textually or in another document."
+                        ]
                     },
                     "dateCreated": {
                         "description": " The date on which the CreativeWork was created or the item was added to a DataFeed.",
                         "oneOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
                                 "$ref": "#/definitions/datetime"
@@ -395,34 +146,34 @@
                         ]
                     },
                     "dateModified": {
+                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed.",
                         "anyOf": [
                             {
-                                "format": "date",
-                                "type": "string"
+                                "type": "string",
+                                "format": "date"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "date",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "date"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/datetime"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/datetime"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " The date on which the CreativeWork was most recently modified or when the item's entry was modified within a DataFeed."
+                        ]
                     },
                     "datePublished": {
                         "description": " Date of first broadcast/publication.",
-                        "format": "date",
-                        "type": "string"
+                        "type": "string",
+                        "format": "date"
                     },
                     "editor": {
                         "description": " Specifies the Person who edited the CreativeWork.",
@@ -431,10 +182,10 @@
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
@@ -454,185 +205,185 @@
                         "type": "string"
                     },
                     "identifier": {
+                        "description": "A global a unique identifier for scholarly articles such as DOI. Others such as PMID and PMC are also possible. Use the namespace:id format e.g. doi, pmid and pmc . Follow community recommendations for the namespace The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/propertyvalue"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/propertyvalue"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": "A global a unique identifier for scholarly articles such as DOI. Others such as PMID and PMC are also possible. Use the namespace:id format e.g. doi, pmid and pmc . Follow community recommendations for the namespace The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details."
+                        ]
                     },
                     "inLanguage": {
+                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/language"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/language"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " The language of the content or performance or used in an action. Please use one of the language codes from the IETF BCP 47 standard. See also availableLanguage. Supersedes language."
+                        ]
                     },
                     "isAccessibleForFree": {
                         "description": " A flag to signal that the item, event, or place is accessible for free. Supersedes free.",
                         "type": "boolean"
                     },
                     "isBasedOn": {
+                        "description": "Link to any HTML other than the DOI one as well as to possible web services, such as PMC OAI service, providing machine-readable versions used to create this metadata. A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/product"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/product"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": "Link to any HTML other than the DOI one as well as to possible web services, such as PMC OAI service, providing machine-readable versions used to create this metadata. A resource that was used in the creation of this resource. This term can be repeated for multiple sources. For example, http://example.com/great-multiplication-intro.html. Supersedes isBasedOnUrl."
+                        ]
                     },
                     "isPartOf": {
+                        "description": "We recommend at least to inlcude a link to the most granular possible level, e.g., PublicationIssue if available. It is also possible to use 'isPartOf' to directly link to the PublicationVolume or the Journal (i.e. Periodical), making it easier to find links to each other. It can also be part of another type, e.g., Dataset, if needed. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/publicationvolume"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/publicationvolume"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/publicationissue"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/publicationissue"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/creativework"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/creativework"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/periodical"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/periodical"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": "We recommend at least to inlcude a link to the most granular possible level, e.g., PublicationIssue if available. It is also possible to use 'isPartOf' to directly link to the PublicationVolume or the Journal (i.e. Periodical), making it easier to find links to each other. It can also be part of another type, e.g., Dataset, if needed. Indicates an item or CreativeWork that this item, or CreativeWork (in some sense), is part of.\n Inverse property: hasPart."
+                        ]
                     },
                     "keywords": {
+                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/definedterm"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/definedterm"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
-                        ],
-                        "description": " Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas."
+                        ]
                     },
                     "license": {
                         "description": " A license document that applies to this content, typically indicated by URL.",
@@ -641,8 +392,8 @@
                                 "$ref": "#/definitions/creativework"
                             },
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             }
                         ]
                     },
@@ -679,49 +430,49 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "publisher": {
+                        "description": " The publisher of the creative work.",
                         "anyOf": [
                             {
                                 "$ref": "#/definitions/organization"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/organization"
-                                },
-                                "type": "array"
+                                }
                             },
                             {
                                 "$ref": "#/definitions/person"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "$ref": "#/definitions/person"
-                                },
-                                "type": "array"
+                                }
                             }
-                        ],
-                        "description": " The publisher of the creative work."
+                        ]
                     },
                     "sameAs": {
                         "description": "Any other machine readable description of this article. URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -729,19 +480,20 @@
                         "description": "DOI if possible and any other available page displaying this article URL of the item.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     }
                 },
+                "required": [],
                 "recommended": [
                     "abstract",
                     "author",
@@ -755,19 +507,267 @@
                     "publisher",
                     "url"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:ScholarlyArticle",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a ScholarlyArticle in Life Sciences. A ScholarlyArticle is an article commonly reporting a scientific research, for instance a journal article or thesis. DOI is recommended as official idnetifier (e.g., \"@id\" in JSON-LD)<h4>Summary of Changes</h4>    Changes since previous draft 0.1 of the ScholarlyArticle profile:    <ul>      <li>Add examples</li>      <li>Updates identifier property to MANY so multiple identifiers can be included</li>      <li>Uses name for the title (as per schema.org examples) and keeps headline (optional) for compatibility purposes</li>      <li>Simplifies the profile by removing alternateName and alternativeHeadline as they are not commonly used</li>      <li>Changes sameAs so it is used only for machine-readable representations</li>      <li>Changes url so it is used for any (MANY) web page displaying this article</li>      <li>Changes about to link to SemanticTextAnnotation (rather than SemanticAnnotation as only those based on text are currently supported)</li>      <li>Uses abstract rather than backstory to store the article abstract</li>      <li>Simplifies the profile by removing copyrightHolder and copyrightYear are they are not commonly used</li>      <li>Adds correction so it is possible to link to corrections of this article</li>      <li>Adds editor and funder</li>      <li>Changes isAccessibleForFree to optional as license is more common and has more information</li>      <li>Changes isBasedOn to optional as it is not that common</li>      <li>Changes keywords to MANY as DefinedTerm and URL would require them to be separated in a list rather by only commas</li>      <li>Adds publisher as recommended (mandatory for Google Structured Data)</li>      <li>Removes version</li>      <li>Removes article section as it referes to sports, culture and so in a magazine</li>      <li>Makes pageStart and pageEnd optional</li>      <li>Removes wordCount as not that common</li>      <li>Double checks the property range as some has been updated in schema.org</li>      <li>Changes prepared by L. Garcia</li>    </ul> Version: 0.2-DRAFT-2020_12_03",
-            "rdfs:label": "ScholarlyArticle",
-            "rdfs:subClassOf": {
-                "@id": "schema:Article"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/ScholarlyArticle/0.2-DRAFT-2020_12_03"
-            ]
+                "optional": [
+                    "about",
+                    "articleBody",
+                    "correction",
+                    "editor",
+                    "funder",
+                    "headline",
+                    "inLanguage",
+                    "isAccessibleForFree",
+                    "isBasedOn",
+                    "pageEnd",
+                    "pageStart",
+                    "pagination",
+                    "sameAs"
+                ],
+                "definitions": {
+                    "thing": {
+                        "@type": "schema:Thing",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "organization": {
+                        "@type": "Organization",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "alternateName": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        }
+                    },
+                    "person": {
+                        "@type": "Person",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "affiliation": {
+                                "$ref": "#/definitions/organization"
+                            }
+                        },
+                        "required": [
+                            "name"
+                        ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "correctioncomment": {
+                        "@type": "schema:CorrectionComment",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "propertyvalue": {
+                        "@type": "PropertyValue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "value": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "boolean"
+                                    },
+                                    {
+                                        "type": "number"
+                                    }
+                                ]
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "valuereference": {
+                                "oneOf": [
+                                    {
+                                        "$ref": "#/definitions/categorycode"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": [
+                                            {
+                                                "$ref": "#/definitions/categorycode"
+                                            }
+                                        ]
+                                    }
+                                ]
+                            },
+                            "unitCode": {
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    }
+                                ]
+                            },
+                            "unitText": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "value"
+                        ],
+                        "recommended": [
+                            "valueReference"
+                        ],
+                        "optional": [
+                            "unitCode",
+                            "unitText"
+                        ]
+                    },
+                    "categorycode": {
+                        "@type": "CategoryCode",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "codeValue": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            }
+                        },
+                        "required": [
+                            "name",
+                            "codeValue",
+                            "url"
+                        ]
+                    },
+                    "language": {
+                        "@type": "schema:Language",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "product": {
+                        "@type": "schema:Product",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "publicationvolume": {
+                        "@type": "bioschemas:PublicationVolume",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "publicationissue": {
+                        "@type": "bioschemas:PublicationIssue",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "periodical": {
+                        "@type": "schema:Periodical",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    },
+                    "definedterm": {
+                        "@type": "DefinedTerm",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "termCode": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "inDefinedTermSet": {
+                                "$ref": "#/definitions/definedtermset"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         }
     ]
 }

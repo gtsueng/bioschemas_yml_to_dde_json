@@ -1,56 +1,39 @@
 {
     "@context": {
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "schema": "http://schema.org/"
+        "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [
         {
+            "@id": "bioschemas:Taxon",
+            "@type": "rdfs:Class",
+            "rdfs:comment": "Bioschemas specification for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.1-DRAFT-2018_09_26",
+            "schema:schemaVersion": [
+                "https://bioschemas.org/Profile/Taxon/0.1-DRAFT-2018_09_26"
+            ],
+            "rdfs:label": "Taxon",
+            "rdfs:subClassOf": {
+                "@id": "schema:Thing"
+            },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
-                "definitions": {
-                    "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
-                        "properties": {
-                            "identifier": {
-                                "type": "string"
-                            },
-                            "name": {
-                                "type": "string"
-                            },
-                            "url": {
-                                "format": "uri",
-                                "type": "string"
-                            }
-                        },
-                        "required": [],
-                        "type": "object"
-                    }
-                },
-                "optional": [
-                    "additionalType",
-                    "alternateName",
-                    "sameAs",
-                    "scientificName",
-                    "scientificNameAuthorship",
-                    "taxonRank",
-                    "vernacularName"
-                ],
+                "type": "object",
                 "properties": {
                     "additionalType": {
                         "description": "A Taxon type from a well known vocabulary, e.g. DarwinCore http://rs.tdwg.org/dwc/terms/Taxon or http://rs.tdwg.org/ontology/voc/TaxonConcept#TaxonConcept An additional type for the item, typically used for adding more specific types from external vocabularies in microdata syntax. This is a relationship between something and a class that the thing is in. In RDFa syntax, it is better to use the native RDFa syntax - the 'typeof' attribute - for multiple types. Schema.org tools may have only weaker understanding of extra types, in particular those defined externally.\nBioChemEntity: Whenever a suitable profile exists, the profile type should be used in addition to the BioChemEntity type. Other additional types are always possible via the additionalType property. For instance, http://purl.obolibrary.org/obo/PR_000000001 is the type used for the Protein profile but http://semanticscience.org/resource/SIO_010043 or https://www.wikidata.org/wiki/Q8054 can be used as an additionalType if that results useful somehow to the data providers.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -61,16 +44,16 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     },
                     "isContainedIn": {
-                        "$ref": "#/definitions/biochementity",
-                        "description": "Direct, most proximate higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of."
+                        "description": "Direct, most proximate higher-rank parent taxon Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of.",
+                        "$ref": "#/definitions/biochementity"
                     },
                     "name": {
                         "description": "Taxon name (without authorship nor date information) of the currently valid (zoological) or accepted (botanical) taxon. The name of the item.",
@@ -80,15 +63,15 @@
                         "description": "The taxonomic rank of this name given as a URI from a controled vocabulary, typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs ",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -96,15 +79,15 @@
                         "description": "URL of third-party webpages describing the same taxon URL of a reference Web page that unambiguously indicates the item's identity. E.g. the URL of the item's Wikipedia page, Wikidata entry, or official website.",
                         "oneOf": [
                             {
-                                "format": "uri",
-                                "type": "string"
+                                "type": "string",
+                                "format": "uri"
                             },
                             {
+                                "type": "array",
                                 "items": {
-                                    "format": "uri",
-                                    "type": "string"
-                                },
-                                "type": "array"
+                                    "type": "string",
+                                    "format": "uri"
+                                }
                             }
                         ]
                     },
@@ -122,8 +105,8 @@
                     },
                     "url": {
                         "description": "Link to the webpage associated with this taxon URL of the item.\nBioChemEntity: Link to the official webpage associated to this entity.",
-                        "format": "uri",
-                        "type": "string"
+                        "type": "string",
+                        "format": "uri"
                     },
                     "vernacularName": {
                         "description": "A vernacular (common) name of the taxon ",
@@ -132,37 +115,54 @@
                                 "type": "string"
                             },
                             {
+                                "type": "array",
                                 "items": {
                                     "type": "string"
-                                },
-                                "type": "array"
+                                }
                             }
                         ]
                     }
                 },
+                "required": [],
                 "recommended": [
                     "isContainedIn",
                     "rank",
                     "url"
                 ],
-                "required": [],
-                "type": "object"
-            },
-            "@id": "bioschemas:Taxon",
-            "@type": "rdfs:Class",
-            "rdfs:comment": "Bioschemas specification for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, authority, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. Version: 0.1-DRAFT-2018_09_26",
-            "rdfs:label": "Taxon",
-            "rdfs:subClassOf": {
-                "@id": "schema:Thing"
-            },
-            "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Taxon/0.1-DRAFT-2018_09_26"
-            ]
+                "optional": [
+                    "additionalType",
+                    "alternateName",
+                    "sameAs",
+                    "scientificName",
+                    "scientificNameAuthorship",
+                    "taxonRank",
+                    "vernacularName"
+                ],
+                "definitions": {
+                    "biochementity": {
+                        "@type": "bioschemas:BioChemEntity",
+                        "type": "object",
+                        "properties": {
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            }
+                        },
+                        "required": []
+                    }
+                }
+            }
         },
         {
             "@id": "bioschemas:isContainedIn",
-            "@type": "rdf:Property",
             "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of. Direct, most proximate higher-rank parent taxon",
+            "@type": "rdf:Property",
             "rdfs:label": "isContainedIn",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Taxon"
@@ -175,8 +175,8 @@
         },
         {
             "@id": "rank",
-            "@type": "rdf:Property",
             "rdfs:comment": " The taxonomic rank of this name given as a URI from a controled vocabulary, typically the ranks from TDWG TaxonRank ontology or equivalent Wikidata URIs",
+            "@type": "rdf:Property",
             "rdfs:label": "rank",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Taxon"
@@ -189,8 +189,8 @@
         },
         {
             "@id": "scientificName",
-            "@type": "rdf:Property",
             "rdfs:comment": " Full scientific name, with authorship and date information if known",
+            "@type": "rdf:Property",
             "rdfs:label": "scientificName",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Taxon"
@@ -203,8 +203,8 @@
         },
         {
             "@id": "scientificNameAuthorship",
-            "@type": "rdf:Property",
             "rdfs:comment": " Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: \"(Torr.) J.T. Howell\", \"(Martinovsk\u00fd) Tzvelev\", \"(Gy\u00f6rfi, 1952)\"",
+            "@type": "rdf:Property",
             "rdfs:label": "scientificNameAuthorship",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Taxon"
@@ -217,8 +217,8 @@
         },
         {
             "@id": "taxonRank",
-            "@type": "rdf:Property",
             "rdfs:comment": " The taxonomic rank of this name given as a literal",
+            "@type": "rdf:Property",
             "rdfs:label": "taxonRank",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Taxon"
@@ -231,8 +231,8 @@
         },
         {
             "@id": "vernacularName",
-            "@type": "rdf:Property",
             "rdfs:comment": " A vernacular (common) name of the taxon",
+            "@type": "rdf:Property",
             "rdfs:label": "vernacularName",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Taxon"
