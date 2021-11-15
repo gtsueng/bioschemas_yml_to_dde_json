@@ -609,6 +609,23 @@
                         },
                         "required": []
                     },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
                     "imageobject": {
                         "@type": "ImageObject",
                         "type": "object",

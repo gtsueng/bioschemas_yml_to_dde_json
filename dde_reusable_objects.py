@@ -284,8 +284,29 @@ reusable_definitions= {
         "type": "string",
         "format": "uri"
       },
-      "affiliation": {
-        "$ref": "#/definitions/organization"
+      "mainEntityOfPage": {
+        "anyOf": [
+          {
+              "type": "string",
+              "format": "uri"
+          },
+          {
+              "type": "array",
+              "items": {
+                  "type": "string",
+                  "format": "uri"
+              }
+          },
+          {
+              "$ref": "#/definitions/creativework"
+          },
+          {
+              "type": "array",
+              "items": {
+                  "$ref": "#/definitions/creativework"
+              }
+          }
+        ]
       }
     },
     "required": [
@@ -299,13 +320,13 @@ reusable_definitions= {
       "name": {
         "type": "string"
       },
-      "alternateName": {
+      "legalName": {
         "type": "string"
       },
-      "identifier": {
+      "description": {
         "type": "string"
       },
-      "url": {
+      "sameAs": {
         "type": "string",
         "format": "uri"
       }

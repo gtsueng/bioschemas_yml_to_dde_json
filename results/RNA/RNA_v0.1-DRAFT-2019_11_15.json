@@ -407,6 +407,23 @@
                         },
                         "required": []
                     },
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
                     "sequenceannotation": {
                         "@type": "schema:SequenceAnnotation",
                         "type": "object",

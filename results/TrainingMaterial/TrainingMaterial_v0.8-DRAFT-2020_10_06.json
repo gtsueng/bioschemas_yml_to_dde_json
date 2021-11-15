@@ -455,13 +455,13 @@
                             "name": {
                                 "type": "string"
                             },
-                            "alternateName": {
+                            "legalName": {
                                 "type": "string"
                             },
-                            "identifier": {
+                            "description": {
                                 "type": "string"
                             },
-                            "url": {
+                            "sameAs": {
                                 "type": "string",
                                 "format": "uri"
                             }
@@ -478,13 +478,51 @@
                                 "type": "string",
                                 "format": "uri"
                             },
-                            "affiliation": {
-                                "$ref": "#/definitions/organization"
+                            "mainEntityOfPage": {
+                                "anyOf": [
+                                    {
+                                        "type": "string",
+                                        "format": "uri"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "string",
+                                            "format": "uri"
+                                        }
+                                    },
+                                    {
+                                        "$ref": "#/definitions/creativework"
+                                    },
+                                    {
+                                        "type": "array",
+                                        "items": {
+                                            "$ref": "#/definitions/creativework"
+                                        }
+                                    }
+                                ]
                             }
                         },
                         "required": [
                             "name"
                         ]
+                    },
+                    "creativework": {
+                        "@type": "CreativeWork",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
+                            },
+                            "identifier": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string",
+                                "format": "uri"
+                            }
+                        },
+                        "required": []
                     },
                     "definedterm": {
                         "@type": "DefinedTerm",
@@ -509,18 +547,8 @@
                         },
                         "required": []
                     },
-                    "datetime": {
-                        "@type": "schema:DateTime",
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string"
-                            }
-                        },
-                        "required": []
-                    },
-                    "creativework": {
-                        "@type": "CreativeWork",
+                    "definedtermset": {
+                        "@type": "DefinedTermSet",
                         "type": "object",
                         "properties": {
                             "name": {
@@ -532,6 +560,16 @@
                             "url": {
                                 "type": "string",
                                 "format": "uri"
+                            }
+                        },
+                        "required": []
+                    },
+                    "datetime": {
+                        "@type": "schema:DateTime",
+                        "type": "object",
+                        "properties": {
+                            "name": {
+                                "type": "string"
                             }
                         },
                         "required": []
