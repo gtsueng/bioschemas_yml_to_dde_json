@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Workflow",
             "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
+                "@id": "schema:SoftwareSourceCode"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

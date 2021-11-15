@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Course",
             "rdfs:subClassOf": {
-                "@id": "schema:Course"
+                "@id": "bioschemas:Course"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -715,6 +715,6 @@
                     }
                 }
             }
-        } 
+        }
     ]
 }

@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {
-                "@id": "schema:Intangible"
+                "@id": "bioschemas:FormalParameter"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

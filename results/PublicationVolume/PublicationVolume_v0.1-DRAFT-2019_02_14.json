@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "PublicationVolume",
             "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
+                "@id": "bioschemas:PublicationVolume"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

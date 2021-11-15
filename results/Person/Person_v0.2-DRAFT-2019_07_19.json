@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Person",
             "rdfs:subClassOf": {
-                "@id": "schema:Thing"
+                "@id": "bioschemas:Person"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

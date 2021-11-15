@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "ProteinAnnotation",
             "rdfs:subClassOf": {
-                "@id": "schema:Thing"
+                "@id": "schema:BioChemEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Beacon",
             "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
+                "@id": "bioschemas:DataCatalog"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

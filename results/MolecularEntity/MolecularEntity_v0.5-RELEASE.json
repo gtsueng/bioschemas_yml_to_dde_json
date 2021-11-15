@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "MolecularEntity",
             "rdfs:subClassOf": {
-                "@id": "schema:BioChemEntity"
+                "@id": "bioschemas:MolecularEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
