@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "DataCatalog",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:DataCatalog"
+                "@id": "schema:DataCatalog"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

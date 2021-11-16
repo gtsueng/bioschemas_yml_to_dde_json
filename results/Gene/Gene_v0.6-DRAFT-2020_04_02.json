@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Gene",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:Gene"
+                "@id": "schema:Gene"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

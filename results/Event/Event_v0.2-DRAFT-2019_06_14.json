@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "Event",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:Event"
+                "@id": "schema:Event"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

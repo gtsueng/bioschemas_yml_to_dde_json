@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "PublicationVolume",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:PublicationVolume"
+                "@id": "schema:PublicationVolume"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

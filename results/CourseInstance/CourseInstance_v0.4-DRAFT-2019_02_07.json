@@ -15,7 +15,7 @@
             ],
             "rdfs:label": "CourseInstance",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:CourseInstance"
+                "@id": "schema:CourseInstance"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
