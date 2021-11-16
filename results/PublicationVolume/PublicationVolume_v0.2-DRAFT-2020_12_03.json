@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a PublicationVolume in Life Sciences. A PublicationVolume is a collection of publication issues, or scholarly articles, or possibly, although no commonly, any mix from those mentioned. It is commonly part of a Journal.<h4>Summary of Changes</h4>    Changes since previous draft 0.1 of the PublicationVolumen profile:    <ul>      <li>Add examples</li>      <li>Keywords range updated as per changes on schema.org</li>    </ul> Version: 0.2-DRAFT-2020_12_03",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/PublicationVolume/0.2-DRAFT-2020_12_03"
+                "https://bioschemas.org/profiles/PublicationVolume/0.2-DRAFT-2020_12_03"
             ],
             "rdfs:label": "PublicationVolume",
             "rdfs:subClassOf": {

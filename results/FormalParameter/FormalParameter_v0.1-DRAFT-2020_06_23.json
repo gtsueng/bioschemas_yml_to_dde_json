@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "A formal parameter is a slot that may be satisfied when the workflow is run. It appears as an Input or Output of a Workflow  Version: 0.1-DRAFT-2020_06_23",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/FormalParameter/0.1-DRAFT-2020_06_23"
+                "https://bioschemas.org/profiles/FormalParameter/0.1-DRAFT-2020_06_23"
             ],
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {

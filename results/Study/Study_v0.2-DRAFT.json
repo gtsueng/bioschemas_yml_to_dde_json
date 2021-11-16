@@ -12,7 +12,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": " This Study profile presents the markup when describing a Study Version: 0.2-DRAFT",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Study/0.2-DRAFT"
+                "https://bioschemas.org/profiles/Study/0.2-DRAFT"
             ],
             "rdfs:label": "Study",
             "rdfs:subClassOf": {

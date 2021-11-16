@@ -12,7 +12,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification describing LabProtocol in the life-science. An experimental protocol is a sequence of tasks and operations executed to perform experimental research in biological and biomedical areas. Experimental protocols are fundamental information structures that support the description of the processes by means of which results are generated in experimental research [1]. Experimental protocols describe how the data were produced, the steps undertaken and conditions under which these steps were carried out.<br />[1]  Giraldo, O., Garc\u00eda, A., L\u00f3pez, F., & Corcho, O. (2017). Using semantics for representing experimental protocols. Journal of Biomedical Semantics, 8, 52. <a href=\"http://doi.org/10.1186/s13326-017-0160-y\">http://doi.org/10.1186/s13326-017-0160-y</a> Version: 0.2-DRAFT-2018_03_09",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/LabProtocol/0.2-DRAFT-2018_03_09"
+                "https://bioschemas.org/profiles/LabProtocol/0.2-DRAFT-2018_03_09"
             ],
             "rdfs:label": "LabProtocol",
             "rdfs:subClassOf": {

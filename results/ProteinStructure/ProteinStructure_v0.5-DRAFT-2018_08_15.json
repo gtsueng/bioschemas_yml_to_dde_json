@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification describing a ProteinStructure (BioChemEntity profile) in Life Sciences This profile specification presents the BioChemEntity usage when describing a Protein structure. Version: 0.5-DRAFT-2018_08_15",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/ProteinStructure/0.5-DRAFT-2018_08_15"
+                "https://bioschemas.org/profiles/ProteinStructure/0.5-DRAFT-2018_08_15"
             ],
             "rdfs:label": "ProteinStructure",
             "rdfs:subClassOf": {

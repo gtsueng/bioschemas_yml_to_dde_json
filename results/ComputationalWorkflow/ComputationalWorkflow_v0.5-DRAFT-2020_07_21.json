@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification for describing a computational workflow in the Life Sciences A computational workflow consists of an orchestrated and repeatable pattern of activity enabled by the systematic organization of resources into processes that transform materials, provide services, or process information (source Wikipedia.org). It is executed by a computational process and is thus distinct from laboratory or business workflows. Version: 0.5-DRAFT-2020_07_21",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/ComputationalWorkflow/0.5-DRAFT-2020_07_21"
+                "https://bioschemas.org/profiles/ComputationalWorkflow/0.5-DRAFT-2020_07_21"
             ],
             "rdfs:label": "ComputationalWorkflow",
             "rdfs:subClassOf": {

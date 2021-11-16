@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification describing a Gene (BioChemEntity profile) in Life Sciences This Gene profile specification presents the BioChemEntity usage when describing a Gene. Version: 0.3-DRAFT-2018_08_21",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Gene/0.3-DRAFT-2018_08_21"
+                "https://bioschemas.org/profiles/Gene/0.3-DRAFT-2018_08_21"
             ],
             "rdfs:label": "Gene",
             "rdfs:subClassOf": {

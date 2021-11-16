@@ -12,7 +12,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a LabProtocol in Life Sciences This LabProtocol profile specification presents the markup for describing a LabProtocol Version: 0.3-DRAFT-2019_06_14",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/LabProtocol/0.3-DRAFT-2019_06_14"
+                "https://bioschemas.org/profiles/LabProtocol/0.3-DRAFT-2019_06_14"
             ],
             "rdfs:label": "LabProtocol",
             "rdfs:subClassOf": {

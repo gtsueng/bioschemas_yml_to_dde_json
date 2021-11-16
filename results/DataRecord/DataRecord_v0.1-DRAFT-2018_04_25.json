@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification describing a record in a dataset. A Record acts itself as a dataset although it refers to what could be seen as the minimum compact, complete and auto-descriptive unit in a dataset, i.e., a record. Bioschemas usage In Life Sciences, records will represent a BioChemEntity. Version: 0.1-DRAFT-2018_04_25",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/DataRecord/0.1-DRAFT-2018_04_25"
+                "https://bioschemas.org/profiles/DataRecord/0.1-DRAFT-2018_04_25"
             ],
             "rdfs:label": "DataRecord",
             "rdfs:subClassOf": {

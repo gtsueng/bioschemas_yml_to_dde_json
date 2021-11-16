@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. A FormalParameter is an identified variable used to stand for the actual value(s) are consumed/produced by a ComputationalWorkflow Version: 0.1-DRAFT-2020_07_21",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/FormalParameter/0.1-DRAFT-2020_07_21"
+                "https://bioschemas.org/profiles/FormalParameter/0.1-DRAFT-2020_07_21"
             ],
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {

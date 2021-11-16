@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a MolecularEntity Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity. (Source: <a href='https://www.ebi.ac.uk/chebi/searchId.do?chebiId=23367'>ChEBI:23367</a>) <h4>Summary of Changes</h4> This is the first release of the MolecularEntity profile. There are no changes from the previous draft. Version: 0.5-RELEASE",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/MolecularEntity/0.5-RELEASE"
+                "https://bioschemas.org/profiles/MolecularEntity/0.5-RELEASE"
             ],
             "rdfs:label": "MolecularEntity",
             "rdfs:subClassOf": {

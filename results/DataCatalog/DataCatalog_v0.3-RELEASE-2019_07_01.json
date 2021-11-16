@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": " A guide for how to describe data catalogs/repositories in the life-sciences using Schema.org-like annotation. Version: 0.3-RELEASE-2019_07_01",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/DataCatalog/0.3-RELEASE-2019_07_01"
+                "https://bioschemas.org/profiles/DataCatalog/0.3-RELEASE-2019_07_01"
             ],
             "rdfs:label": "DataCatalog",
             "rdfs:subClassOf": {

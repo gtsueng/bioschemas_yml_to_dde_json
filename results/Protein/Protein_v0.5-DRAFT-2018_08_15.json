@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas specification describing a Protein (BioChemEntity profile) in Life Sciences. This Protein profile specification presents the BioChemEntity usage when describing a Protein. Version: 0.5-DRAFT-2018_08_15",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Protein/0.5-DRAFT-2018_08_15"
+                "https://bioschemas.org/profiles/Protein/0.5-DRAFT-2018_08_15"
             ],
             "rdfs:label": "Protein",
             "rdfs:subClassOf": {

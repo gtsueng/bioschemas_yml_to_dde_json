@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a ScholarlyArticle in Life Sciences. A ScholarlyArticle is an article commonly reporting a scientific research, for instance a journal article or thesis. Version: 0.1-DRAFT-2019_02_08",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/ScholarlyArticle/0.1-DRAFT-2019_02_08"
+                "https://bioschemas.org/profiles/ScholarlyArticle/0.1-DRAFT-2019_02_08"
             ],
             "rdfs:label": "ScholarlyArticle",
             "rdfs:subClassOf": {

@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile, based on Biotea model, describing a semantic annotation associated to a piece of text in a ScholarlyArticle in Life Sciences. A SemanticTExtAnnotation currently corresponds to an expression identified in a ScholarlyArticle and associated to an ontology term. It could apply as well to documents other than ScholarlyArticle, for instant patents and so. Version: 0.1-DRAFT-2019_02_08",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/SemanticTextAnnotation/0.1-DRAFT-2019_02_08"
+                "https://bioschemas.org/profiles/SemanticTextAnnotation/0.1-DRAFT-2019_02_08"
             ],
             "rdfs:label": "SemanticTextAnnotation",
             "rdfs:subClassOf": {

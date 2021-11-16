@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile for describing a biological taxon This profile aims to denote a taxon by common properties such as its scientific name, taxonomic rank and vernacular names. It is also a means to link to existing taxonomic registers where each taxon has a URI. <br/>Changes in 0.4: <ul><li>taxonRank promoted to minimal marginality</li><li>parentTaxon, childTaxon and taxonRank are moved to namespace schema.org.</li><li>scientificName and scientificNameAuthorship removed</li></ul> Version: 0.4-DRAFT-2019_06_19",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Taxon/0.4-DRAFT-2019_06_19"
+                "https://bioschemas.org/profiles/Taxon/0.4-DRAFT-2019_06_19"
             ],
             "rdfs:label": "Taxon",
             "rdfs:subClassOf": {

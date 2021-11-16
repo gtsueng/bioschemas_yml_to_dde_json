@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a Protein in Life Sciences. This Protein profile specification presents the most common properties used for a Protein plus examples on how to use them. Version: 0.9-DRAFT-2019_08_20",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Protein/0.9-DRAFT-2019_08_20"
+                "https://bioschemas.org/profiles/Protein/0.9-DRAFT-2019_08_20"
             ],
             "rdfs:label": "Protein",
             "rdfs:subClassOf": {

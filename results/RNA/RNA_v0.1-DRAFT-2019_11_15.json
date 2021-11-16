@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "  Version: 0.1-DRAFT-2019_11_15",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/RNA/0.1-DRAFT-2019_11_15"
+                "https://bioschemas.org/profiles/RNA/0.1-DRAFT-2019_11_15"
             ],
             "rdfs:label": "RNA",
             "rdfs:subClassOf": {

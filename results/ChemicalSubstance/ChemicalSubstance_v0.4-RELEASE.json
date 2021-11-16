@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a ChemicalEntity This profile describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: <a href='https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999'>ChEBI:59999</a>). <h4>Summary of Changes</h4> This is the first release of the ChemicalSubstance profile. There are no changes from the previous draft.  Version: 0.4-RELEASE",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/ChemicalSubstance/0.4-RELEASE"
+                "https://bioschemas.org/profiles/ChemicalSubstance/0.4-RELEASE"
             ],
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {

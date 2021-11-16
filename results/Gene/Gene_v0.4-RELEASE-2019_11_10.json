@@ -11,7 +11,7 @@
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a Gene in Life Sciences This Gene profile specification presents the markup for describing a Gene. Version: 0.4-RELEASE-2019_11_10",
             "schema:schemaVersion": [
-                "https://bioschemas.org/Profile/Gene/0.4-RELEASE-2019_11_10"
+                "https://bioschemas.org/profiles/Gene/0.4-RELEASE-2019_11_10"
             ],
             "rdfs:label": "Gene",
             "rdfs:subClassOf": {
