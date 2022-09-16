@@ -1,0 +1,1539 @@
+{
+  "text": {
+    "type": "string"
+  },
+  "url": {
+    "type": "string",
+    "format": "uri"
+  },
+  "propertyvalue": {
+    "@type": "PropertyValue",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "creativework": {
+    "@type": "CreativeWork",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "definedterm": {
+    "@type": "DefinedTerm",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "organization": {
+    "@type": "Organization",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "legalName": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "sameAs": {
+        "type": "string",
+        "format": "uri"
+      },
+      "topic": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "type": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      }
+    },
+    "required": [
+      "description",
+      "legalName",
+      "name",
+      "sameAs",
+      "topic",
+      "type"
+    ]
+  },
+  "person": {
+    "@type": "Person",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "mainEntityOfPage": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "CreativeWork"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "description",
+      "mainEntityOfPage",
+      "name"
+    ]
+  },
+  "date": {
+    "type": "string",
+    "format": "date"
+  },
+  "biochementity": {
+    "@type": "BioChemEntity",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "datetime": {
+    "@type": "DateTime",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "imageobject": {
+    "@type": "ImageObject",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "integer": {
+    "type": "integer"
+  },
+  "thing": {
+    "@type": "Thing",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "product": {
+    "@type": "Product",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "taxon": {
+    "@type": "Taxon",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      },
+      "taxonRank": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      }
+    },
+    "required": [
+      "name",
+      "taxonRank"
+    ]
+  },
+  "place": {
+    "@type": "Place",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "boolean": {
+    "type": "boolean"
+  },
+  "language": {
+    "@type": "Language",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "medicalcondition": {
+    "@type": "MedicalCondition",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "event": {
+    "@type": "Event",
+    "type": "object",
+    "properties": {
+      "contact": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Organization"
+          },
+          {
+            "type": "object",
+            "@type": "Person"
+          }
+        ]
+      },
+      "description": {
+        "type": "string"
+      },
+      "endDate": {
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "object",
+            "@type": "DateTime"
+          }
+        ]
+      },
+      "eventType": {
+        "type": "object",
+        "@type": "EventType"
+      },
+      "hostInstitution": {
+        "type": "object",
+        "@type": "Organization"
+      },
+      "location": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Place"
+          },
+          {
+            "type": "object",
+            "@type": "PostalAddress"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "startDate": {
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "object",
+            "@type": "DateTime"
+          }
+        ]
+      }
+    },
+    "required": [
+      "contact",
+      "description",
+      "endDate",
+      "eventType",
+      "hostInstitution",
+      "location",
+      "name",
+      "startDate"
+    ]
+  },
+  "duration": {
+    "@type": "Duration",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "gene": {
+    "@type": "Gene",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "identifier",
+      "name"
+    ]
+  },
+  "postaladdress": {
+    "@type": "PostalAddress",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "softwareapplication": {
+    "@type": "SoftwareApplication",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "number": {
+    "type": "number"
+  },
+  "publicationissue": {
+    "@type": "PublicationIssue",
+    "type": "object",
+    "properties": {
+      "issueNumber": {
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "issueNumber"
+    ]
+  },
+  "publicationvolume": {
+    "@type": "PublicationVolume",
+    "type": "object",
+    "properties": {
+      "url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "volumeNumber": {
+        "oneOf": [
+          {
+            "type": "integer"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "url",
+      "volumeNumber"
+    ]
+  },
+  "contactpoint": {
+    "@type": "ContactPoint",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "journal": {
+    "@type": "Journal",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "identifier",
+      "name"
+    ]
+  },
+  "computerlanguage": {
+    "@type": "ComputerLanguage",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "scholarlyarticle": {
+    "@type": "ScholarlyArticle",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "identifier",
+      "name"
+    ]
+  },
+  "offer": {
+    "@type": "Offer",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "programmembership": {
+    "@type": "ProgramMembership",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "audience": {
+    "@type": "Audience",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "mediaobject": {
+    "@type": "MediaObject",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "biochementity orurl": {
+    "@type": "BioChemEntity orURL",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "taxonname": {
+    "@type": "TaxonName",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  },
+  "trip": {
+    "@type": "Trip",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "formalparameter": {
+    "@type": "FormalParameter",
+    "type": "object",
+    "properties": {
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "name"
+    ]
+  },
+  "propertyvalue ortext orurl": {
+    "@type": "PropertyValue orText orURL",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "quantitativevalue": {
+    "@type": "QuantitativeValue",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "rna": {
+    "@type": "RNA",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "categorycode": {
+    "@type": "CategoryCode",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "datadownload": {
+    "@type": "DataDownload",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "datacatalog": {
+    "@type": "DataCatalog",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "keywords": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "provider": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Organization"
+          },
+          {
+            "type": "object",
+            "@type": "Person"
+          }
+        ]
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "description",
+      "keywords",
+      "name",
+      "provider",
+      "url"
+    ]
+  },
+  "dna": {
+    "@type": "DNA",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "sequencematchingmodel": {
+    "@type": "SequenceMatchingModel",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "study": {
+    "@type": "Study",
+    "type": "object",
+    "properties": {
+      "author": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Organization"
+          },
+          {
+            "type": "object",
+            "@type": "Person"
+          }
+        ]
+      },
+      "datePublished": {
+        "type": "string",
+        "format": "date"
+      },
+      "description": {
+        "type": "string"
+      },
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "studyDomain": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "studySubject": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "BioChemEntity"
+          },
+          {
+            "type": "object",
+            "@type": "MedicalEntity"
+          }
+        ]
+      }
+    },
+    "required": [
+      "author",
+      "datePublished",
+      "description",
+      "identifier",
+      "name",
+      "studyDomain",
+      "studySubject"
+    ]
+  },
+  "review": {
+    "@type": "Review",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "pricespecification": {
+    "@type": "PriceSpecification",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "sequenceannotation": {
+    "@type": "SequenceAnnotation",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "place orpostaladdress orpropertyvalue ortext orurl": {
+    "@type": "Place orPostalAddress orPropertyValue orText orURL",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "action": {
+    "@type": "Action",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "howtostep": {
+    "@type": "HowToStep",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "periodical": {
+    "@type": "Periodical",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "datarecord orurl": {
+    "@type": "DataRecord orURL",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "aggregaterating": {
+    "@type": "AggregateRating",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "alignmentobject": {
+    "@type": "AlignmentObject",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "anatomicalstructure": {
+    "@type": "AnatomicalStructure",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "anatomicalsystem": {
+    "@type": "AnatomicalSystem",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "biosample": {
+    "@type": "BioSample",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "description",
+      "identifier",
+      "name",
+      "url"
+    ]
+  },
+  "chemicalsubstance": {
+    "@type": "ChemicalSubstance",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "identifier",
+      "name",
+      "url"
+    ]
+  },
+  "comment": {
+    "@type": "Comment",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "correctioncomment": {
+    "@type": "CorrectionComment",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "course": {
+    "@type": "Course",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "keywords": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "description",
+      "keywords",
+      "name"
+    ]
+  },
+  "courseinstance": {
+    "@type": "CourseInstance",
+    "type": "object",
+    "properties": {
+      "courseMode": {
+        "oneOf": [
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "location": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Place"
+          },
+          {
+            "type": "object",
+            "@type": "PostalAddress"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "object",
+            "@type": "VirtualLocation"
+          }
+        ]
+      }
+    },
+    "required": [
+      "courseMode",
+      "location"
+    ]
+  },
+  "dataset": {
+    "@type": "Dataset",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "keywords": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "license": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "CreativeWork"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "description",
+      "identifier",
+      "keywords",
+      "license",
+      "name",
+      "url"
+    ]
+  },
+  "ownershipinfo": {
+    "@type": "OwnershipInfo",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "demand": {
+    "@type": "Demand",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "educationaloccupationalcredential": {
+    "@type": "EducationalOccupationalCredential",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "eventstatustype": {
+    "@type": "EventStatusType",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "eventtype": {
+    "@type": "EventType",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "gendertype": {
+    "@type": "GenderType",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "grant": {
+    "@type": "Grant",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "howtosection": {
+    "@type": "HowToSection",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "administrativearea": {
+    "@type": "AdministrativeArea",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "medicalentity": {
+    "@type": "MedicalEntity",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "molecularentity": {
+    "@type": "MolecularEntity",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "identifier",
+      "name",
+      "url"
+    ]
+  },
+  "virtuallocation": {
+    "@type": "VirtualLocation",
+    "type": "object",
+    "properties": {},
+    "required": []
+  },
+  "beacon": {
+    "@type": "Beacon",
+    "type": "object",
+    "properties": {
+      "dataset": {
+        "type": "object",
+        "@type": "DataCatalog"
+      },
+      "name": {
+        "type": "string"
+      },
+      "potentialAction": {
+        "type": "object",
+        "@type": "Action"
+      },
+      "provider": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Organization"
+          },
+          {
+            "type": "object",
+            "@type": "Person"
+          }
+        ]
+      },
+      "rdf:type": {
+        "type": "string",
+        "format": "uri"
+      },
+      "supportedRefs": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "dataset",
+      "name",
+      "potentialAction",
+      "provider",
+      "rdf:type",
+      "supportedRefs",
+      "url"
+    ]
+  },
+  "computationaltool": {
+    "@type": "ComputationalTool",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "description",
+      "name",
+      "url"
+    ]
+  },
+  "computationalworkflow": {
+    "@type": "ComputationalWorkflow",
+    "type": "object",
+    "properties": {
+      "creator": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Organization"
+          },
+          {
+            "type": "object",
+            "@type": "Person"
+          }
+        ]
+      },
+      "dateCreated": {
+        "oneOf": [
+          {
+            "type": "string",
+            "format": "date"
+          },
+          {
+            "type": "object",
+            "@type": "DateTime"
+          }
+        ]
+      },
+      "input": {
+        "type": "object",
+        "@type": "FormalParameter"
+      },
+      "license": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "CreativeWork"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      },
+      "output": {
+        "type": "object",
+        "@type": "FormalParameter"
+      },
+      "programmingLanguage": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "ComputerLanguage"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "sdPublisher": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "Organization"
+          },
+          {
+            "type": "object",
+            "@type": "Person"
+          }
+        ]
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      },
+      "version": {
+        "oneOf": [
+          {
+            "type": "number"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      }
+    },
+    "required": [
+      "creator",
+      "dateCreated",
+      "input",
+      "license",
+      "name",
+      "output",
+      "programmingLanguage",
+      "sdPublisher",
+      "url",
+      "version"
+    ]
+  },
+  "datarecord": {
+    "@type": "DataRecord",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "mainEntity": {
+        "type": "object",
+        "@type": "Thing"
+      }
+    },
+    "required": [
+      "identifier",
+      "mainEntity"
+    ]
+  },
+  "labprotocol": {
+    "@type": "LabProtocol",
+    "type": "object",
+    "properties": {
+      "bioSampleUsed": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "BioChemEntity"
+          },
+          {
+            "type": "object",
+            "@type": "BioSample"
+          },
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          },
+          {
+            "type": "object",
+            "@type": "Taxon"
+          }
+        ]
+      },
+      "headline": {
+        "type": "string"
+      },
+      "keywords": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "labEquipmentUsed": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "protocolPurpose": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "CreativeWork"
+          },
+          {
+            "type": "string"
+          }
+        ]
+      },
+      "reagentUsed": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "BioChemEntity"
+          },
+          {
+            "type": "object",
+            "@type": "MolecularEntity"
+          },
+          {
+            "type": "object",
+            "@type": "ChemicalSubstance"
+          },
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      }
+    },
+    "required": [
+      "bioSampleUsed",
+      "headline",
+      "keywords",
+      "labEquipmentUsed",
+      "protocolPurpose",
+      "reagentUsed"
+    ]
+  },
+  "phenotype": {
+    "@type": "Phenotype",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "identifier",
+      "name"
+    ]
+  },
+  "protein": {
+    "@type": "Protein",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "identifier",
+      "name"
+    ]
+  },
+  "proteinannotation": {
+    "@type": "ProteinAnnotation",
+    "type": "object",
+    "properties": {
+      "additionalType": {
+        "type": "string",
+        "format": "uri"
+      },
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "rdf:type": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "additionalType",
+      "identifier",
+      "rdf:type"
+    ]
+  },
+  "proteinstructure": {
+    "@type": "ProteinStructure",
+    "type": "object",
+    "properties": {
+      "identifier": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "PropertyValue"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      }
+    },
+    "required": [
+      "identifier"
+    ]
+  },
+  "semantictextannotation": {
+    "@type": "SemanticTextAnnotation",
+    "type": "object",
+    "properties": {
+      "mainEntity": {
+        "type": "object",
+        "@type": "DefinedTerm"
+      },
+      "text": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "mainEntity",
+      "text"
+    ]
+  },
+  "tool": {
+    "@type": "Tool",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "name": {
+        "type": "string"
+      },
+      "url": {
+        "type": "string",
+        "format": "uri"
+      }
+    },
+    "required": [
+      "description",
+      "name",
+      "url"
+    ]
+  },
+  "trainingmaterial": {
+    "@type": "TrainingMaterial",
+    "type": "object",
+    "properties": {
+      "description": {
+        "type": "string"
+      },
+      "keywords": {
+        "oneOf": [
+          {
+            "type": "object",
+            "@type": "DefinedTerm"
+          },
+          {
+            "type": "string"
+          },
+          {
+            "type": "string",
+            "format": "uri"
+          }
+        ]
+      },
+      "name": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "description",
+      "keywords",
+      "name"
+    ]
+  }
+}
