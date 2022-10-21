@@ -38,7 +38,7 @@
             ],
             "owl:cardinality": "many"
           },
-          "biochemicalInteraction": {
+          "bioChemInteraction": {
             "description": "Interaction of the molecular entity with other BioChemical entities. ",
             "oneOf": [
               {
@@ -250,7 +250,7 @@
           "bioChemSimilarity",
           "biologicalRole",
           "disambiguatingDescription",
-          "biochemicalInteraction",
+          "bioChemInteraction",
           "chemicalRole",
           "description",
           "image",
