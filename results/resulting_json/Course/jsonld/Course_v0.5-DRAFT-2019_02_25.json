@@ -590,26 +590,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:skillLevel",
-            "rdfs:comment": "The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced' The students expected level of ability in the topic being taught. Skill levels are 'beginner', 'intermediate' or 'advanced'",
-            "@type": "rdf:Property",
-            "rdfs:label": "skillLevel",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
         }
     ]
 }

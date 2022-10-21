@@ -591,20 +591,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:mentions",
-            "rdfs:comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept. Datasets, tools, etc, to which are used by or referred to by this course instance.\n\n(courseInstance) mentions can be used to override (course) mentions for specific course instances.",
-            "@type": "rdf:Property",
-            "rdfs:label": "mentions",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:CourseInstance"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
         }
     ]
 }

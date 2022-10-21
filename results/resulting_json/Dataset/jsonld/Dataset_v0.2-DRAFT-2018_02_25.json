@@ -431,20 +431,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "rdf:type",
-            "rdfs:comment": " This is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
-            "@type": "rdf:Property",
-            "rdfs:label": "type",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Dataset"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:URL"
-                }
-            ]
         }
     ]
 }

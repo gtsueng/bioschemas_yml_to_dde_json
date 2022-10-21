@@ -564,20 +564,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:mentions",
-            "rdfs:comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept. Datasets, tools, technologies, entities etc, which are used by or referred to by this course instance.\n\nTypically this should be covered by Mentions in Course. Use this property if the CourseInstance *mentions* varies from Course *mentions*",
-            "@type": "rdf:Property",
-            "rdfs:label": "mentions",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:CourseInstance"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
         }
     ]
 }

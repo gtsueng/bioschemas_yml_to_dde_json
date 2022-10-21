@@ -795,68 +795,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:codeRepository",
-            "@type": "rdf:Property",
-            "rdfs:comment": "Link to the source code repository of the tool.",
-            "rdfs:label": "codeRepository",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:URL"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:programmingLanguage",
-            "@type": "rdf:Property",
-            "rdfs:comment": "The main programming language(s) used to build or execute the tool. Please use terms from the \u00e2\u20ac\u02dcProgramming language\u00e2\u20ac\u2122 table in the Bio.Tools documentation",
-            "rdfs:label": "programmingLanguage",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:ComputerLanguage"
-                }
-            ]
-        },
-        {
-            "@id": "edam:has_input",
-            "rdfs:comment": " This is equivalent to edam:has_input. It should be modelled as a MediaObject.",
-            "@type": "rdf:Property",
-            "rdfs:label": "has_input",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:MediaObject"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:serviceOutput",
-            "rdfs:comment": " This is equivalent to edam:has_output. It should be modelled as a MediaObject.",
-            "@type": "rdf:Property",
-            "rdfs:label": "serviceOutput",
-            "sameAs": {
-                "@id": "edam:has_output"
-            },
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalTool"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:MediaObject"
-                }
-            ]
         }
     ]
 }

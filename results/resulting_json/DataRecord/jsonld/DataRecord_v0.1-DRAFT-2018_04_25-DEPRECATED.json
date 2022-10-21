@@ -4,7 +4,7 @@
         "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
-        "owl": "http://www.w3.org/2002/07/owl/",
+        "owl": "http://www.w3.org/2002/07/owl#",
         "bioschemas": "http://discovery.biothings.io/view/bioschemas/"
     },
     "@graph": [

@@ -582,26 +582,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:educationalLevel",
-            "rdfs:comment": "The level in terms of progression through an educational or training context. Examples of educational levels include 'beginner', 'intermediate' or 'advanced', and formal sets of level indicators. ",
-            "@type": "rdf:Property",
-            "rdfs:label": "educationalLevel",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:DefinedTerm"
-                },
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
         }
     ]
 }

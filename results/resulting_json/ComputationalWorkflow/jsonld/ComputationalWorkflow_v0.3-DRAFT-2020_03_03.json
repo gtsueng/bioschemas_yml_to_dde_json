@@ -585,51 +585,6 @@
                     }
                 }
             }
-        },
-        {
-            "@id": "bioschemas:input",
-            "rdfs:comment": "the input required to use the workflow (eg. xl spreadsheet, xml file, ...) ",
-            "@type": "rdf:Property",
-            "rdfs:label": "input",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:output",
-            "rdfs:comment": "the output produced by the workflow ",
-            "@type": "rdf:Property",
-            "rdfs:label": "output",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Thing"
-                }
-            ]
-        },
-        {
-            "@id": "bioschemas:softwareRequirements",
-            "rdfs:comment": "Component dependency requirements for application. This includes runtime environments and shared libraries that are not included in the application distribution package, but required to run the application (Examples: DirectX, Java or .NET runtime). Supersedes requirements. Renaming schema.org/requirements as softwareRequirements",
-            "@type": "rdf:Property",
-            "rdfs:label": "softwareRequirements",
-            "schema:domainIncludes": {
-                "@id": "bioschemas:ComputationalWorkflow"
-            },
-            "schema:rangeIncludes": [
-                {
-                    "@id": "schema:Text"
-                },
-                {
-                    "@id": "schema:URL"
-                }
-            ]
         }
     ]
 }
