@@ -28,8 +28,19 @@
             "type": "string"
           },
           "biologicalRole": {
-            "description": "A role played by the molecular entity within a biological context.",
-            "type": "string"
+            "description": "A role played by the molecular entity within a biological context. ",
+            "oneOf": [
+              {
+                "$ref": "#/definitions/definedterm"
+              },
+              {
+                "type": "array",
+                "items": {
+                    "$ref": "#/definitions/definedterm"
+                }
+              }
+            ],
+            "owl:cardinality": "many"
           },
           "alternateName": {
             "description": "An alias for the item.",
