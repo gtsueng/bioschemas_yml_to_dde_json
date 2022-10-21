@@ -10,7 +10,7 @@
         {
             "@id": "bioschemas:ComputationalTool",
             "@type": "rdfs:Class",
-            "rdfs:comment": "The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.",
+            "rdfs:comment": "The Life Science Tools specification provides a way to describe bioscience tools and software on the World Wide Web. It defines a set of metadata and vocabularies, built on top of existing technologies and standards, that can be used to represent such tools in Web pages and applications. The goal of the specification is to make it easier to discover. Version 1.0-RELEASE.<h3>Summary of Changes</h3> <p>Changes since the 0.6-DRAFT</p> <ul> <li>additionalType property deprecated and replaced by applicationCategory.</li><li>example added for the name property.</li></ul>",
             "rdfs:label": "ComputationalTool",
             "rdfs:subClassOf": {
                 "@id": "schema:SoftwareApplication"
@@ -825,6 +825,62 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:codeRepository",
+            "rdfs:comment": "Link to the repository where the un-compiled, human readable code and related code is located (SVN, github, CodePlex).",
+            "@type": "rdf:Property",
+            "rdfs:label": "codeRepository",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:input",
+            "rdfs:comment": "Specification of a consumed input.",
+            "@type": "rdf:Property",
+            "rdfs:label": "input",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:output",
+            "rdfs:comment": "Specification of a produced output.",
+            "@type": "rdf:Property",
+            "rdfs:label": "output",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemas:FormalParameter"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:programmingLanguage",
+            "rdfs:comment": "The computer programming language.",
+            "@type": "rdf:Property",
+            "rdfs:label": "programmingLanguage",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:ComputationalTool"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
         }
     ]
 }
