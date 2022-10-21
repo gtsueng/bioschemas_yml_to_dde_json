@@ -3,12 +3,13 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "owl": "http://www.w3.org/2002/07/owl/"
+        "bioschemastemp": "https://discovery.biothings.io/view/bioschemastemp/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
     },
     "@graph": [
         {
-            "@id": "bioschemas:ChemicalSubstance",
+            "@id": "bioschemastemp:ChemicalSubstance",
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a ChemicalEntity This specification describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI). Version: 0.2-DRAFT-2019_06_11",
             "schema:schemaVersion": [
@@ -16,7 +17,7 @@
             ],
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:BioChemEntity"
+                "@id": "bioschemastypes:BioChemEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -258,7 +259,7 @@
                 ],
                 "definitions": {
                     "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
+                        "@type": "bioschemastypes:BioChemEntity",
                         "type": "object",
                         "properties": {
                             "url": {
@@ -415,6 +416,62 @@
                     }
                 }
             }
+        },
+    {
+        "@id": "bioschemastemp:molecularFormula",
+        "rdfs:comment": "The empirical formula is the simplest whole number ratio of all the  atoms in a molecule.",
+        "@type": "rdf:Property",
+        "rdfs:label": "molecularFormula",
+        "schema:domainIncludes": {
+            "@id": "bioschemastemp:ChemicalSubstance"
+        },
+        "schema:rangeIncludes": [
+            {
+                "@id": "schema:Text"
+            }
+        ]
+    },
+    {
+        "@id": "bioschemastemp:chemicalRole",
+        "rdfs:comment": "A role played by the BioChemEntity within a chemical context. A role played by the molecular entity within a chemical context.",
+        "@type": "rdf:Property",
+        "rdfs:label": "chemicalRole",
+        "schema:domainIncludes": {
+            "@id": "bioschemastemp:ChemicalSubstance"
+            },
+        "schema:rangeIncludes": [
+            {
+                "@id": "schema:DefinedTerm"
+            }
+    ]
+    },
+    {
+        "@id": "bioschemastemp:potentialUse",
+        "rdfs:comment": "Intended use of the BioChemEntity by humans. ",
+        "@type": "rdf:Property",
+        "rdfs:label": "potentialUse",
+        "schema:domainIncludes": {
+            "@id": "bioschemastemp:ChemicalSubstance"
+            },
+        "schema:rangeIncludes": [
+            {
+                "@id": "schema:DefinedTerm"
+            }
+        ]
+    },
+    {
+        "@id": "bioschemastemp:bioChemInteraction",
+        "@type": "rdf:Property",
+        "rdfs:comment": "A BioChemEntity that is know to interact with this item.",
+        "rdfs:label": "bioChemInteraction",
+        "schema:domainIncludes": {
+            "@id": "bioschemastemp:ChemicalSubstance"
+            },
+        "schema:rangeIncludes": [
+        {
+            "@id": "bioschemastypes:BioChemEntity"
         }
+        ]
+    }
     ]
 }

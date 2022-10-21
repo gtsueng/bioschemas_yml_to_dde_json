@@ -9,9 +9,9 @@
         {
             "@id": "bioschemastypes:ChemicalSubstance",
             "@type": "rdfs:Class",
-            "rdfs:comment": "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Version: 0.3-RELEASE-2019_09_02. This version is was released as a pending class as of schema.org version 13",
+            "rdfs:comment": "A chemical substance is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: ChEBI:59999). Version: 0.2-RELEASE-2019_06_19.",
             "schema:schemaVersion": [
-                "https://bioschemas.org/types/ChemicalSubstance/0.3-RELEASE-2019_09_02"
+                "https://bioschemas.org/types/ChemicalSubstance/0.2-RELEASE-2019_06_19"
             ],
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {
