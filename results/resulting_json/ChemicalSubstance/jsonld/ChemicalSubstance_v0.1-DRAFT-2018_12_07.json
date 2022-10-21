@@ -317,6 +317,20 @@
             }
         }
       }
+    },
+    {
+      "@id": "bioschemastemp:molecularFormula",
+      "rdfs:comment": "The empirical formula is the simplest whole number ratio of all the  atoms in a molecule.",
+      "@type": "rdf:Property",
+      "rdfs:label": "molecularFormula",
+      "schema:domainIncludes": {
+        "@id": "bioschemastemp:ChemicalSubstance"
+      },
+      "schema:rangeIncludes": [
+        {
+            "@id": "schema:Text"
+        }
+      ]
     }
   ]
 }
