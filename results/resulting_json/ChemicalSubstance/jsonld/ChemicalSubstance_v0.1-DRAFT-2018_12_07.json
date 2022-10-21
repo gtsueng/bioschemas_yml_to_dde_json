@@ -469,7 +469,7 @@
       },
       "schema:rangeIncludes": [
         {
-          "@id": "bioschemas:BioChemEntity"
+          "@id": "bioschemastypes:BioChemEntity"
         }
       ]
     }
