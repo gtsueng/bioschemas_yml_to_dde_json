@@ -18,7 +18,7 @@
             ],
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {
-                "@id": "bioschemastypes:BioChemEntity"
+                "@id": "bioschemastypes:ChemicalSubstance"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
