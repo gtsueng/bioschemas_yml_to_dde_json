@@ -3,12 +3,13 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "owl": "http://www.w3.org/2002/07/owl/"
+        "bioschemastemp": "https://discovery.biothings.io/view/bioschemastemp/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
     },
     "@graph": [
         {
-            "@id": "bioschemas:ChemicalSubstance",
+            "@id": "bioschemastemp:ChemicalSubstance",
             "@type": "rdfs:Class",
             "rdfs:comment": "Bioschemas profile describing a ChemicalEntity This profile describes a ChemicalSubstance which is 'a portion of matter of constant composition, composed of molecular entities of the same type or of different types' (source: <a href='https://www.ebi.ac.uk/chebi/searchId.do?chebiId=59999'>ChEBI:59999</a>). Version: 0.3-DRAFT-2019_11_11",
             "schema:schemaVersion": [
@@ -16,7 +17,7 @@
             ],
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:BioChemEntity"
+                "@id": "bioschemastypes:ChemicalSubstance"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -247,7 +248,7 @@
                 ],
                 "definitions": {
                     "biochementity": {
-                        "@type": "bioschemas:BioChemEntity",
+                        "@type": "bioschemastypes:BioChemEntity",
                         "type": "object",
                         "properties": {
                             "url": {
