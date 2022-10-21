@@ -61,7 +61,7 @@
         ],
         "definitions": {
             "biochementity": {
-                "@type": "bioschemas:BioChemEntity",
+                "@type": "bioschemastypes:BioChemEntity",
                 "type": "object",
                 "properties": {
                     "url": {
