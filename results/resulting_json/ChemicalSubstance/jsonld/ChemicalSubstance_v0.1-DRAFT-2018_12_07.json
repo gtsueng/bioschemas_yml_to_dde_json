@@ -4,7 +4,8 @@
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "owl": "http://www.w3.org/2002/07/owl/"
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/"
     },
     "@graph": [
         {
@@ -16,7 +17,7 @@
             ],
             "rdfs:label": "ChemicalSubstance",
             "rdfs:subClassOf": {
-                "@id": "bioschemas:BioChemEntity"
+                "@id": "bioschemastypes:BioChemEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
