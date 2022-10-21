@@ -54,12 +54,24 @@
             "owl:cardinality": "many"
           },
           "alternateName": {
-            "description": "An alias for the item.",
-            "type": "string"
+            "description": " An alias for the item.",
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            ],
+            "owl:cardinality": "many"
           },
           "disambiguatingDescription": {
-            "description": "A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
-            "type": "string"
+            "description": " A sub property of description. A short description of the item used to disambiguate from other, similar items. Information from other properties (in particular, name) may be necessary for the description to be useful for disambiguation.",
+            "type": "string",
+            "owl:cardinality": "one"
           }
         },
         "required": [],
