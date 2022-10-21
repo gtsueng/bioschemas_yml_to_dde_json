@@ -458,6 +458,20 @@
           "@id": "schema:DefinedTerm"
         }
     ]
+    },
+    {
+      "@id": "bioschemastemp:bioChemInteraction",
+      "@type": "rdf:Property",
+      "rdfs:comment": "A BioChemEntity that is know to interact with this item.",
+      "rdfs:label": "bioChemInteraction",
+      "schema:domainIncludes": {
+        "@id": "bioschemastemp:ChemicalSubstance"
+      },
+      "schema:rangeIncludes": [
+        {
+          "@id": "bioschemas:BioChemEntity"
+        }
+      ]
     }
   ]
 }
