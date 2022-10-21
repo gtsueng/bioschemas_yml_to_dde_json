@@ -24,8 +24,19 @@
         "type": "object",
         "properties": {
           "bioChemSimilarity": {
-            "description": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithm.",
-            "type": "string"
+            "description": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithms. ",
+            "oneOf": [
+                {
+                    "$ref": "#/definitions/biochementity"
+                },
+                {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/biochementity"
+                    }
+                }
+            ],
+            "owl:cardinality": "many"
           },
           "biologicalRole": {
             "description": "A role played by the molecular entity within a biological context. ",
