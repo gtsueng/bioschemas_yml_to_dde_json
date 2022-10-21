@@ -73,6 +73,32 @@
             "type": "string",
             "owl:cardinality": "one"
           },
+          "hasBioChemEntityPart": {
+            "description": " Indicates a BioChemEntity that (in some sense) has this BioChemEntity as a part.",
+            "anyOf": [
+              {
+                "$ref": "#/definitions/biochementity"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "$ref": "#/definitions/biochementity"
+                }
+              },
+              {
+                "type": "string",
+                "format": "uri"
+              },
+              {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "format": "uri"
+                }
+              }
+            ],
+            "owl:cardinality": "many"
+          },
           "identifier": {
             "description": " The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See [background notes](http://schema.org/docs/datamodel.html#identifierBg) for more details.",
             "oneOf": [
@@ -87,6 +113,11 @@
                 "format": "uri"
               }
             ],
+            "owl:cardinality": "one"
+          },
+          "molecularFormula": {
+            "description": "The empirical formula is the simplest whole number ratio of all the atoms in a molecule. Because for substances this often cannot accurately be determined, an approximation is acceptable. Inverse property: isPartOfBioChemEntity",
+            "type": "string",
             "owl:cardinality": "one"
           },
           "name": {
@@ -117,7 +148,10 @@
           "name",
           "url"
         ],
-        "recommended": [],
+        "recommended": [
+          "hasBioChemEntityPart",
+          "molecularFormula"
+        ],
         "optional": [
           "bioChemSimilarity",
           "biologicalRole",
