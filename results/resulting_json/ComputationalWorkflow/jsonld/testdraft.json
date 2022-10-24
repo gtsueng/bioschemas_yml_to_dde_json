@@ -5,7 +5,7 @@
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "owl": "http://www.w3.org/2002/07/owl/",
     "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/",
-    "bioschemastemp": "https://discovery.biothings.io/view/bioschemastemp/",
+    "bioschemastemp": "https://discovery.biothings.io/view/bioschemastemp/"
   },
   "@graph": [
     {
