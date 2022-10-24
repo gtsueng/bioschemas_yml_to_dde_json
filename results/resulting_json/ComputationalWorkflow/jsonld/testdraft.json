@@ -6,7 +6,6 @@
     "owl": "http://www.w3.org/2002/07/owl/",
     "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/",
     "bioschemastemp": "https://discovery.biothings.io/view/bioschemastemp/",
-    "bioschemas": "https://discovery.biothings.io/view/bioschemas/"
   },
   "@graph": [
     {
