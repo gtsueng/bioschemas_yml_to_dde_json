@@ -16,9 +16,9 @@
             "schema:schemaVersion": [
                 "https://bioschemas.org/profiles/Workflow/0.2-DRAFT-2019_11_29"
             ],
-            "rdfs:label": "Workflow",
+            "rdfs:label": "ComputationalWorkflow",
             "rdfs:subClassOf": {
-                "@id": "bioschemastypes:ComputationalWorkflow"
+              "@id": "bioschemastypes:ComputationalWorkflow"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
