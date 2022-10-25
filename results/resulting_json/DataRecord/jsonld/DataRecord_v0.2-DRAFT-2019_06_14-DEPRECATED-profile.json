@@ -386,6 +386,71 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemasdeprecated:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. \n Additional to the use of name and description to describe this property in a human-readable way, additionalType should be used to specify the nature of the property/relation. For instance, if the property refers to a gene/protein disease association, you could use SIO:000983 (gene-disease association) as the additionalType for the additionalProperty.",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdeprecated:distribution",
+            "rdfs:comment": "A downloadable form of this dataset, at a specific location, in a specific format.",
+            "@type": "rdf:Property",
+            "rdfs:label": "distribution",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DataDownload"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdeprecated:isBasisFor",
+            "rdfs:comment": "A resource for which this resource is basis for. Inverse property: isBasedOn.",
+            "@type": "rdf:Property",
+            "rdfs:label": "isBasisFor",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CreativeWork"
+                },
+                {
+                    "@id": "schema:Product"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdeprecated:seeAlso",
+            "rdfs:comment": "A pointer to any (somehow related) Thing. To be used whenever you are not so sure about the nature of the relation. Otherwise, use more precise terms from pre-existing Controlled Vocabularies.",
+            "@type": "rdf:Property",
+            "rdfs:label": "seeAlso",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdeprecated:DataRecord"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Thing"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }

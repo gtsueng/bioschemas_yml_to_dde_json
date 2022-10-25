@@ -3,8 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "owl": "http://www.w3.org/2002/07/owl/"
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "owl": "http://www.w3.org/2002/07/owl/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/"
     },
     "@graph": [
         {
@@ -13,7 +14,7 @@
             "rdfs:comment": "Bioschemas specification for describing a formal parameter in the Life Sciences. Version: 1.0-RELEASE (09 March 2021) ",
             "rdfs:label": "FormalParameter",
             "rdfs:subClassOf": {
-                "@id": "schema:Intangible"
+                "@id": "bioschemastypes:FormalParameter"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",

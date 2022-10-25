@@ -3,7 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -700,6 +700,48 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:skillLevel",
+            "rdfs:comment": "The students expected level of ability in the topic being taught. Skill levels are ‘beginner’, ‘intermediate’ or ‘advanced’.",
+            "@type": "rdf:Property",
+            "rdfs:label": "skillLevel",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Course"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:learningOutcome",
+            "rdfs:comment": "Statements that describe what knowledge and skills a student will acquire from completing this training. It is recommended you utilize terms from Blooms taxonomy.",
+            "@type": "rdf:Property",
+            "rdfs:label": "learningOutcome",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Course"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:uses",
+            "rdfs:comment": "List resources utilized by this resource such as datasets, tools, technologies, or other entities. Datasets, tools, technologies, entities etc, which will be utilized in this Course.",
+            "@type": "rdf:Property",
+            "rdfs:label": "uses",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Course"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ]
         }
     ]
 }

@@ -3,7 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "https://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -455,6 +455,37 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:fileFormat",
+            "rdfs:comment": "Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, ‘encoding’ can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.",
+            "@type": "rdf:Property",
+            "rdfs:label": "fileFormat",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:DataCatalog"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "rdf:type",
+            "rdfs:comment": "his is used by validation tools to indentify the profile used. You must use the value specified in the Controlled Vocabulary column.",
+            "@type": "rdf:Property",
+            "rdfs:label": "type",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:DataCatalog"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }

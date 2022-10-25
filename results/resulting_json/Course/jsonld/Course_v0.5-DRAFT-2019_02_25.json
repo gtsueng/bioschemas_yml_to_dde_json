@@ -3,7 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -590,6 +590,26 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:skillLevel",
+            "rdfs:comment": "The students expected level of ability in the topic being taught. Skill levels are ‘beginner’, ‘intermediate’ or ‘advanced’.",
+            "@type": "rdf:Property",
+            "rdfs:label": "skillLevel",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Course"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                }
+            ]
         }
     ]
 }

@@ -3,7 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -591,6 +591,20 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:mentions",
+            "rdfs:comment": "Indicates that the CreativeWork contains a reference to, but is not necessarily about a concept. Datasets, tools, etc, to which are used by or referred to by this course instance. (courseInstance) mentions can be used to override (course) mentions for specific course instances.",
+            "@type": "rdf:Property",
+            "rdfs:label": "mentions",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:CourseInstance"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ]
         }
     ]
 }
