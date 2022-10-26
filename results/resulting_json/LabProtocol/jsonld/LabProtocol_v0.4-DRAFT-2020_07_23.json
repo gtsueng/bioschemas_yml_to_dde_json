@@ -885,6 +885,126 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:labEquipmentUsed",
+            "rdfs:comment": "A laboratory equipment used by a person to follow one or more steps described in this LabProtocol. Controlled Vocabulary: BAO, EFO, ERO, OBI",
+            "@type": "rdf:Property",
+            "rdfs:label": "labEquipmentUsed",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:bioSampleUsed",
+            "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. Controlled Vocabulary: NCBI Taxonomy, Uberon",
+            "@type": "rdf:Property",
+            "rdfs:label": "bioSampleUsed",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemastypes:BioSample"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "bioschemastypes:Taxon"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:totalTime",
+            "rdfs:comment": "The total time required to perform instructions or a direction (including time to prepare the supplies), in ISO 8601 duration format.",
+            "@type": "rdf:Property",
+            "rdfs:label": "totalTime",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Duration"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:protocolPurpose",
+            "rdfs:comment": "BioSample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. Controlled Vocabulary: NCBI Taxonomy, Uberon",
+            "@type": "rdf:Property",
+            "rdfs:label": "protocolPurpose",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:CreativeWork"
+                },
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:reagentUsed",
+            "rdfs:comment": "Reagents used in the protocol. ChEBI and PubChem entities can be used whenever available. Commercial names are also acceptable. Controlled Vocabulary: ChEBI, PubChem",
+            "@type": "rdf:Property",
+            "rdfs:label": "reagentUsed",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:softwareUsed",
+            "rdfs:comment": "Software or tool used as part of the lab protocol to complete a part of it.",
+            "@type": "rdf:Property",
+            "rdfs:label": "softwareUsed",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:SoftwareApplication"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
