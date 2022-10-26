@@ -815,7 +815,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schemaPropertyValue"
+                    "@id": "schema:PropertyValue"
                 },
                 {
                     "@id": "schema:Text"
