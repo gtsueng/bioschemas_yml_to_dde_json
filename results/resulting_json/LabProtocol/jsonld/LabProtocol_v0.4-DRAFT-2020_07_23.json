@@ -960,7 +960,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemastypes:CreativeWork"
+                    "@id": "schema:CreativeWork"
                 },
                 {
                     "@id": "schema:Text"
