@@ -637,6 +637,161 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, ...) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism.",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:categoryCode",
+            "rdfs:comment": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.",
+            "@type": "rdf:Property",
+            "rdfs:label": "categoryCode",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CategoryCode"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:contains",
+            "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn. \n For genes, it can be used to link to gene sequence annotations such as variants or so.",
+            "@type": "rdf:Property",
+            "rdfs:label": "contains",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:enablesMF",
+            "rdfs:comment": "RO:0002327 (enables). GO molecular function enabled by the gene/protein. Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.",
+            "@type": "rdf:Property",
+            "rdfs:label": "enablesMF",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CategoryCode"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:encodes",
+            "rdfs:comment": "SIO:010078 (encodes). For genes, this property is used to express in a generic way gene products encoded by this gene. Two more specific properties SIO:010082 (is translated into) and SIO:010080 (is transcribed into) should be used for (protein) translation and (RNA) transcription respectively. Controlled Vocabulary: SIO",
+            "@type": "rdf:Property",
+            "rdfs:label": "encodes",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:involvedInBP",
+            "rdfs:comment": "RO:0002331 (is involved in). GO biological process this gene/protein is involved in. Recommended range: BioChemEntity or CategoryCode, ProteinAnnotation if evidence should be included.",
+            "@type": "rdf:Property",
+            "rdfs:label": "involvedInBP",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CategoryCode"
+                },
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isContainedIn",
+            "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of. \n For genes, it is recommended to at least specify the DNA/chromosome containing this gene and the taxon/organism associated to it. For taxon/organism, it is a good practice to use categoryCode to point to a controlled vocabulary such as NCBI taxon or UniProt Taxonomy. Controlled Vocabulary: For subcellular locations branch from GO, please use Gene Ontology (GO)",
+            "@type": "rdf:Property",
+            "rdfs:label": "isContainedIn",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isTranscribedInto",
+            "rdfs:comment": "SIO:010080 (is transcribed into). For genes, this property is used to link to gene products transcribed from this gene such as RNA. Controlled Vocabulary: SIO.",
+            "@type": "rdf:Property",
+            "rdfs:label": "isTranscribedInto",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:isVariantOf",
+            "rdfs:comment": "SIO: 000272 (is variant of). Use this property to express when a gene is a variant of any other gene. Controlled Vocabulary: SIO.",
+            "@type": "rdf:Property",
+            "rdfs:label": "isVariantOf",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemastypes:Gene"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:positionInRepresentation",
+            "rdfs:comment": "Refers to a position in the chromosome or sequence. For instance, FALDO can be used for sequence coordinates. \n For a particular gene, the molecular location is a precise description of its position in a chromosome. The molecular location is based on the sequence of DNA that make up the chromosome.",
+            "@type": "rdf:Property",
+            "rdfs:label": "positionInRepresentation",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Gene"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schemaPropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
