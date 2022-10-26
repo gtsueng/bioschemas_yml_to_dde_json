@@ -815,13 +815,13 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "bioschemastypes:PropertyValue"
+                    "@id": "schemaPropertyValue"
                 },
                 {
-                    "@id": "bioschemastypes:Text"
+                    "@id": "schema:Text"
                 },
                 {
-                    "@id": "bioschemastypes:URL"
+                    "@id": "schema:URL"
                 }
             ]
         }
