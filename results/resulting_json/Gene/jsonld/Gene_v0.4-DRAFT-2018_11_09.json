@@ -595,7 +595,7 @@
             ]
         },
         {
-            "@id": "bioschemas:hasCategoryCode",
+            "@id": "bioschemas:categoryCode",
             "rdfs:comment": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.",
             "@type": "rdf:Property",
             "rdfs:label": "categoryCode",
@@ -725,7 +725,7 @@
             },
             "schema:rangeIncludes": [
                 {
-                    "@id": "schemaPropertyValue"
+                    "@id": "schema:PropertyValue"
                 },
                 {
                     "@id": "schema:Text"
