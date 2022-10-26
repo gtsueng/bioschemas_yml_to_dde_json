@@ -3,6 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
@@ -421,6 +422,20 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:isAssociatedWith",
+            "rdfs:comment": "BioChemEntity that has some association with this Phenotype.",
+            "@type": "rdf:Property",
+            "rdfs:label": "isAssociatedWith",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Phenotype"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
         }
     ]
 }
