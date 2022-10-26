@@ -640,7 +640,7 @@
             "@type": "rdf:Property",
             "rdfs:label": "type",
             "schema:domainIncludes": {
-                "@id": "bioschemas:Course"
+                "@id": "bioschemas:Organization"
             },
             "schema:rangeIncludes": [
                 {
