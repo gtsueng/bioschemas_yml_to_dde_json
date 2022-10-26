@@ -3,6 +3,7 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "ChEBI": "",
@@ -538,6 +539,60 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:duration",
+            "rdfs:comment": "The duration of the item (movie, audio recording, event, etc.) in ISO 8601 date format.\n The time it takes to actually carry out the protocol, in ISO 8601 date format.",
+            "@type": "rdf:Property",
+            "rdfs:label": "duration",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Duration"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:instrument",
+            "rdfs:comment": "The object that helped the agent perform the action. e.g. John wrote a book with a pen.\n For LabProtocols it would be a laboratory equipment use by a person to follow one or more steps described in this LabProtocol. Note: Bioschemas have added the following to the list of Expected Types: Text and URL.",
+            "@type": "rdf:Property",
+            "rdfs:label": "instrument",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:Thing"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:sample",
+            "rdfs:comment": "Sample used in the protocol. It could be a record in a Dataset describing the sample or a physical object corresponding to the sample or a URL pointing to the type of sample used. Controlled Vocabulary: NCBI Taxonomy, Uberon",
+            "@type": "rdf:Property",
+            "rdfs:label": "sample",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:LabProtocol"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
