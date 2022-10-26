@@ -435,6 +435,34 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:biochemicalInteraction",
+            "rdfs:comment": "A BioChemEntity that is known to interact with the item.",
+            "@type": "rdf:Property",
+            "rdfs:label": "biochemicalInteraction",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:biochemicalSimilarity",
+            "rdfs:comment": "A similar molecular entity, e.g., obtained by fingerprint similarity algorithms.",
+            "@type": "rdf:Property",
+            "rdfs:label": "biochemicalSimilarity",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:MolecularEntity"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
         }
     ]
 }
