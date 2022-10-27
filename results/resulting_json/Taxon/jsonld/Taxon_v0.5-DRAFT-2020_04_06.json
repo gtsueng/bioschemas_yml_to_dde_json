@@ -6,6 +6,7 @@
         "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "dwc": "http://rs.tdwg.org/dwc/terms/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -335,6 +336,20 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "dwc:vernacularName",
+            "rdfs:comment": "A vernacular (common) name of the taxon.",
+            "@type": "rdf:Property",
+            "rdfs:label": "vernacularName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }

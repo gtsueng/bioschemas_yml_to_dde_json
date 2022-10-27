@@ -6,6 +6,7 @@
         "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "dwc": "http://rs.tdwg.org/dwc/terms/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -363,6 +364,62 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:hasCategoryCode",
+            "rdfs:comment": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasCategoryCode",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CategoryCode"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:scientificName",
+            "rdfs:comment": "Full scientific name, with authorship and date information if know, of the currently valid (zoological) or accepted (botanical) taxon.",
+            "@type": "rdf:Property",
+            "rdfs:label": "scientificName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:scientificNameAuthorship",
+            "rdfs:comment": "Authorship information for the scientificName formatted according to the conventions of the applicable nomenclatural Code. Example: '(Torr.) J.T. Howell', '(Martinovský) Tzvelev', '(Györfi, 1952)'.",
+            "@type": "rdf:Property",
+            "rdfs:label": "scientificNameAuthorship",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "dwc:vernacularName",
+            "rdfs:comment": "A vernacular (common) name of the taxon.",
+            "@type": "rdf:Property",
+            "rdfs:label": "vernacularName",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Taxon"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }
