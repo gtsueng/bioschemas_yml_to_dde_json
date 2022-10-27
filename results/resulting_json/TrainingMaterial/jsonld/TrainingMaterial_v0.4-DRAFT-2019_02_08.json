@@ -700,6 +700,40 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:skillLevel",
+            "rdfs:comment": "The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced'.",
+            "@type": "rdf:Property",
+            "rdfs:label": "skillLevel",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:status",
+            "rdfs:comment": "The status of a training material. If this is not filled in it will be regarded as Active. Options are 'Active', 'Under development', and 'Archived'.",
+            "@type": "rdf:Property",
+            "rdfs:label": "status",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
         }
     ]
 }

@@ -676,6 +676,85 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:skillLevel",
+            "rdfs:comment": "The students level of ability in the topic being taught. Examples of skill levels include 'beginner', 'intermediate' or 'advanced'.",
+            "@type": "rdf:Property",
+            "rdfs:label": "skillLevel",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:DefinedTerm"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:status",
+            "rdfs:comment": "The status of a training material. If this is not filled in it will be regarded as Active. Options are 'Active', 'Under development', and 'Archived'.",
+            "@type": "rdf:Property",
+            "rdfs:label": "status",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:featuredInEvent",
+            "rdfs:comment": "The course instance or event where this training material was or will be featured. Inverse of workFeatured.\n Use isPartOf by default unless this training material is unique to a specific course instance.",
+            "@type": "rdf:Property",
+            "rdfs:label": "featuredInEvent",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Course"
+                },
+                {
+                    "@id": "schema:Event"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:learningOutcome",
+            "rdfs:comment": "Statements that describe what knowledge and skills a student will acquire from completing this training. Controlled Vocabulary: It is recommended you utilize terms from Blooms taxonomy.",
+            "@type": "rdf:Property",
+            "rdfs:label": "learningOutcome",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemas:uses",
+            "rdfs:comment": "List resources utilized by this resource such as datasets, tools, technologies, or other entities.\n Datasets, tools, technologies, entities etc, which will be utilized in this training material.",
+            "@type": "rdf:Property",
+            "rdfs:label": "uses",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:TrainingMaterial"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Thing"
+                }
+            ]
         }
     ]
 }
