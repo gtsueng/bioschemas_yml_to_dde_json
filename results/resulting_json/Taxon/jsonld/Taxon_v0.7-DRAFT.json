@@ -3,9 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemastypes": "http://discovery.biothings.io/view/bioschemastypes/",
-        "bioschemastypesdrafts": "http://discovery.biothings.io/view/bioschemastypesdrafts/",
-        "bioschemasdrafts": "http://discovery.biothings.io/view/bioschemasdrafts/",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/",
         "dwc": "http://rs.tdwg.org/dwc/terms/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
