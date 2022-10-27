@@ -189,7 +189,7 @@
                         "type": "string",
                         "owl:cardinality": "one"
                     },
-                    "growth_facility": {
+                    "hasGrowthChamber": {
                         "description": "The kind of growth facility used in a plant study has growth facility",
                         "type": "string",
                         "format": "uri",
@@ -668,10 +668,10 @@
             }
         },
         {
-            "@id": "ppeo:growth_facility",
+            "@id": "ppeo:hasGrowthChamber",
             "rdfs:comment": "Has growth facility. \n The kind of growth facility used in a plant study.",
             "@type": "rdf:Property",
-            "rdfs:label": "growth_facility",
+            "rdfs:label": "hasGrowthChamber",
             "schema:domainIncludes": {
                 "@id": "bioschemas:Study"
             },
