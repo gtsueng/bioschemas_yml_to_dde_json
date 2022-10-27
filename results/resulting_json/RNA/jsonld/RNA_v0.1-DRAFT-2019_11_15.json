@@ -3,6 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
@@ -16,7 +18,7 @@
             ],
             "rdfs:label": "RNA",
             "rdfs:subClassOf": {
-                "@id": "schema:BioChemEntity"
+                "@id": "bioschemastypesdrafts:RNA"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -162,7 +164,7 @@
                         ],
                         "owl:cardinality": "one"
                     },
-                    "isCodingRna": {
+                    "isCodingRNA": {
                         "description": " Indicates whether or not this Rna is a coding one.",
                         "type": "boolean",
                         "owl:cardinality": "one"
@@ -577,6 +579,37 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemas:hasSequenceAnnotation",
+            "@type": "rdf:Property",
+            "rdfs:comment": "Pointer to a sequence annotation; please use PropertyValue if you want to include any evidence.",
+            "rdfs:label": "hasSequenceAnnotation",
+            "schema:domainIncludes": {
+              "@id": "bioschemas:RNA"
+            },
+            "schema:rangeIncludes": [
+              {
+                "@id": "bioschemastypesdrafts:SequenceAnnotation"
+              },
+              {
+                "@id": "schema:PropertyValue"
+              }
+            ]
+        },
+        {
+            "@id": "bioschemas:isMatchedBy",
+            "@type": "rdf:Property",
+            "rdfs:comment": "A model matching this BioChemEntity.",
+            "rdfs:label": "isMatchedBy",
+            "schema:domainIncludes": {
+              "@id": "bioschemas:RNA"
+            },
+            "schema:rangeIncludes": [
+              {
+                "@id": "bioschemastypesdrafts:SequenceMatchingModel"
+              }
+            ]
         }
     ]
 }

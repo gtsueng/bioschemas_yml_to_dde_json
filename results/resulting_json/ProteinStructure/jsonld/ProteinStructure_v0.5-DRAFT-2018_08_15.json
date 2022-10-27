@@ -5,7 +5,8 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "dct": "https://dublincore.org/specifications/dublin-core/dcmi-terms/#",
         "owl": "http://www.w3.org/2002/07/owl/",
-        "bioschemasdrafts": "http://discovery.biothings.io/view/bioschemasdrafts/"
+        "bioschemastypes": "https://discovery.biothings.io/view/bioschemastypes/",
+        "bioschemasdrafts": "https://discovery.biothings.io/view/bioschemasdrafts/"
     },
     "@graph": [
         {
@@ -17,7 +18,7 @@
             ],
             "rdfs:label": "ProteinStructure",
             "rdfs:subClassOf": {
-                "@id": "schema:BioChemEntity"
+                "@id": "bioschemastypes:BioChemEntity"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -615,6 +616,136 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "bioschemasdrafts:additionalProperty",
+            "rdfs:comment": "A property-value pair representing an additional characteristics of the entitity, e.g. a product feature or another characteristic for which there is no matching property in schema.org. \n Note: Publishers should be aware that applications designed to use specific schema.org properties (e.g. http://schema.org/width, http://schema.org/color, http://schema.org/gtin13, …) will typically expect such data to be provided using those properties, rather than using the generic property/value mechanism. \n As much a possible, do not use it! Alternatively, consider reusing properties/relations already coined in controlled vocabularies. We recommed to look at the OBO Relations Ontology (RO) or the Semanticscience Integrated Ontology (SIO) as starting points.",
+            "@type": "rdf:Property",
+            "rdfs:label": "additionalProperty",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:contains",
+            "rdfs:comment": "Indicates a BioChemEntity that is (in some sense) a part of this BioChemEntity. Inverse property: isContainedIn. \n For proteins, it can be used to link to protein sequence annotations such as domains, sites, regions, etc.",
+            "@type": "rdf:Property",
+            "rdfs:label": "contains",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemasdeprecated:ProteinAnnotation"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:hasCategoryCode",
+            "rdfs:comment": "A controlled vocabulary term equivalent to this entity. For instance, an organism coined in NCBI taxonomy can be represented as a BioChemEntity. As it also exists as a term in an ontology, it would be nice to capture that information via categoryCode.",
+            "@type": "rdf:Property",
+            "rdfs:label": "hasCategoryCode",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:CategoryCode"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:isContainedIn",
+            "rdfs:comment": "Indicates a BioChemEntity that this BioChemEntity is (in some sense) part of. \n For proteins, it is recommended to at least specify the taxon/organism associated to the described protein. For taxon/organism, it is a good practice to use hasCategoryCode to point to a controlled vacabulary such as NCBI taxon or UniProt Taxonomy. Including as well the GO cellular locations is optional; for cellular locations it is a good practice to use hasCategorryCode to point to a GO Cellular Location term.",
+            "@type": "rdf:Property",
+            "rdfs:label": "isContainedIn",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:location",
+            "rdfs:comment": "The location can be refer to a position in a chromosome or sequence or to a physical place where, for instance, a sample is stored. Using additionalType is advised to make the distinction. For instance, FALDO can be used for sequence coordinates. \n Note: The list of Expected Types has been extended as schema.org/location only has Place, PostalAddress and Text.",
+            "@type": "rdf:Property",
+            "rdfs:label": "location",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:PropertyValue"
+                },
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:boundMolecule",
+            "rdfs:comment": "Bound molecules.",
+            "@type": "rdf:Property",
+            "rdfs:label": "boundMolecule",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:expressionSystem",
+            "rdfs:comment": "Organism where this protein extructure is expresed.",
+            "@type": "rdf:Property",
+            "rdfs:label": "expressionSystem",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "bioschemastypes:BioChemEntity"
+                },
+                {
+                    "@id": "bioschemastypes:Taxon"
+                }
+            ]
+        },
+        {
+            "@id": "bioschemasdrafts:structureDeterminationMethod",
+            "rdfs:comment": "Method used to determine the protein structure.",
+            "@type": "rdf:Property",
+            "rdfs:label": "structureDeterminationMethod",
+            "schema:domainIncludes": {
+                "@id": "bioschemasdrafts:ProteinStructure"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:Text"
+                },
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }

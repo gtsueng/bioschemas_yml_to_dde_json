@@ -3,8 +3,9 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
-        "ppeo": "http://purl.org/ppeo/PPEO.owl#",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
+        "ppeo": "https://purl.org/ppeo/PPEO.owl#",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -17,7 +18,7 @@
             ],
             "rdfs:label": "Study",
             "rdfs:subClassOf": {
-                "@id": "schema:CreativeWork"
+                "@id": "bioschemastypesdrafts:Study"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
@@ -188,7 +189,7 @@
                         "type": "string",
                         "owl:cardinality": "one"
                     },
-                    "hasGrowthChamber": {
+                    "growth_facility": {
                         "description": "The kind of growth facility used in a plant study has growth facility",
                         "type": "string",
                         "format": "uri",
@@ -665,6 +666,20 @@
                     }
                 }
             }
+        },
+        {
+            "@id": "ppeo:growth_facility",
+            "rdfs:comment": "Has growth facility. \n The kind of growth facility used in a plant study.",
+            "@type": "rdf:Property",
+            "rdfs:label": "growth_facility",
+            "schema:domainIncludes": {
+                "@id": "bioschemas:Study"
+            },
+            "schema:rangeIncludes": [
+                {
+                    "@id": "schema:URL"
+                }
+            ]
         }
     ]
 }

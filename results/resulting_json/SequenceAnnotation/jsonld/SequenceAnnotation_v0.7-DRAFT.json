@@ -3,7 +3,8 @@
         "schema": "http://schema.org/",
         "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
-        "bioschemas": "http://discovery.biothings.io/view/bioschemas/",
+        "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
+        "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
@@ -13,7 +14,7 @@
             "rdfs:comment": "Used to provide metadata about Sequence Annotations. The sequence can be an amino acid (protein) or nucleic acid (Gene, DNA, RNA). Version: 0.7-DRAFT (05 July 2021) Note, the parent class for this type has been updated to a pending class in schema.org.",
             "rdfs:label": "SequenceAnnotation",
             "rdfs:subClassOf": {
-                "@id": "schema:BioChemEntity"
+                "@id": "bioschemastypesdrafts:SequenceAnnotation"
             },
             "$validation": {
                 "$schema": "http://json-schema.org/draft-07/schema#",
