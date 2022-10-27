@@ -5,7 +5,7 @@
         "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
         "bioschemastypesdrafts": "https://discovery.biothings.io/view/bioschemastypesdrafts/",
         "bioschemas": "https://discovery.biothings.io/view/bioschemas/",
-        "ppeo": "https://purl.org/ppeo/PPEO.owl#",
+        "ppeo:hasGrowthChamber": "http://purl.org/ppeo/PPEO.owl#growth_facility",
         "owl": "http://www.w3.org/2002/07/owl/"
     },
     "@graph": [
