@@ -1,6 +1,9 @@
 [
   {
-    "_id": "id429bio",
+    "_id": [
+      "idcp679bio",
+      "blank"
+    ],
     "title": "identifier",
     "color": "#097969",
     "validation": {
@@ -23,7 +26,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "id788bio",
+    "_id": [
+      "idfr164bio",
+      "blank"
+    ],
     "title": "identifier",
     "color": "#097969",
     "validation": {
@@ -68,7 +74,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha895bio",
+    "_id": [
+      "habw501bio",
+      "blank"
+    ],
     "title": "hasRepresentation",
     "color": "#097969",
     "validation": {
@@ -80,7 +89,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha714bio",
+    "_id": [
+      "habx745bio",
+      "blank"
+    ],
     "title": "hasRepresentation",
     "color": "#097969",
     "validation": {
@@ -105,7 +117,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ta205bio",
+    "_id": [
+      "tacx825bio",
+      "blank"
+    ],
     "title": "taxonRank",
     "color": "#097969",
     "validation": {
@@ -128,7 +143,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ta254bio",
+    "_id": [
+      "tagx273bio",
+      "blank"
+    ],
     "title": "taxonRank",
     "color": "#097969",
     "validation": {
@@ -173,7 +191,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st478bio",
+    "_id": [
+      "stgv418bio",
+      "blank"
+    ],
     "title": "studyProcess",
     "color": "#097969",
     "validation": {
@@ -196,7 +217,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st941bio",
+    "_id": [
+      "stds249bio",
+      "blank"
+    ],
     "title": "studyProcess",
     "color": "#097969",
     "validation": {
@@ -241,7 +265,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st506bio",
+    "_id": [
+      "stcq896bio",
+      "blank"
+    ],
     "title": "studyDomain",
     "color": "#097969",
     "validation": {
@@ -264,7 +291,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st809bio",
+    "_id": [
+      "sthp499bio",
+      "blank"
+    ],
     "title": "studyDomain",
     "color": "#097969",
     "validation": {
@@ -309,7 +339,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ur914bio",
+    "_id": [
+      "uraw856bio",
+      "blank"
+    ],
     "title": "url",
     "color": "#097969",
     "validation": {
@@ -319,7 +352,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ur935bio",
+    "_id": [
+      "urbs307bio",
+      "blank"
+    ],
     "title": "url",
     "color": "#097969",
     "validation": {
@@ -340,7 +376,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sa216bio",
+    "_id": [
+      "saes935bio",
+      "blank"
+    ],
     "title": "sameAs",
     "color": "#097969",
     "validation": {
@@ -350,7 +389,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sa302bio",
+    "_id": [
+      "saap702bio",
+      "blank"
+    ],
     "title": "sameAs",
     "color": "#097969",
     "validation": {
@@ -371,7 +413,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ad926bio",
+    "_id": [
+      "addt491bio",
+      "blank"
+    ],
     "title": "additionalType",
     "color": "#097969",
     "validation": {
@@ -380,7 +425,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ad905bio",
+    "_id": [
+      "adgu638bio",
+      "blank"
+    ],
     "title": "additionalType",
     "color": "#097969",
     "validation": {
@@ -399,7 +447,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "th541bio",
+    "_id": [
+      "thap156bio",
+      "blank"
+    ],
     "title": "thumbnailUrl",
     "color": "#097969",
     "validation": {
@@ -409,7 +460,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "th924bio",
+    "_id": [
+      "thgs788bio",
+      "blank"
+    ],
     "title": "thumbnailUrl",
     "color": "#097969",
     "validation": {
@@ -430,7 +484,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "do159bio",
+    "_id": [
+      "dobt943bio",
+      "blank"
+    ],
     "title": "downloadUrl",
     "color": "#097969",
     "validation": {
@@ -440,7 +497,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "do627bio",
+    "_id": [
+      "docp201bio",
+      "blank"
+    ],
     "title": "downloadUrl",
     "color": "#097969",
     "validation": {
@@ -461,7 +521,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so228bio",
+    "_id": [
+      "socs696bio",
+      "blank"
+    ],
     "title": "socialMedia",
     "color": "#097969",
     "validation": {
@@ -471,7 +534,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so585bio",
+    "_id": [
+      "sobu184bio",
+      "blank"
+    ],
     "title": "socialMedia",
     "color": "#097969",
     "validation": {
@@ -492,7 +558,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "rd158bio",
+    "_id": [
+      "rdgw928bio",
+      "blank"
+    ],
     "title": "rdf:type",
     "color": "#097969",
     "validation": {
@@ -502,7 +571,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "rd767bio",
+    "_id": [
+      "rdbx589bio",
+      "blank"
+    ],
     "title": "rdf:type",
     "color": "#097969",
     "validation": {
@@ -523,7 +595,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "at939bio",
+    "_id": [
+      "atfq758bio",
+      "blank"
+    ],
     "title": "attachment",
     "color": "#097969",
     "validation": {
@@ -533,7 +608,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "at919bio",
+    "_id": [
+      "atgr700bio",
+      "blank"
+    ],
     "title": "attachment",
     "color": "#097969",
     "validation": {
@@ -554,7 +632,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co356bio",
+    "_id": [
+      "coaw429bio",
+      "blank"
+    ],
     "title": "codeRepository",
     "color": "#097969",
     "validation": {
@@ -564,7 +645,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co563bio",
+    "_id": [
+      "coaw543bio",
+      "blank"
+    ],
     "title": "codeRepository",
     "color": "#097969",
     "validation": {
@@ -585,7 +669,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di746bio",
+    "_id": [
+      "difv247bio",
+      "blank"
+    ],
     "title": "discussionUrl",
     "color": "#097969",
     "validation": {
@@ -595,7 +682,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di484bio",
+    "_id": [
+      "dibv154bio",
+      "blank"
+    ],
     "title": "discussionUrl",
     "color": "#097969",
     "validation": {
@@ -616,7 +706,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "to534bio",
+    "_id": [
+      "todq932bio",
+      "blank"
+    ],
     "title": "topic",
     "color": "#097969",
     "validation": {
@@ -633,7 +726,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "to573bio",
+    "_id": [
+      "toew338bio",
+      "blank"
+    ],
     "title": "topic",
     "color": "#097969",
     "validation": {
@@ -663,7 +759,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ou879bio",
+    "_id": [
+      "ouet593bio",
+      "blank"
+    ],
     "title": "outputData",
     "color": "#097969",
     "validation": {
@@ -673,7 +772,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ou654bio",
+    "_id": [
+      "ouev782bio",
+      "blank"
+    ],
     "title": "outputData",
     "color": "#097969",
     "validation": {
@@ -694,7 +796,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ou783bio",
+    "_id": [
+      "oufs744bio",
+      "blank"
+    ],
     "title": "outputFormat",
     "color": "#097969",
     "validation": {
@@ -704,7 +809,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ou475bio",
+    "_id": [
+      "oues440bio",
+      "blank"
+    ],
     "title": "outputFormat",
     "color": "#097969",
     "validation": {
@@ -725,7 +833,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "PP167bio",
+    "_id": [
+      "PPfs112bio",
+      "blank"
+    ],
     "title": "PPEO:hasGrowthChamber",
     "color": "#097969",
     "validation": {
@@ -735,7 +846,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "PP856bio",
+    "_id": [
+      "PPhv910bio",
+      "blank"
+    ],
     "title": "PPEO:hasGrowthChamber",
     "color": "#097969",
     "validation": {
@@ -756,7 +870,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "au792bio",
+    "_id": [
+      "audq308bio",
+      "blank"
+    ],
     "title": "audience",
     "color": "#097969",
     "validation": {
@@ -768,7 +885,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "au918bio",
+    "_id": [
+      "auep559bio",
+      "blank"
+    ],
     "title": "audience",
     "color": "#097969",
     "validation": {
@@ -793,7 +913,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ex894bio",
+    "_id": [
+      "exgu707bio",
+      "blank"
+    ],
     "title": "expertise",
     "color": "#097969",
     "validation": {
@@ -803,7 +926,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ex437bio",
+    "_id": [
+      "exes168bio",
+      "blank"
+    ],
     "title": "expertise",
     "color": "#097969",
     "validation": {
@@ -824,7 +950,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in615bio",
+    "_id": [
+      "infs136bio",
+      "blank"
+    ],
     "title": "inputData",
     "color": "#097969",
     "validation": {
@@ -834,7 +963,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in187bio",
+    "_id": [
+      "infp183bio",
+      "blank"
+    ],
     "title": "inputData",
     "color": "#097969",
     "validation": {
@@ -855,7 +987,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in190bio",
+    "_id": [
+      "inav985bio",
+      "blank"
+    ],
     "title": "inputFormat",
     "color": "#097969",
     "validation": {
@@ -865,7 +1000,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in950bio",
+    "_id": [
+      "ineu171bio",
+      "blank"
+    ],
     "title": "inputFormat",
     "color": "#097969",
     "validation": {
@@ -886,7 +1024,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fe866bio",
+    "_id": [
+      "feax160bio",
+      "blank"
+    ],
     "title": "featureList",
     "color": "#097969",
     "validation": {
@@ -903,7 +1044,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fe110bio",
+    "_id": [
+      "fegr432bio",
+      "blank"
+    ],
     "title": "featureList",
     "color": "#097969",
     "validation": {
@@ -933,7 +1077,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "na124bio",
+    "_id": [
+      "nahw542bio",
+      "blank"
+    ],
     "title": "name",
     "color": "#097969",
     "validation": {
@@ -942,7 +1089,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "na892bio",
+    "_id": [
+      "nabp659bio",
+      "blank"
+    ],
     "title": "name",
     "color": "#097969",
     "validation": {
@@ -961,7 +1111,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "de117bio",
+    "_id": [
+      "deeu745bio",
+      "blank"
+    ],
     "title": "description",
     "color": "#097969",
     "validation": {
@@ -970,7 +1123,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "de957bio",
+    "_id": [
+      "deht204bio",
+      "blank"
+    ],
     "title": "description",
     "color": "#097969",
     "validation": {
@@ -989,7 +1145,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "al698bio",
+    "_id": [
+      "alhs968bio",
+      "blank"
+    ],
     "title": "alternateName",
     "color": "#097969",
     "validation": {
@@ -998,7 +1157,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "al459bio",
+    "_id": [
+      "aleq612bio",
+      "blank"
+    ],
     "title": "alternateName",
     "color": "#097969",
     "validation": {
@@ -1017,7 +1179,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ke584bio",
+    "_id": [
+      "keex417bio",
+      "blank"
+    ],
     "title": "keywords",
     "color": "#097969",
     "validation": {
@@ -1040,7 +1205,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ke362bio",
+    "_id": [
+      "kefs295bio",
+      "blank"
+    ],
     "title": "keywords",
     "color": "#097969",
     "validation": {
@@ -1085,7 +1253,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di551bio",
+    "_id": [
+      "diht811bio",
+      "blank"
+    ],
     "title": "disambiguatingDescription",
     "color": "#097969",
     "validation": {
@@ -1094,7 +1265,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di579bio",
+    "_id": [
+      "diav318bio",
+      "blank"
+    ],
     "title": "disambiguatingDescription",
     "color": "#097969",
     "validation": {
@@ -1113,7 +1287,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ab133bio",
+    "_id": [
+      "abct413bio",
+      "blank"
+    ],
     "title": "abstract",
     "color": "#097969",
     "validation": {
@@ -1122,7 +1299,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ab481bio",
+    "_id": [
+      "abbt610bio",
+      "blank"
+    ],
     "title": "abstract",
     "color": "#097969",
     "validation": {
@@ -1141,7 +1321,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pa251bio",
+    "_id": [
+      "paex332bio",
+      "blank"
+    ],
     "title": "pagination",
     "color": "#097969",
     "validation": {
@@ -1150,7 +1333,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pa799bio",
+    "_id": [
+      "pahq939bio",
+      "blank"
+    ],
     "title": "pagination",
     "color": "#097969",
     "validation": {
@@ -1169,7 +1355,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "op979bio",
+    "_id": [
+      "opdp750bio",
+      "blank"
+    ],
     "title": "operatingSystem",
     "color": "#097969",
     "validation": {
@@ -1178,7 +1367,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "op627bio",
+    "_id": [
+      "opds509bio",
+      "blank"
+    ],
     "title": "operatingSystem",
     "color": "#097969",
     "validation": {
@@ -1197,7 +1389,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "he794bio",
+    "_id": [
+      "hebt980bio",
+      "blank"
+    ],
     "title": "headline",
     "color": "#097969",
     "validation": {
@@ -1206,7 +1401,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "he704bio",
+    "_id": [
+      "heat376bio",
+      "blank"
+    ],
     "title": "headline",
     "color": "#097969",
     "validation": {
@@ -1225,7 +1423,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ac226bio",
+    "_id": [
+      "achr283bio",
+      "blank"
+    ],
     "title": "accessibilitySummary",
     "color": "#097969",
     "validation": {
@@ -1234,7 +1435,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ac374bio",
+    "_id": [
+      "acfx167bio",
+      "blank"
+    ],
     "title": "accessibilitySummary",
     "color": "#097969",
     "validation": {
@@ -1253,7 +1457,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ap128bio",
+    "_id": [
+      "apau114bio",
+      "blank"
+    ],
     "title": "applicationSuite",
     "color": "#097969",
     "validation": {
@@ -1262,7 +1469,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ap612bio",
+    "_id": [
+      "apex270bio",
+      "blank"
+    ],
     "title": "applicationSuite",
     "color": "#097969",
     "validation": {
@@ -1281,7 +1491,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so595bio",
+    "_id": [
+      "sohp727bio",
+      "blank"
+    ],
     "title": "softwareVersion",
     "color": "#097969",
     "validation": {
@@ -1290,7 +1503,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so147bio",
+    "_id": [
+      "socw103bio",
+      "blank"
+    ],
     "title": "softwareVersion",
     "color": "#097969",
     "validation": {
@@ -1309,7 +1525,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "te565bio",
+    "_id": [
+      "teax207bio",
+      "blank"
+    ],
     "title": "text",
     "color": "#097969",
     "validation": {
@@ -1318,7 +1537,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "te109bio",
+    "_id": [
+      "tefs758bio",
+      "blank"
+    ],
     "title": "text",
     "color": "#097969",
     "validation": {
@@ -1337,7 +1559,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sm305bio",
+    "_id": [
+      "smhq692bio",
+      "blank"
+    ],
     "title": "smiles",
     "color": "#097969",
     "validation": {
@@ -1346,7 +1571,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sm522bio",
+    "_id": [
+      "smgu979bio",
+      "blank"
+    ],
     "title": "smiles",
     "color": "#097969",
     "validation": {
@@ -1365,7 +1593,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "mo886bio",
+    "_id": [
+      "moap722bio",
+      "blank"
+    ],
     "title": "molecularFormula",
     "color": "#097969",
     "validation": {
@@ -1374,7 +1605,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "mo342bio",
+    "_id": [
+      "mocq824bio",
+      "blank"
+    ],
     "title": "molecularFormula",
     "color": "#097969",
     "validation": {
@@ -1393,7 +1627,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ru505bio",
+    "_id": [
+      "ruer601bio",
+      "blank"
+    ],
     "title": "runtimePlatform",
     "color": "#097969",
     "validation": {
@@ -1402,7 +1639,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ru729bio",
+    "_id": [
+      "rubt497bio",
+      "blank"
+    ],
     "title": "runtimePlatform",
     "color": "#097969",
     "validation": {
@@ -1421,7 +1661,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "re453bio",
+    "_id": [
+      "redu620bio",
+      "blank"
+    ],
     "title": "registrationStatus",
     "color": "#097969",
     "validation": {
@@ -1430,7 +1673,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "re843bio",
+    "_id": [
+      "reau629bio",
+      "blank"
+    ],
     "title": "registrationStatus",
     "color": "#097969",
     "validation": {
@@ -1449,7 +1695,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su175bio",
+    "_id": [
+      "subx126bio",
+      "blank"
+    ],
     "title": "supportedRefs",
     "color": "#097969",
     "validation": {
@@ -1458,7 +1707,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su614bio",
+    "_id": [
+      "sudw414bio",
+      "blank"
+    ],
     "title": "supportedRefs",
     "color": "#097969",
     "validation": {
@@ -1477,7 +1729,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st655bio",
+    "_id": [
+      "sths860bio",
+      "blank"
+    ],
     "title": "status",
     "color": "#097969",
     "validation": {
@@ -1486,7 +1741,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st695bio",
+    "_id": [
+      "stct474bio",
+      "blank"
+    ],
     "title": "status",
     "color": "#097969",
     "validation": {
@@ -1505,7 +1763,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr880bio",
+    "_id": [
+      "prgw612bio",
+      "blank"
+    ],
     "title": "prerequisite",
     "color": "#097969",
     "validation": {
@@ -1514,7 +1775,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr208bio",
+    "_id": [
+      "prgt447bio",
+      "blank"
+    ],
     "title": "prerequisite",
     "color": "#097969",
     "validation": {
@@ -1533,7 +1797,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co630bio",
+    "_id": [
+      "cobs632bio",
+      "blank"
+    ],
     "title": "courseCode",
     "color": "#097969",
     "validation": {
@@ -1542,7 +1809,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co565bio",
+    "_id": [
+      "codu712bio",
+      "blank"
+    ],
     "title": "courseCode",
     "color": "#097969",
     "validation": {
@@ -1561,7 +1831,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "dw374bio",
+    "_id": [
+      "dwhv256bio",
+      "blank"
+    ],
     "title": "dwc:vernacularName",
     "color": "#097969",
     "validation": {
@@ -1570,7 +1843,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "dw772bio",
+    "_id": [
+      "dwet883bio",
+      "blank"
+    ],
     "title": "dwc:vernacularName",
     "color": "#097969",
     "validation": {
@@ -1589,7 +1865,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "el155bio",
+    "_id": [
+      "elbw112bio",
+      "blank"
+    ],
     "title": "eligibility",
     "color": "#097969",
     "validation": {
@@ -1598,7 +1877,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "el775bio",
+    "_id": [
+      "eldx388bio",
+      "blank"
+    ],
     "title": "eligibility",
     "color": "#097969",
     "validation": {
@@ -1617,7 +1899,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co360bio",
+    "_id": [
+      "cocp966bio",
+      "blank"
+    ],
     "title": "conditionsOfAccess",
     "color": "#097969",
     "validation": {
@@ -1626,7 +1911,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co850bio",
+    "_id": [
+      "codp388bio",
+      "blank"
+    ],
     "title": "conditionsOfAccess",
     "color": "#097969",
     "validation": {
@@ -1645,7 +1933,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ap169bio",
+    "_id": [
+      "apbs774bio",
+      "blank"
+    ],
     "title": "applicationCategory",
     "color": "#097969",
     "validation": {
@@ -1662,7 +1953,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ap595bio",
+    "_id": [
+      "apgs609bio",
+      "blank"
+    ],
     "title": "applicationCategory",
     "color": "#097969",
     "validation": {
@@ -1692,7 +1986,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ap804bio",
+    "_id": [
+      "apgs842bio",
+      "blank"
+    ],
     "title": "applicationSubCategory",
     "color": "#097969",
     "validation": {
@@ -1709,7 +2006,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ap207bio",
+    "_id": [
+      "aphr680bio",
+      "blank"
+    ],
     "title": "applicationSubCategory",
     "color": "#097969",
     "validation": {
@@ -1739,7 +2039,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ar333bio",
+    "_id": [
+      "araq955bio",
+      "blank"
+    ],
     "title": "articleBody",
     "color": "#097969",
     "validation": {
@@ -1748,7 +2051,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ar830bio",
+    "_id": [
+      "ards465bio",
+      "blank"
+    ],
     "title": "articleBody",
     "color": "#097969",
     "validation": {
@@ -1767,7 +2073,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ch136bio",
+    "_id": [
+      "chfq169bio",
+      "blank"
+    ],
     "title": "chemicalComposition",
     "color": "#097969",
     "validation": {
@@ -1776,7 +2085,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ch749bio",
+    "_id": [
+      "chas168bio",
+      "blank"
+    ],
     "title": "chemicalComposition",
     "color": "#097969",
     "validation": {
@@ -1795,7 +2107,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ex666bio",
+    "_id": [
+      "exes618bio",
+      "blank"
+    ],
     "title": "experience",
     "color": "#097969",
     "validation": {
@@ -1804,7 +2119,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ex966bio",
+    "_id": [
+      "exdx429bio",
+      "blank"
+    ],
     "title": "experience",
     "color": "#097969",
     "validation": {
@@ -1823,7 +2141,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in153bio",
+    "_id": [
+      "inat939bio",
+      "blank"
+    ],
     "title": "internatonalActivities",
     "color": "#097969",
     "validation": {
@@ -1832,7 +2153,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in651bio",
+    "_id": [
+      "inbw234bio",
+      "blank"
+    ],
     "title": "internatonalActivities",
     "color": "#097969",
     "validation": {
@@ -1851,7 +2175,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "iu608bio",
+    "_id": [
+      "iuev996bio",
+      "blank"
+    ],
     "title": "iupacName",
     "color": "#097969",
     "validation": {
@@ -1860,7 +2187,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "iu160bio",
+    "_id": [
+      "iuev904bio",
+      "blank"
+    ],
     "title": "iupacName",
     "color": "#097969",
     "validation": {
@@ -1879,7 +2209,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "le794bio",
+    "_id": [
+      "lehp928bio",
+      "blank"
+    ],
     "title": "legalName",
     "color": "#097969",
     "validation": {
@@ -1888,7 +2221,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "le506bio",
+    "_id": [
+      "lefs966bio",
+      "blank"
+    ],
     "title": "legalName",
     "color": "#097969",
     "validation": {
@@ -1907,7 +2243,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fu308bio",
+    "_id": [
+      "fuex488bio",
+      "blank"
+    ],
     "title": "funding",
     "color": "#097969",
     "validation": {
@@ -1916,7 +2255,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fu726bio",
+    "_id": [
+      "fuaw475bio",
+      "blank"
+    ],
     "title": "funding",
     "color": "#097969",
     "validation": {
@@ -1935,7 +2277,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fu990bio",
+    "_id": [
+      "fugu732bio",
+      "blank"
+    ],
     "title": "fundingModel",
     "color": "#097969",
     "validation": {
@@ -1944,7 +2289,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fu834bio",
+    "_id": [
+      "fubx741bio",
+      "blank"
+    ],
     "title": "fundingModel",
     "color": "#097969",
     "validation": {
@@ -1963,7 +2311,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha730bio",
+    "_id": [
+      "haex239bio",
+      "blank"
+    ],
     "title": "hasBioPolymerSequence",
     "color": "#097969",
     "validation": {
@@ -1972,7 +2323,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha345bio",
+    "_id": [
+      "hadr665bio",
+      "blank"
+    ],
     "title": "hasBioPolymerSequence",
     "color": "#097969",
     "validation": {
@@ -1991,7 +2345,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha645bio",
+    "_id": [
+      "haet961bio",
+      "blank"
+    ],
     "title": "hasSequence",
     "color": "#097969",
     "validation": {
@@ -2000,7 +2357,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha671bio",
+    "_id": [
+      "habx721bio",
+      "blank"
+    ],
     "title": "hasSequence",
     "color": "#097969",
     "validation": {
@@ -2019,7 +2379,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha429bio",
+    "_id": [
+      "hagq177bio",
+      "blank"
+    ],
     "title": "hasStatus",
     "color": "#097969",
     "validation": {
@@ -2028,7 +2391,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha931bio",
+    "_id": [
+      "haax810bio",
+      "blank"
+    ],
     "title": "hasStatus",
     "color": "#097969",
     "validation": {
@@ -2047,7 +2413,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in295bio",
+    "_id": [
+      "incu981bio",
+      "blank"
+    ],
     "title": "inChI",
     "color": "#097969",
     "validation": {
@@ -2056,7 +2425,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in708bio",
+    "_id": [
+      "iner716bio",
+      "blank"
+    ],
     "title": "inChI",
     "color": "#097969",
     "validation": {
@@ -2075,7 +2447,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in823bio",
+    "_id": [
+      "indv291bio",
+      "blank"
+    ],
     "title": "inChIKey",
     "color": "#097969",
     "validation": {
@@ -2084,7 +2459,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in430bio",
+    "_id": [
+      "ingq207bio",
+      "blank"
+    ],
     "title": "inChIKey",
     "color": "#097969",
     "validation": {
@@ -2103,7 +2481,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "im779bio",
+    "_id": [
+      "imgu349bio",
+      "blank"
+    ],
     "title": "image",
     "color": "#097969",
     "validation": {
@@ -2123,7 +2504,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "im498bio",
+    "_id": [
+      "imcv796bio",
+      "blank"
+    ],
     "title": "image",
     "color": "#097969",
     "validation": {
@@ -2159,7 +2543,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "lo764bio",
+    "_id": [
+      "lofp282bio",
+      "blank"
+    ],
     "title": "logo",
     "color": "#097969",
     "validation": {
@@ -2179,7 +2566,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "lo131bio",
+    "_id": [
+      "lobv884bio",
+      "blank"
+    ],
     "title": "logo",
     "color": "#097969",
     "validation": {
@@ -2215,7 +2605,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "da196bio",
+    "_id": [
+      "dahp605bio",
+      "blank"
+    ],
     "title": "dateModified",
     "color": "#097969",
     "validation": {
@@ -2235,7 +2628,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "da479bio",
+    "_id": [
+      "daau626bio",
+      "blank"
+    ],
     "title": "dateModified",
     "color": "#097969",
     "validation": {
@@ -2271,7 +2667,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "da618bio",
+    "_id": [
+      "daat442bio",
+      "blank"
+    ],
     "title": "dateCreated",
     "color": "#097969",
     "validation": {
@@ -2291,7 +2690,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "da762bio",
+    "_id": [
+      "daau992bio",
+      "blank"
+    ],
     "title": "dateCreated",
     "color": "#097969",
     "validation": {
@@ -2327,7 +2729,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st731bio",
+    "_id": [
+      "stet579bio",
+      "blank"
+    ],
     "title": "startDate",
     "color": "#097969",
     "validation": {
@@ -2347,7 +2752,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st450bio",
+    "_id": [
+      "stfp682bio",
+      "blank"
+    ],
     "title": "startDate",
     "color": "#097969",
     "validation": {
@@ -2383,7 +2791,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "en767bio",
+    "_id": [
+      "enep502bio",
+      "blank"
+    ],
     "title": "endDate",
     "color": "#097969",
     "validation": {
@@ -2403,7 +2814,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "en457bio",
+    "_id": [
+      "enfr228bio",
+      "blank"
+    ],
     "title": "endDate",
     "color": "#097969",
     "validation": {
@@ -2439,7 +2853,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "da548bio",
+    "_id": [
+      "daaq249bio",
+      "blank"
+    ],
     "title": "datePublished",
     "color": "#097969",
     "validation": {
@@ -2449,7 +2866,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "da647bio",
+    "_id": [
+      "dacp304bio",
+      "blank"
+    ],
     "title": "datePublished",
     "color": "#097969",
     "validation": {
@@ -2470,7 +2890,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "li831bio",
+    "_id": [
+      "lihr716bio",
+      "blank"
+    ],
     "title": "license",
     "color": "#097969",
     "validation": {
@@ -2490,7 +2913,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "li674bio",
+    "_id": [
+      "ligw154bio",
+      "blank"
+    ],
     "title": "license",
     "color": "#097969",
     "validation": {
@@ -2526,7 +2952,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma380bio",
+    "_id": [
+      "macx790bio",
+      "blank"
+    ],
     "title": "mainEntityOfPage",
     "color": "#097969",
     "validation": {
@@ -2546,7 +2975,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma213bio",
+    "_id": [
+      "macx425bio",
+      "blank"
+    ],
     "title": "mainEntityOfPage",
     "color": "#097969",
     "validation": {
@@ -2582,7 +3014,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is170bio",
+    "_id": [
+      "iset200bio",
+      "blank"
+    ],
     "title": "isPartOf",
     "color": "#097969",
     "validation": {
@@ -2594,7 +3029,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is525bio",
+    "_id": [
+      "isbt982bio",
+      "blank"
+    ],
     "title": "isPartOf",
     "color": "#097969",
     "validation": {
@@ -2619,7 +3057,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pu449bio",
+    "_id": [
+      "puhv407bio",
+      "blank"
+    ],
     "title": "publishingPrinciples",
     "color": "#097969",
     "validation": {
@@ -2639,7 +3080,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pu171bio",
+    "_id": [
+      "pugq402bio",
+      "blank"
+    ],
     "title": "publishingPrinciples",
     "color": "#097969",
     "validation": {
@@ -2675,7 +3119,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "do225bio",
+    "_id": [
+      "doew616bio",
+      "blank"
+    ],
     "title": "documentation",
     "color": "#097969",
     "validation": {
@@ -2695,7 +3142,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "do748bio",
+    "_id": [
+      "docx104bio",
+      "blank"
+    ],
     "title": "documentation",
     "color": "#097969",
     "validation": {
@@ -2731,7 +3181,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is627bio",
+    "_id": [
+      "isgt247bio",
+      "blank"
+    ],
     "title": "isBasedOn",
     "color": "#097969",
     "validation": {
@@ -2743,7 +3196,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is618bio",
+    "_id": [
+      "isbu670bio",
+      "blank"
+    ],
     "title": "isBasedOn",
     "color": "#097969",
     "validation": {
@@ -2768,7 +3224,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ci677bio",
+    "_id": [
+      "cifx452bio",
+      "blank"
+    ],
     "title": "citation",
     "color": "#097969",
     "validation": {
@@ -2787,7 +3246,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ci959bio",
+    "_id": [
+      "cigv836bio",
+      "blank"
+    ],
     "title": "citation",
     "color": "#097969",
     "validation": {
@@ -2821,7 +3283,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr722bio",
+    "_id": [
+      "prhs297bio",
+      "blank"
+    ],
     "title": "protocolAdvantage",
     "color": "#097969",
     "validation": {
@@ -2840,7 +3305,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr925bio",
+    "_id": [
+      "prcu362bio",
+      "blank"
+    ],
     "title": "protocolAdvantage",
     "color": "#097969",
     "validation": {
@@ -2874,7 +3342,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr513bio",
+    "_id": [
+      "prhq853bio",
+      "blank"
+    ],
     "title": "protocolApplication",
     "color": "#097969",
     "validation": {
@@ -2893,7 +3364,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr449bio",
+    "_id": [
+      "prhv635bio",
+      "blank"
+    ],
     "title": "protocolApplication",
     "color": "#097969",
     "validation": {
@@ -2927,7 +3401,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr481bio",
+    "_id": [
+      "prep694bio",
+      "blank"
+    ],
     "title": "protocolLimitation",
     "color": "#097969",
     "validation": {
@@ -2946,7 +3423,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr138bio",
+    "_id": [
+      "prbx119bio",
+      "blank"
+    ],
     "title": "protocolLimitation",
     "color": "#097969",
     "validation": {
@@ -2980,7 +3460,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr634bio",
+    "_id": [
+      "prdx887bio",
+      "blank"
+    ],
     "title": "protocolOutcome",
     "color": "#097969",
     "validation": {
@@ -2999,7 +3482,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr936bio",
+    "_id": [
+      "preu132bio",
+      "blank"
+    ],
     "title": "protocolOutcome",
     "color": "#097969",
     "validation": {
@@ -3033,7 +3519,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr211bio",
+    "_id": [
+      "prav800bio",
+      "blank"
+    ],
     "title": "protocolPurpose",
     "color": "#097969",
     "validation": {
@@ -3052,7 +3541,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr533bio",
+    "_id": [
+      "prdp387bio",
+      "blank"
+    ],
     "title": "protocolPurpose",
     "color": "#097969",
     "validation": {
@@ -3086,7 +3578,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ed587bio",
+    "_id": [
+      "edgt904bio",
+      "blank"
+    ],
     "title": "educationalLevel",
     "color": "#097969",
     "validation": {
@@ -3109,7 +3604,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ed814bio",
+    "_id": [
+      "edhw231bio",
+      "blank"
+    ],
     "title": "educationalLevel",
     "color": "#097969",
     "validation": {
@@ -3154,7 +3652,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co121bio",
+    "_id": [
+      "cohw771bio",
+      "blank"
+    ],
     "title": "competencyRequired",
     "color": "#097969",
     "validation": {
@@ -3177,7 +3678,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co487bio",
+    "_id": [
+      "cogs747bio",
+      "blank"
+    ],
     "title": "competencyRequired",
     "color": "#097969",
     "validation": {
@@ -3222,7 +3726,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "la302bio",
+    "_id": [
+      "lafs722bio",
+      "blank"
+    ],
     "title": "labEquipmentUsed",
     "color": "#097969",
     "validation": {
@@ -3245,7 +3752,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "la116bio",
+    "_id": [
+      "ladw393bio",
+      "blank"
+    ],
     "title": "labEquipmentUsed",
     "color": "#097969",
     "validation": {
@@ -3290,7 +3800,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ab284bio",
+    "_id": [
+      "abbt905bio",
+      "blank"
+    ],
     "title": "about",
     "color": "#097969",
     "validation": {
@@ -3302,7 +3815,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ab640bio",
+    "_id": [
+      "abat552bio",
+      "blank"
+    ],
     "title": "about",
     "color": "#097969",
     "validation": {
@@ -3327,7 +3843,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me866bio",
+    "_id": [
+      "mehq508bio",
+      "blank"
+    ],
     "title": "mentions",
     "color": "#097969",
     "validation": {
@@ -3339,7 +3858,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me586bio",
+    "_id": [
+      "medw143bio",
+      "blank"
+    ],
     "title": "mentions",
     "color": "#097969",
     "validation": {
@@ -3364,7 +3886,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma701bio",
+    "_id": [
+      "maax217bio",
+      "blank"
+    ],
     "title": "mainEntity",
     "color": "#097969",
     "validation": {
@@ -3376,7 +3901,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma838bio",
+    "_id": [
+      "maht755bio",
+      "blank"
+    ],
     "title": "mainEntity",
     "color": "#097969",
     "validation": {
@@ -3401,7 +3929,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is348bio",
+    "_id": [
+      "ishx856bio",
+      "blank"
+    ],
     "title": "isBasisFor",
     "color": "#097969",
     "validation": {
@@ -3427,7 +3958,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is839bio",
+    "_id": [
+      "isfp198bio",
+      "blank"
+    ],
     "title": "isBasisFor",
     "color": "#097969",
     "validation": {
@@ -3478,7 +4012,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di834bio",
+    "_id": [
+      "dies132bio",
+      "blank"
+    ],
     "title": "dissolutionDate",
     "color": "#097969",
     "validation": {
@@ -3488,7 +4025,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di532bio",
+    "_id": [
+      "difx179bio",
+      "blank"
+    ],
     "title": "dissolutionDate",
     "color": "#097969",
     "validation": {
@@ -3509,7 +4049,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ac205bio",
+    "_id": [
+      "acct729bio",
+      "blank"
+    ],
     "title": "acceptanceNotificationDate",
     "color": "#097969",
     "validation": {
@@ -3519,7 +4062,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ac267bio",
+    "_id": [
+      "accr512bio",
+      "blank"
+    ],
     "title": "acceptanceNotificationDate",
     "color": "#097969",
     "validation": {
@@ -3540,7 +4086,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fo465bio",
+    "_id": [
+      "fobr188bio",
+      "blank"
+    ],
     "title": "foundingDate",
     "color": "#097969",
     "validation": {
@@ -3550,7 +4099,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fo111bio",
+    "_id": [
+      "fobr249bio",
+      "blank"
+    ],
     "title": "foundingDate",
     "color": "#097969",
     "validation": {
@@ -3571,7 +4123,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "au349bio",
+    "_id": [
+      "aucs882bio",
+      "blank"
+    ],
     "title": "author",
     "color": "#097969",
     "validation": {
@@ -3659,7 +4214,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "au790bio",
+    "_id": [
+      "auer947bio",
+      "blank"
+    ],
     "title": "author",
     "color": "#097969",
     "validation": {
@@ -3831,7 +4389,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co357bio",
+    "_id": [
+      "coht838bio",
+      "blank"
+    ],
     "title": "contributor",
     "color": "#097969",
     "validation": {
@@ -3919,7 +4480,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co750bio",
+    "_id": [
+      "cobx549bio",
+      "blank"
+    ],
     "title": "contributor",
     "color": "#097969",
     "validation": {
@@ -4091,7 +4655,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cr633bio",
+    "_id": [
+      "crft524bio",
+      "blank"
+    ],
     "title": "creator",
     "color": "#097969",
     "validation": {
@@ -4179,7 +4746,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cr297bio",
+    "_id": [
+      "crgt495bio",
+      "blank"
+    ],
     "title": "creator",
     "color": "#097969",
     "validation": {
@@ -4351,7 +4921,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fu952bio",
+    "_id": [
+      "fufq764bio",
+      "blank"
+    ],
     "title": "funder",
     "color": "#097969",
     "validation": {
@@ -4439,7 +5012,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fu782bio",
+    "_id": [
+      "fucq690bio",
+      "blank"
+    ],
     "title": "funder",
     "color": "#097969",
     "validation": {
@@ -4611,7 +5187,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr621bio",
+    "_id": [
+      "prcp419bio",
+      "blank"
+    ],
     "title": "provider",
     "color": "#097969",
     "validation": {
@@ -4699,7 +5278,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr910bio",
+    "_id": [
+      "prcw592bio",
+      "blank"
+    ],
     "title": "provider",
     "color": "#097969",
     "validation": {
@@ -4871,7 +5453,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pu881bio",
+    "_id": [
+      "pufx326bio",
+      "blank"
+    ],
     "title": "publisher",
     "color": "#097969",
     "validation": {
@@ -4959,7 +5544,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pu168bio",
+    "_id": [
+      "pueu818bio",
+      "blank"
+    ],
     "title": "publisher",
     "color": "#097969",
     "validation": {
@@ -5131,7 +5719,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma254bio",
+    "_id": [
+      "magv247bio",
+      "blank"
+    ],
     "title": "maintainer",
     "color": "#097969",
     "validation": {
@@ -5219,7 +5810,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma951bio",
+    "_id": [
+      "macs212bio",
+      "blank"
+    ],
     "title": "maintainer",
     "color": "#097969",
     "validation": {
@@ -5391,7 +5985,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "or210bio",
+    "_id": [
+      "ordx238bio",
+      "blank"
+    ],
     "title": "organizer",
     "color": "#097969",
     "validation": {
@@ -5479,7 +6076,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "or947bio",
+    "_id": [
+      "orcr844bio",
+      "blank"
+    ],
     "title": "organizer",
     "color": "#097969",
     "validation": {
@@ -5651,7 +6251,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me298bio",
+    "_id": [
+      "mebu941bio",
+      "blank"
+    ],
     "title": "member",
     "color": "#097969",
     "validation": {
@@ -5739,7 +6342,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me442bio",
+    "_id": [
+      "mebp608bio",
+      "blank"
+    ],
     "title": "member",
     "color": "#097969",
     "validation": {
@@ -5911,7 +6517,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sd762bio",
+    "_id": [
+      "sdfs930bio",
+      "blank"
+    ],
     "title": "sdPublisher",
     "color": "#097969",
     "validation": {
@@ -5999,7 +6608,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sd784bio",
+    "_id": [
+      "sdeu393bio",
+      "blank"
+    ],
     "title": "sdPublisher",
     "color": "#097969",
     "validation": {
@@ -6171,7 +6783,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr260bio",
+    "_id": [
+      "prep264bio",
+      "blank"
+    ],
     "title": "producer",
     "color": "#097969",
     "validation": {
@@ -6259,7 +6874,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr212bio",
+    "_id": [
+      "prhp219bio",
+      "blank"
+    ],
     "title": "producer",
     "color": "#097969",
     "validation": {
@@ -6431,7 +7049,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sp523bio",
+    "_id": [
+      "spcv341bio",
+      "blank"
+    ],
     "title": "sponsor",
     "color": "#097969",
     "validation": {
@@ -6519,7 +7140,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sp777bio",
+    "_id": [
+      "spfw989bio",
+      "blank"
+    ],
     "title": "sponsor",
     "color": "#097969",
     "validation": {
@@ -6691,7 +7315,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su351bio",
+    "_id": [
+      "suhu878bio",
+      "blank"
+    ],
     "title": "submitter",
     "color": "#097969",
     "validation": {
@@ -6779,7 +7406,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su112bio",
+    "_id": [
+      "sufu370bio",
+      "blank"
+    ],
     "title": "submitter",
     "color": "#097969",
     "validation": {
@@ -6951,7 +7581,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pe694bio",
+    "_id": [
+      "pedu362bio",
+      "blank"
+    ],
     "title": "performer",
     "color": "#097969",
     "validation": {
@@ -7039,7 +7672,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pe653bio",
+    "_id": [
+      "pehs910bio",
+      "blank"
+    ],
     "title": "performer",
     "color": "#097969",
     "validation": {
@@ -7211,7 +7847,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cu206bio",
+    "_id": [
+      "cuev369bio",
+      "blank"
+    ],
     "title": "custodian",
     "color": "#097969",
     "validation": {
@@ -7299,7 +7938,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cu531bio",
+    "_id": [
+      "cuhr706bio",
+      "blank"
+    ],
     "title": "custodian",
     "color": "#097969",
     "validation": {
@@ -7471,7 +8113,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co200bio",
+    "_id": [
+      "cofr979bio",
+      "blank"
+    ],
     "title": "contact",
     "color": "#097969",
     "validation": {
@@ -7559,7 +8204,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co895bio",
+    "_id": [
+      "cobv182bio",
+      "blank"
+    ],
     "title": "contact",
     "color": "#097969",
     "validation": {
@@ -7731,7 +8379,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co293bio",
+    "_id": [
+      "cogu680bio",
+      "blank"
+    ],
     "title": "collector",
     "color": "#097969",
     "validation": {
@@ -7819,7 +8470,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co670bio",
+    "_id": [
+      "cogt444bio",
+      "blank"
+    ],
     "title": "collector",
     "color": "#097969",
     "validation": {
@@ -7991,7 +8645,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fo547bio",
+    "_id": [
+      "foes941bio",
+      "blank"
+    ],
     "title": "founderMember",
     "color": "#097969",
     "validation": {
@@ -8079,7 +8736,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "fo296bio",
+    "_id": [
+      "foex873bio",
+      "blank"
+    ],
     "title": "founderMember",
     "color": "#097969",
     "validation": {
@@ -8251,7 +8911,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in829bio",
+    "_id": [
+      "ingp566bio",
+      "blank"
+    ],
     "title": "inLanguage",
     "color": "#097969",
     "validation": {
@@ -8270,7 +8933,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in741bio",
+    "_id": [
+      "inct850bio",
+      "blank"
+    ],
     "title": "inLanguage",
     "color": "#097969",
     "validation": {
@@ -8304,7 +8970,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "as273bio",
+    "_id": [
+      "aseq582bio",
+      "blank"
+    ],
     "title": "associatedDisease",
     "color": "#097969",
     "validation": {
@@ -8330,7 +8999,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "as129bio",
+    "_id": [
+      "asbp161bio",
+      "blank"
+    ],
     "title": "associatedDisease",
     "color": "#097969",
     "validation": {
@@ -8381,7 +9053,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is464bio",
+    "_id": [
+      "ishp398bio",
+      "blank"
+    ],
     "title": "isInvolvedInBiologicalProcess",
     "color": "#097969",
     "validation": {
@@ -8407,7 +9082,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is316bio",
+    "_id": [
+      "isgt499bio",
+      "blank"
+    ],
     "title": "isInvolvedInBiologicalProcess",
     "color": "#097969",
     "validation": {
@@ -8458,7 +9136,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha752bio",
+    "_id": [
+      "hahw582bio",
+      "blank"
+    ],
     "title": "hasMolecularFunction",
     "color": "#097969",
     "validation": {
@@ -8484,7 +9165,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha186bio",
+    "_id": [
+      "haas186bio",
+      "blank"
+    ],
     "title": "hasMolecularFunction",
     "color": "#097969",
     "validation": {
@@ -8535,7 +9219,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is839bio",
+    "_id": [
+      "iscx143bio",
+      "blank"
+    ],
     "title": "isLocatedInSubcellularLocation",
     "color": "#097969",
     "validation": {
@@ -8561,7 +9248,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is179bio",
+    "_id": [
+      "iscq913bio",
+      "blank"
+    ],
     "title": "isLocatedInSubcellularLocation",
     "color": "#097969",
     "validation": {
@@ -8612,7 +9302,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ad676bio",
+    "_id": [
+      "adhx546bio",
+      "blank"
+    ],
     "title": "additionalProperty",
     "color": "#097969",
     "validation": {
@@ -8624,7 +9317,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ad509bio",
+    "_id": [
+      "adhp367bio",
+      "blank"
+    ],
     "title": "additionalProperty",
     "color": "#097969",
     "validation": {
@@ -8649,7 +9345,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cr523bio",
+    "_id": [
+      "cras502bio",
+      "blank"
+    ],
     "title": "creationMethod",
     "color": "#097969",
     "validation": {
@@ -8661,7 +9360,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cr767bio",
+    "_id": [
+      "crfu400bio",
+      "blank"
+    ],
     "title": "creationMethod",
     "color": "#097969",
     "validation": {
@@ -8686,7 +9388,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha805bio",
+    "_id": [
+      "hafv991bio",
+      "blank"
+    ],
     "title": "hasBioChemEntityPart",
     "color": "#097969",
     "validation": {
@@ -8706,7 +9411,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha879bio",
+    "_id": [
+      "hahp417bio",
+      "blank"
+    ],
     "title": "hasBioChemEntityPart",
     "color": "#097969",
     "validation": {
@@ -8742,7 +9450,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is107bio",
+    "_id": [
+      "iseu529bio",
+      "blank"
+    ],
     "title": "isPartOfBioChemEntity",
     "color": "#097969",
     "validation": {
@@ -8754,7 +9465,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is621bio",
+    "_id": [
+      "isbu152bio",
+      "blank"
+    ],
     "title": "isPartOfBioChemEntity",
     "color": "#097969",
     "validation": {
@@ -8779,7 +9493,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi599bio",
+    "_id": [
+      "biev141bio",
+      "blank"
+    ],
     "title": "bioChemInteraction",
     "color": "#097969",
     "validation": {
@@ -8791,7 +9508,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi336bio",
+    "_id": [
+      "biep863bio",
+      "blank"
+    ],
     "title": "bioChemInteraction",
     "color": "#097969",
     "validation": {
@@ -8816,7 +9536,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi146bio",
+    "_id": [
+      "bigp826bio",
+      "blank"
+    ],
     "title": "bioChemSimilarity",
     "color": "#097969",
     "validation": {
@@ -8828,7 +9551,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi391bio",
+    "_id": [
+      "biew371bio",
+      "blank"
+    ],
     "title": "bioChemSimilarity",
     "color": "#097969",
     "validation": {
@@ -8853,7 +9579,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "en856bio",
+    "_id": [
+      "enct236bio",
+      "blank"
+    ],
     "title": "encodesBioChemEntity",
     "color": "#097969",
     "validation": {
@@ -8865,7 +9594,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "en919bio",
+    "_id": [
+      "enfw321bio",
+      "blank"
+    ],
     "title": "encodesBioChemEntity",
     "color": "#097969",
     "validation": {
@@ -8890,7 +9622,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi923bio",
+    "_id": [
+      "biet619bio",
+      "blank"
+    ],
     "title": "bioChemAssociation",
     "color": "#097969",
     "validation": {
@@ -8902,7 +9637,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi825bio",
+    "_id": [
+      "bicw377bio",
+      "blank"
+    ],
     "title": "bioChemAssociation",
     "color": "#097969",
     "validation": {
@@ -8927,7 +9665,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha908bio",
+    "_id": [
+      "hagp680bio",
+      "blank"
+    ],
     "title": "hasPart",
     "color": "#097969",
     "validation": {
@@ -8939,7 +9680,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ha326bio",
+    "_id": [
+      "habs936bio",
+      "blank"
+    ],
     "title": "hasPart",
     "color": "#097969",
     "validation": {
@@ -8964,7 +9708,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so283bio",
+    "_id": [
+      "soer720bio",
+      "blank"
+    ],
     "title": "softwareHelp",
     "color": "#097969",
     "validation": {
@@ -8976,7 +9723,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so603bio",
+    "_id": [
+      "soat509bio",
+      "blank"
+    ],
     "title": "softwareHelp",
     "color": "#097969",
     "validation": {
@@ -9001,7 +9751,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "wo327bio",
+    "_id": [
+      "wocu390bio",
+      "blank"
+    ],
     "title": "works",
     "color": "#097969",
     "validation": {
@@ -9013,7 +9766,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "wo359bio",
+    "_id": [
+      "wodv980bio",
+      "blank"
+    ],
     "title": "works",
     "color": "#097969",
     "validation": {
@@ -9038,7 +9794,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "wo251bio",
+    "_id": [
+      "wocw317bio",
+      "blank"
+    ],
     "title": "workTranslation",
     "color": "#097969",
     "validation": {
@@ -9050,7 +9809,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "wo898bio",
+    "_id": [
+      "wocw440bio",
+      "blank"
+    ],
     "title": "workTranslation",
     "color": "#097969",
     "validation": {
@@ -9075,7 +9837,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "wo828bio",
+    "_id": [
+      "wodq606bio",
+      "blank"
+    ],
     "title": "workFeatured",
     "color": "#097969",
     "validation": {
@@ -9087,7 +9852,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "wo329bio",
+    "_id": [
+      "wocs117bio",
+      "blank"
+    ],
     "title": "workFeatured",
     "color": "#097969",
     "validation": {
@@ -9112,7 +9880,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "jo605bio",
+    "_id": [
+      "jocp981bio",
+      "blank"
+    ],
     "title": "journalReferee",
     "color": "#097969",
     "validation": {
@@ -9124,7 +9895,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "jo131bio",
+    "_id": [
+      "joap365bio",
+      "blank"
+    ],
     "title": "journalReferee",
     "color": "#097969",
     "validation": {
@@ -9149,7 +9923,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is726bio",
+    "_id": [
+      "isdt712bio",
+      "blank"
+    ],
     "title": "isAccessibleForFree",
     "color": "#097969",
     "validation": {
@@ -9158,7 +9935,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is602bio",
+    "_id": [
+      "iset630bio",
+      "blank"
+    ],
     "title": "isAccessibleForFree",
     "color": "#097969",
     "validation": {
@@ -9177,7 +9957,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "va765bio",
+    "_id": [
+      "vahu385bio",
+      "blank"
+    ],
     "title": "valueRequired",
     "color": "#097969",
     "validation": {
@@ -9186,7 +9969,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "va231bio",
+    "_id": [
+      "vaex219bio",
+      "blank"
+    ],
     "title": "valueRequired",
     "color": "#097969",
     "validation": {
@@ -9205,7 +9991,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ag440bio",
+    "_id": [
+      "aghv554bio",
+      "blank"
+    ],
     "title": "aggregator",
     "color": "#097969",
     "validation": {
@@ -9214,7 +10003,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ag863bio",
+    "_id": [
+      "agcr961bio",
+      "blank"
+    ],
     "title": "aggregator",
     "color": "#097969",
     "validation": {
@@ -9233,7 +10025,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is658bio",
+    "_id": [
+      "isfu441bio",
+      "blank"
+    ],
     "title": "isCodingRNA",
     "color": "#097969",
     "validation": {
@@ -9242,7 +10037,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is549bio",
+    "_id": [
+      "iscq542bio",
+      "blank"
+    ],
     "title": "isCodingRNA",
     "color": "#097969",
     "validation": {
@@ -9261,7 +10059,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is384bio",
+    "_id": [
+      "isds416bio",
+      "blank"
+    ],
     "title": "isControl",
     "color": "#097969",
     "validation": {
@@ -9270,7 +10071,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is737bio",
+    "_id": [
+      "isap938bio",
+      "blank"
+    ],
     "title": "isControl",
     "color": "#097969",
     "validation": {
@@ -9289,7 +10093,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ed311bio",
+    "_id": [
+      "edaw758bio",
+      "blank"
+    ],
     "title": "editor",
     "color": "#097969",
     "validation": {
@@ -9324,7 +10131,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ed292bio",
+    "_id": [
+      "edcw691bio",
+      "blank"
+    ],
     "title": "editor",
     "color": "#097969",
     "validation": {
@@ -9395,7 +10205,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ad595bio",
+    "_id": [
+      "addv322bio",
+      "blank"
+    ],
     "title": "advisor",
     "color": "#097969",
     "validation": {
@@ -9430,7 +10243,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ad819bio",
+    "_id": [
+      "adct625bio",
+      "blank"
+    ],
     "title": "advisor",
     "color": "#097969",
     "validation": {
@@ -9501,7 +10317,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in134bio",
+    "_id": [
+      "infv797bio",
+      "blank"
+    ],
     "title": "instructor",
     "color": "#097969",
     "validation": {
@@ -9536,7 +10355,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in242bio",
+    "_id": [
+      "inhq584bio",
+      "blank"
+    ],
     "title": "instructor",
     "color": "#097969",
     "validation": {
@@ -9607,7 +10429,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ta162bio",
+    "_id": [
+      "taeq154bio",
+      "blank"
+    ],
     "title": "taxonomicRange",
     "color": "#097969",
     "validation": {
@@ -9658,7 +10483,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ta883bio",
+    "_id": [
+      "tafw150bio",
+      "blank"
+    ],
     "title": "taxonomicRange",
     "color": "#097969",
     "validation": {
@@ -9762,7 +10590,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ve576bio",
+    "_id": [
+      "vegv986bio",
+      "blank"
+    ],
     "title": "version",
     "color": "#097969",
     "validation": {
@@ -9778,7 +10609,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ve749bio",
+    "_id": [
+      "vebq501bio",
+      "blank"
+    ],
     "title": "version",
     "color": "#097969",
     "validation": {
@@ -9806,7 +10640,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "en884bio",
+    "_id": [
+      "enau869bio",
+      "blank"
+    ],
     "title": "encodingFormat",
     "color": "#097969",
     "validation": {
@@ -9823,7 +10660,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "en465bio",
+    "_id": [
+      "enfu684bio",
+      "blank"
+    ],
     "title": "encodingFormat",
     "color": "#097969",
     "validation": {
@@ -9853,7 +10693,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "or131bio",
+    "_id": [
+      "orhx545bio",
+      "blank"
+    ],
     "title": "orcid",
     "color": "#097969",
     "validation": {
@@ -9870,7 +10713,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "or542bio",
+    "_id": [
+      "oret502bio",
+      "blank"
+    ],
     "title": "orcid",
     "color": "#097969",
     "validation": {
@@ -9900,7 +10746,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me303bio",
+    "_id": [
+      "megv546bio",
+      "blank"
+    ],
     "title": "measurementTechnique",
     "color": "#097969",
     "validation": {
@@ -9917,7 +10766,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me744bio",
+    "_id": [
+      "meft139bio",
+      "blank"
+    ],
     "title": "measurementTechnique",
     "color": "#097969",
     "validation": {
@@ -9947,7 +10799,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so615bio",
+    "_id": [
+      "sofr788bio",
+      "blank"
+    ],
     "title": "softwareRequirements",
     "color": "#097969",
     "validation": {
@@ -9964,7 +10819,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so754bio",
+    "_id": [
+      "sofs727bio",
+      "blank"
+    ],
     "title": "softwareRequirements",
     "color": "#097969",
     "validation": {
@@ -9994,7 +10852,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ty157bio",
+    "_id": [
+      "tybr947bio",
+      "blank"
+    ],
     "title": "type",
     "color": "#097969",
     "validation": {
@@ -10011,7 +10872,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ty390bio",
+    "_id": [
+      "tyfr891bio",
+      "blank"
+    ],
     "title": "type",
     "color": "#097969",
     "validation": {
@@ -10041,7 +10905,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st363bio",
+    "_id": [
+      "sthq317bio",
+      "blank"
+    ],
     "title": "structureDeterminationMethod",
     "color": "#097969",
     "validation": {
@@ -10058,7 +10925,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "st228bio",
+    "_id": [
+      "sthr380bio",
+      "blank"
+    ],
     "title": "structureDeterminationMethod",
     "color": "#097969",
     "validation": {
@@ -10088,7 +10958,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr420bio",
+    "_id": [
+      "prhq141bio",
+      "blank"
+    ],
     "title": "programme",
     "color": "#097969",
     "validation": {
@@ -10105,7 +10978,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr258bio",
+    "_id": [
+      "prep184bio",
+      "blank"
+    ],
     "title": "programme",
     "color": "#097969",
     "validation": {
@@ -10135,7 +11011,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "de457bio",
+    "_id": [
+      "deaw366bio",
+      "blank"
+    ],
     "title": "deadline",
     "color": "#097969",
     "validation": {
@@ -10152,7 +11031,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "de962bio",
+    "_id": [
+      "deau118bio",
+      "blank"
+    ],
     "title": "deadline",
     "color": "#097969",
     "validation": {
@@ -10182,7 +11064,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co327bio",
+    "_id": [
+      "coew984bio",
+      "blank"
+    ],
     "title": "courseMode",
     "color": "#097969",
     "validation": {
@@ -10199,7 +11084,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co812bio",
+    "_id": [
+      "coer753bio",
+      "blank"
+    ],
     "title": "courseMode",
     "color": "#097969",
     "validation": {
@@ -10229,7 +11117,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cu841bio",
+    "_id": [
+      "cubw775bio",
+      "blank"
+    ],
     "title": "curriculumVitae",
     "color": "#097969",
     "validation": {
@@ -10246,7 +11137,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cu785bio",
+    "_id": [
+      "cuds700bio",
+      "blank"
+    ],
     "title": "curriculumVitae",
     "color": "#097969",
     "validation": {
@@ -10276,7 +11170,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bo905bio",
+    "_id": [
+      "boeq341bio",
+      "blank"
+    ],
     "title": "boundMolecule",
     "color": "#097969",
     "validation": {
@@ -10293,7 +11190,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bo565bio",
+    "_id": [
+      "bobu695bio",
+      "blank"
+    ],
     "title": "boundMolecule",
     "color": "#097969",
     "validation": {
@@ -10323,7 +11223,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in306bio",
+    "_id": [
+      "incw939bio",
+      "blank"
+    ],
     "title": "interest",
     "color": "#097969",
     "validation": {
@@ -10340,7 +11243,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "in314bio",
+    "_id": [
+      "inbt863bio",
+      "blank"
+    ],
     "title": "interest",
     "color": "#097969",
     "validation": {
@@ -10370,7 +11276,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr444bio",
+    "_id": [
+      "preu863bio",
+      "blank"
+    ],
     "title": "programmingLanguage",
     "color": "#097969",
     "validation": {
@@ -10389,7 +11298,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr637bio",
+    "_id": [
+      "prbs563bio",
+      "blank"
+    ],
     "title": "programmingLanguage",
     "color": "#097969",
     "validation": {
@@ -10423,7 +11335,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pa490bio",
+    "_id": [
+      "pafv689bio",
+      "blank"
+    ],
     "title": "pageEnd",
     "color": "#097969",
     "validation": {
@@ -10439,7 +11354,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pa748bio",
+    "_id": [
+      "paar921bio",
+      "blank"
+    ],
     "title": "pageEnd",
     "color": "#097969",
     "validation": {
@@ -10467,7 +11385,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pa244bio",
+    "_id": [
+      "paar183bio",
+      "blank"
+    ],
     "title": "pageStart",
     "color": "#097969",
     "validation": {
@@ -10483,7 +11404,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pa854bio",
+    "_id": [
+      "pacv402bio",
+      "blank"
+    ],
     "title": "pageStart",
     "color": "#097969",
     "validation": {
@@ -10511,7 +11435,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "vo811bio",
+    "_id": [
+      "voap511bio",
+      "blank"
+    ],
     "title": "volumeNumber",
     "color": "#097969",
     "validation": {
@@ -10527,7 +11454,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "vo419bio",
+    "_id": [
+      "voap417bio",
+      "blank"
+    ],
     "title": "volumeNumber",
     "color": "#097969",
     "validation": {
@@ -10555,7 +11485,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "po171bio",
+    "_id": [
+      "poct537bio",
+      "blank"
+    ],
     "title": "position",
     "color": "#097969",
     "validation": {
@@ -10571,7 +11504,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "po708bio",
+    "_id": [
+      "poav664bio",
+      "blank"
+    ],
     "title": "position",
     "color": "#097969",
     "validation": {
@@ -10599,7 +11535,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is396bio",
+    "_id": [
+      "isgq376bio",
+      "blank"
+    ],
     "title": "issueNumber",
     "color": "#097969",
     "validation": {
@@ -10615,7 +11554,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is315bio",
+    "_id": [
+      "isbw468bio",
+      "blank"
+    ],
     "title": "issueNumber",
     "color": "#097969",
     "validation": {
@@ -10643,7 +11585,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi943bio",
+    "_id": [
+      "bihu106bio",
+      "blank"
+    ],
     "title": "biologicalRole",
     "color": "#097969",
     "validation": {
@@ -10655,7 +11600,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi821bio",
+    "_id": [
+      "bihx111bio",
+      "blank"
+    ],
     "title": "biologicalRole",
     "color": "#097969",
     "validation": {
@@ -10680,7 +11628,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "po732bio",
+    "_id": [
+      "poew934bio",
+      "blank"
+    ],
     "title": "potentialUse",
     "color": "#097969",
     "validation": {
@@ -10692,7 +11643,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "po215bio",
+    "_id": [
+      "poex427bio",
+      "blank"
+    ],
     "title": "potentialUse",
     "color": "#097969",
     "validation": {
@@ -10717,7 +11671,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ch721bio",
+    "_id": [
+      "chcu245bio",
+      "blank"
+    ],
     "title": "chemicalRole",
     "color": "#097969",
     "validation": {
@@ -10729,7 +11686,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ch291bio",
+    "_id": [
+      "chaw375bio",
+      "blank"
+    ],
     "title": "chemicalRole",
     "color": "#097969",
     "validation": {
@@ -10754,7 +11714,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "va765bio",
+    "_id": [
+      "vaaq474bio",
+      "blank"
+    ],
     "title": "valueReference",
     "color": "#097969",
     "validation": {
@@ -10766,7 +11729,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "va418bio",
+    "_id": [
+      "vaeu450bio",
+      "blank"
+    ],
     "title": "valueReference",
     "color": "#097969",
     "validation": {
@@ -10791,7 +11757,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "an315bio",
+    "_id": [
+      "anft915bio",
+      "blank"
+    ],
     "title": "anatomicalLocation",
     "color": "#097969",
     "validation": {
@@ -10803,7 +11772,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "an684bio",
+    "_id": [
+      "anhw400bio",
+      "blank"
+    ],
     "title": "anatomicalLocation",
     "color": "#097969",
     "validation": {
@@ -10828,7 +11800,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi809bio",
+    "_id": [
+      "bihq320bio",
+      "blank"
+    ],
     "title": "biogicalRole",
     "color": "#097969",
     "validation": {
@@ -10840,7 +11815,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "bi878bio",
+    "_id": [
+      "bibv268bio",
+      "blank"
+    ],
     "title": "biogicalRole",
     "color": "#097969",
     "validation": {
@@ -10865,7 +11843,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma596bio",
+    "_id": [
+      "madp956bio",
+      "blank"
+    ],
     "title": "maximumAttendeeCapacity",
     "color": "#097969",
     "validation": {
@@ -10874,7 +11855,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ma397bio",
+    "_id": [
+      "mabq581bio",
+      "blank"
+    ],
     "title": "maximumAttendeeCapacity",
     "color": "#097969",
     "validation": {
@@ -10893,7 +11877,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co746bio",
+    "_id": [
+      "cogq889bio",
+      "blank"
+    ],
     "title": "commentCount",
     "color": "#097969",
     "validation": {
@@ -10902,7 +11889,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co105bio",
+    "_id": [
+      "coeq533bio",
+      "blank"
+    ],
     "title": "commentCount",
     "color": "#097969",
     "validation": {
@@ -10921,7 +11911,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sa161bio",
+    "_id": [
+      "sacp752bio",
+      "blank"
+    ],
     "title": "samplingAge",
     "color": "#097969",
     "validation": {
@@ -10930,7 +11923,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "sa536bio",
+    "_id": [
+      "saaw812bio",
+      "blank"
+    ],
     "title": "samplingAge",
     "color": "#097969",
     "validation": {
@@ -10949,7 +11945,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me117bio",
+    "_id": [
+      "mefx996bio",
+      "blank"
+    ],
     "title": "memberOf",
     "color": "#097969",
     "validation": {
@@ -11014,7 +12013,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "me104bio",
+    "_id": [
+      "medv888bio",
+      "blank"
+    ],
     "title": "memberOf",
     "color": "#097969",
     "validation": {
@@ -11140,7 +12142,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is515bio",
+    "_id": [
+      "isew395bio",
+      "blank"
+    ],
     "title": "isEncodedByBioChemEntity",
     "color": "#097969",
     "validation": {
@@ -11190,7 +12195,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is289bio",
+    "_id": [
+      "isgs740bio",
+      "blank"
+    ],
     "title": "isEncodedByBioChemEntity",
     "color": "#097969",
     "validation": {
@@ -11289,7 +12297,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "al386bio",
+    "_id": [
+      "albt204bio",
+      "blank"
+    ],
     "title": "alternativeOf",
     "color": "#097969",
     "validation": {
@@ -11323,7 +12334,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "al122bio",
+    "_id": [
+      "alax631bio",
+      "blank"
+    ],
     "title": "alternativeOf",
     "color": "#097969",
     "validation": {
@@ -11392,7 +12406,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di219bio",
+    "_id": [
+      "digp985bio",
+      "blank"
+    ],
     "title": "distribution",
     "color": "#097969",
     "validation": {
@@ -11404,7 +12421,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "di955bio",
+    "_id": [
+      "difw668bio",
+      "blank"
+    ],
     "title": "distribution",
     "color": "#097969",
     "validation": {
@@ -11429,7 +12449,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so300bio",
+    "_id": [
+      "sobu364bio",
+      "blank"
+    ],
     "title": "softwareAddOn",
     "color": "#097969",
     "validation": {
@@ -11441,7 +12464,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "so450bio",
+    "_id": [
+      "soas542bio",
+      "blank"
+    ],
     "title": "softwareAddOn",
     "color": "#097969",
     "validation": {
@@ -11466,7 +12492,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ta441bio",
+    "_id": [
+      "tagu190bio",
+      "blank"
+    ],
     "title": "targetProduct",
     "color": "#097969",
     "validation": {
@@ -11478,7 +12507,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ta416bio",
+    "_id": [
+      "taar900bio",
+      "blank"
+    ],
     "title": "targetProduct",
     "color": "#097969",
     "validation": {
@@ -11503,7 +12535,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is811bio",
+    "_id": [
+      "isaq446bio",
+      "blank"
+    ],
     "title": "isContainedIn",
     "color": "#097969",
     "validation": {
@@ -11515,7 +12550,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "is347bio",
+    "_id": [
+      "isfs667bio",
+      "blank"
+    ],
     "title": "isContainedIn",
     "color": "#097969",
     "validation": {
@@ -11540,7 +12578,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cr360bio",
+    "_id": [
+      "crcu226bio",
+      "blank"
+    ],
     "title": "creativeWorkStatus",
     "color": "#097969",
     "validation": {
@@ -11559,7 +12600,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "cr466bio",
+    "_id": [
+      "crbw426bio",
+      "blank"
+    ],
     "title": "creativeWorkStatus",
     "color": "#097969",
     "validation": {
@@ -11593,7 +12637,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "te801bio",
+    "_id": [
+      "tebx507bio",
+      "blank"
+    ],
     "title": "teaches",
     "color": "#097969",
     "validation": {
@@ -11612,7 +12659,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "te348bio",
+    "_id": [
+      "tecv532bio",
+      "blank"
+    ],
     "title": "teaches",
     "color": "#097969",
     "validation": {
@@ -11646,7 +12696,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "le605bio",
+    "_id": [
+      "legs673bio",
+      "blank"
+    ],
     "title": "learningResourceType",
     "color": "#097969",
     "validation": {
@@ -11665,7 +12718,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "le819bio",
+    "_id": [
+      "lehr965bio",
+      "blank"
+    ],
     "title": "learningResourceType",
     "color": "#097969",
     "validation": {
@@ -11699,7 +12755,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ti262bio",
+    "_id": [
+      "tigr135bio",
+      "blank"
+    ],
     "title": "timeRequired",
     "color": "#097969",
     "validation": {
@@ -11711,7 +12770,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "ti695bio",
+    "_id": [
+      "tidq878bio",
+      "blank"
+    ],
     "title": "timeRequired",
     "color": "#097969",
     "validation": {
@@ -11736,7 +12798,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "to720bio",
+    "_id": [
+      "tocp784bio",
+      "blank"
+    ],
     "title": "totalTime",
     "color": "#097969",
     "validation": {
@@ -11748,7 +12813,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "to954bio",
+    "_id": [
+      "toav935bio",
+      "blank"
+    ],
     "title": "totalTime",
     "color": "#097969",
     "validation": {
@@ -11773,7 +12841,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pe918bio",
+    "_id": [
+      "pecv812bio",
+      "blank"
+    ],
     "title": "performTime",
     "color": "#097969",
     "validation": {
@@ -11785,7 +12856,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pe576bio",
+    "_id": [
+      "pebr524bio",
+      "blank"
+    ],
     "title": "performTime",
     "color": "#097969",
     "validation": {
@@ -11810,7 +12884,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr170bio",
+    "_id": [
+      "prdw663bio",
+      "blank"
+    ],
     "title": "prepTime",
     "color": "#097969",
     "validation": {
@@ -11822,7 +12899,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "pr949bio",
+    "_id": [
+      "prfx642bio",
+      "blank"
+    ],
     "title": "prepTime",
     "color": "#097969",
     "validation": {
@@ -11847,7 +12927,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "du617bio",
+    "_id": [
+      "duhw715bio",
+      "blank"
+    ],
     "title": "duration",
     "color": "#097969",
     "validation": {
@@ -11859,7 +12942,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "du572bio",
+    "_id": [
+      "duhr412bio",
+      "blank"
+    ],
     "title": "duration",
     "color": "#097969",
     "validation": {
@@ -11884,7 +12970,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su707bio",
+    "_id": [
+      "sueq726bio",
+      "blank"
+    ],
     "title": "superEvent",
     "color": "#097969",
     "validation": {
@@ -11971,7 +13060,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su250bio",
+    "_id": [
+      "sudx303bio",
+      "blank"
+    ],
     "title": "superEvent",
     "color": "#097969",
     "validation": {
@@ -12146,7 +13238,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su676bio",
+    "_id": [
+      "sugr863bio",
+      "blank"
+    ],
     "title": "subEvent",
     "color": "#097969",
     "validation": {
@@ -12233,7 +13328,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "su633bio",
+    "_id": [
+      "subu677bio",
+      "blank"
+    ],
     "title": "subEvent",
     "color": "#097969",
     "validation": {
@@ -12408,7 +13506,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "re291bio",
+    "_id": [
+      "rees893bio",
+      "blank"
+    ],
     "title": "recordedAt",
     "color": "#097969",
     "validation": {
@@ -12495,7 +13596,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "re745bio",
+    "_id": [
+      "redx126bio",
+      "blank"
+    ],
     "title": "recordedAt",
     "color": "#097969",
     "validation": {
@@ -12670,7 +13774,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co278bio",
+    "_id": [
+      "coex962bio",
+      "blank"
+    ],
     "title": "contains",
     "color": "#097969",
     "validation": {
@@ -12690,7 +13797,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "co223bio",
+    "_id": [
+      "cofs185bio",
+      "blank"
+    ],
     "title": "contains",
     "color": "#097969",
     "validation": {
@@ -12726,7 +13836,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "lo182bio",
+    "_id": [
+      "lohx419bio",
+      "blank"
+    ],
     "title": "location",
     "color": "#097969",
     "validation": {
@@ -12751,7 +13864,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "lo219bio",
+    "_id": [
+      "lofw986bio",
+      "blank"
+    ],
     "title": "location",
     "color": "#097969",
     "validation": {
@@ -12800,7 +13916,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "it577bio",
+    "_id": [
+      "itau860bio",
+      "blank"
+    ],
     "title": "itemLocation",
     "color": "#097969",
     "validation": {
@@ -12825,7 +13944,10 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "it966bio",
+    "_id": [
+      "itaq599bio",
+      "blank"
+    ],
     "title": "itemLocation",
     "color": "#097969",
     "validation": {

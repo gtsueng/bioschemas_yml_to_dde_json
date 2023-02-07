@@ -1,6 +1,6 @@
 [
   {
-    "_id": "expto377bio",
+    "_id": "extydq290bio",
     "title": "Text",
     "color": "#097969",
     "validation": {
@@ -9,7 +9,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm189bio",
+    "_id": "extyfl438bio",
     "title": "Text",
     "color": "#097969",
     "validation": {
@@ -28,7 +28,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto783bio",
+    "_id": "extyfj790bio",
     "title": "URL",
     "color": "#097969",
     "validation": {
@@ -38,7 +38,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm351bio",
+    "_id": "extyym302bio",
     "title": "URL",
     "color": "#097969",
     "validation": {
@@ -59,7 +59,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto618bio",
+    "_id": "extyxl582bio",
     "title": "PropertyValue",
     "color": "#097969",
     "validation": {
@@ -71,7 +71,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm671bio",
+    "_id": "extyyo163bio",
     "title": "PropertyValue",
     "color": "#097969",
     "validation": {
@@ -96,7 +96,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto942bio",
+    "_id": "extyeo182bio",
     "title": "CreativeWork",
     "color": "#097969",
     "validation": {
@@ -108,7 +108,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm845bio",
+    "_id": "extybn831bio",
     "title": "CreativeWork",
     "color": "#097969",
     "validation": {
@@ -133,7 +133,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto760bio",
+    "_id": "extyfo202bio",
     "title": "DefinedTerm",
     "color": "#097969",
     "validation": {
@@ -145,7 +145,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm546bio",
+    "_id": "extywq938bio",
     "title": "DefinedTerm",
     "color": "#097969",
     "validation": {
@@ -170,7 +170,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto399bio",
+    "_id": "extyfm451bio",
     "title": "Organization",
     "color": "#097969",
     "validation": {
@@ -225,7 +225,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm913bio",
+    "_id": "extyvq346bio",
     "title": "Organization",
     "color": "#097969",
     "validation": {
@@ -336,7 +336,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto409bio",
+    "_id": "extyak727bio",
     "title": "Person",
     "color": "#097969",
     "validation": {
@@ -371,7 +371,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm110bio",
+    "_id": "extyzq221bio",
     "title": "Person",
     "color": "#097969",
     "validation": {
@@ -442,7 +442,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto554bio",
+    "_id": "extyvp710bio",
     "title": "Date",
     "color": "#097969",
     "validation": {
@@ -452,7 +452,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm110bio",
+    "_id": "extyei859bio",
     "title": "Date",
     "color": "#097969",
     "validation": {
@@ -473,7 +473,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto254bio",
+    "_id": "extybo550bio",
     "title": "BioChemEntity",
     "color": "#097969",
     "validation": {
@@ -485,7 +485,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm981bio",
+    "_id": "extydo901bio",
     "title": "BioChemEntity",
     "color": "#097969",
     "validation": {
@@ -510,7 +510,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto142bio",
+    "_id": "extyej323bio",
     "title": "DateTime",
     "color": "#097969",
     "validation": {
@@ -522,7 +522,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm786bio",
+    "_id": "extycq398bio",
     "title": "DateTime",
     "color": "#097969",
     "validation": {
@@ -547,7 +547,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto439bio",
+    "_id": "extycq705bio",
     "title": "ImageObject",
     "color": "#097969",
     "validation": {
@@ -559,7 +559,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm569bio",
+    "_id": "extyyq549bio",
     "title": "ImageObject",
     "color": "#097969",
     "validation": {
@@ -584,7 +584,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto637bio",
+    "_id": "extyvo111bio",
     "title": "Integer",
     "color": "#097969",
     "validation": {
@@ -593,7 +593,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm206bio",
+    "_id": "extybq969bio",
     "title": "Integer",
     "color": "#097969",
     "validation": {
@@ -612,7 +612,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto207bio",
+    "_id": "extyyk865bio",
     "title": "Thing",
     "color": "#097969",
     "validation": {
@@ -624,7 +624,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm648bio",
+    "_id": "extywm897bio",
     "title": "Thing",
     "color": "#097969",
     "validation": {
@@ -649,7 +649,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto264bio",
+    "_id": "extyfp538bio",
     "title": "Product",
     "color": "#097969",
     "validation": {
@@ -661,7 +661,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm879bio",
+    "_id": "extyxl753bio",
     "title": "Product",
     "color": "#097969",
     "validation": {
@@ -686,7 +686,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto833bio",
+    "_id": "extyzp914bio",
     "title": "Taxon",
     "color": "#097969",
     "validation": {
@@ -720,7 +720,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm915bio",
+    "_id": "extybi877bio",
     "title": "Taxon",
     "color": "#097969",
     "validation": {
@@ -789,7 +789,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto552bio",
+    "_id": "extyyi469bio",
     "title": "Place",
     "color": "#097969",
     "validation": {
@@ -801,7 +801,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm495bio",
+    "_id": "extyzm512bio",
     "title": "Place",
     "color": "#097969",
     "validation": {
@@ -826,7 +826,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto143bio",
+    "_id": "extyck927bio",
     "title": "Boolean",
     "color": "#097969",
     "validation": {
@@ -835,7 +835,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm724bio",
+    "_id": "extyxm458bio",
     "title": "Boolean",
     "color": "#097969",
     "validation": {
@@ -854,7 +854,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto269bio",
+    "_id": "extyzj164bio",
     "title": "Language",
     "color": "#097969",
     "validation": {
@@ -866,7 +866,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm354bio",
+    "_id": "extywo256bio",
     "title": "Language",
     "color": "#097969",
     "validation": {
@@ -891,7 +891,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto227bio",
+    "_id": "extyvl909bio",
     "title": "MedicalCondition",
     "color": "#097969",
     "validation": {
@@ -903,7 +903,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm274bio",
+    "_id": "extybm812bio",
     "title": "MedicalCondition",
     "color": "#097969",
     "validation": {
@@ -928,7 +928,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto202bio",
+    "_id": "extybk728bio",
     "title": "Event",
     "color": "#097969",
     "validation": {
@@ -1015,7 +1015,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm141bio",
+    "_id": "extyzk154bio",
     "title": "Event",
     "color": "#097969",
     "validation": {
@@ -1190,7 +1190,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto286bio",
+    "_id": "extyyo590bio",
     "title": "Duration",
     "color": "#097969",
     "validation": {
@@ -1202,7 +1202,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm871bio",
+    "_id": "extyaj149bio",
     "title": "Duration",
     "color": "#097969",
     "validation": {
@@ -1227,7 +1227,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto871bio",
+    "_id": "extyfp499bio",
     "title": "Gene",
     "color": "#097969",
     "validation": {
@@ -1261,7 +1261,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm177bio",
+    "_id": "extyzp605bio",
     "title": "Gene",
     "color": "#097969",
     "validation": {
@@ -1330,7 +1330,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto438bio",
+    "_id": "extybn551bio",
     "title": "PostalAddress",
     "color": "#097969",
     "validation": {
@@ -1342,7 +1342,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm663bio",
+    "_id": "extyyk950bio",
     "title": "PostalAddress",
     "color": "#097969",
     "validation": {
@@ -1367,7 +1367,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto391bio",
+    "_id": "extyfq578bio",
     "title": "SoftwareApplication",
     "color": "#097969",
     "validation": {
@@ -1379,7 +1379,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm930bio",
+    "_id": "extyco250bio",
     "title": "SoftwareApplication",
     "color": "#097969",
     "validation": {
@@ -1404,7 +1404,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto777bio",
+    "_id": "extyyn260bio",
     "title": "Number",
     "color": "#097969",
     "validation": {
@@ -1413,7 +1413,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm544bio",
+    "_id": "extybo753bio",
     "title": "Number",
     "color": "#097969",
     "validation": {
@@ -1432,7 +1432,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto549bio",
+    "_id": "extybm287bio",
     "title": "PublicationIssue",
     "color": "#097969",
     "validation": {
@@ -1457,7 +1457,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm336bio",
+    "_id": "extybq159bio",
     "title": "PublicationIssue",
     "color": "#097969",
     "validation": {
@@ -1508,7 +1508,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto341bio",
+    "_id": "extyyo978bio",
     "title": "PublicationVolume",
     "color": "#097969",
     "validation": {
@@ -1538,7 +1538,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm901bio",
+    "_id": "extyym893bio",
     "title": "PublicationVolume",
     "color": "#097969",
     "validation": {
@@ -1599,7 +1599,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto109bio",
+    "_id": "extybl244bio",
     "title": "ContactPoint",
     "color": "#097969",
     "validation": {
@@ -1611,7 +1611,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm427bio",
+    "_id": "extyyo270bio",
     "title": "ContactPoint",
     "color": "#097969",
     "validation": {
@@ -1636,7 +1636,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto180bio",
+    "_id": "extywk362bio",
     "title": "Journal",
     "color": "#097969",
     "validation": {
@@ -1670,7 +1670,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm654bio",
+    "_id": "extyep185bio",
     "title": "Journal",
     "color": "#097969",
     "validation": {
@@ -1739,7 +1739,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto752bio",
+    "_id": "extybo275bio",
     "title": "ComputerLanguage",
     "color": "#097969",
     "validation": {
@@ -1751,7 +1751,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm476bio",
+    "_id": "extyek194bio",
     "title": "ComputerLanguage",
     "color": "#097969",
     "validation": {
@@ -1776,7 +1776,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto856bio",
+    "_id": "extyaj875bio",
     "title": "ScholarlyArticle",
     "color": "#097969",
     "validation": {
@@ -1810,7 +1810,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm315bio",
+    "_id": "extyvi987bio",
     "title": "ScholarlyArticle",
     "color": "#097969",
     "validation": {
@@ -1879,7 +1879,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto889bio",
+    "_id": "extyzl124bio",
     "title": "Offer",
     "color": "#097969",
     "validation": {
@@ -1891,7 +1891,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm264bio",
+    "_id": "extycq274bio",
     "title": "Offer",
     "color": "#097969",
     "validation": {
@@ -1916,7 +1916,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto783bio",
+    "_id": "extycj711bio",
     "title": "ProgramMembership",
     "color": "#097969",
     "validation": {
@@ -1928,7 +1928,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm312bio",
+    "_id": "extywl864bio",
     "title": "ProgramMembership",
     "color": "#097969",
     "validation": {
@@ -1953,7 +1953,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto206bio",
+    "_id": "extyvo697bio",
     "title": "Audience",
     "color": "#097969",
     "validation": {
@@ -1965,7 +1965,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm523bio",
+    "_id": "extyen868bio",
     "title": "Audience",
     "color": "#097969",
     "validation": {
@@ -1990,7 +1990,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto380bio",
+    "_id": "extyaj154bio",
     "title": "MediaObject",
     "color": "#097969",
     "validation": {
@@ -2002,7 +2002,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm389bio",
+    "_id": "extyen686bio",
     "title": "MediaObject",
     "color": "#097969",
     "validation": {
@@ -2027,44 +2027,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto934bio",
-    "title": "BioChemEntity orURL",
-    "color": "#097969",
-    "validation": {
-      "@type": "BioChemEntity orURL",
-      "type": "object",
-      "properties": {},
-      "required": []
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "exptm378bio",
-    "title": "BioChemEntity orURL",
-    "color": "#097969",
-    "validation": {
-      "oneOf": [
-        {
-          "@type": "BioChemEntity orURL",
-          "type": "object",
-          "properties": {},
-          "required": []
-        },
-        {
-          "type": "array",
-          "items": {
-            "@type": "BioChemEntity orURL",
-            "type": "object",
-            "properties": {},
-            "required": []
-          }
-        }
-      ]
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "expto923bio",
+    "_id": "extyek292bio",
     "title": "TaxonName",
     "color": "#097969",
     "validation": {
@@ -2082,7 +2045,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm261bio",
+    "_id": "extyvi734bio",
     "title": "TaxonName",
     "color": "#097969",
     "validation": {
@@ -2119,7 +2082,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto600bio",
+    "_id": "extyzj337bio",
     "title": "Trip",
     "color": "#097969",
     "validation": {
@@ -2131,7 +2094,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm978bio",
+    "_id": "extyyk642bio",
     "title": "Trip",
     "color": "#097969",
     "validation": {
@@ -2156,7 +2119,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto502bio",
+    "_id": "extyvj263bio",
     "title": "FormalParameter",
     "color": "#097969",
     "validation": {
@@ -2174,7 +2137,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm243bio",
+    "_id": "extydn600bio",
     "title": "FormalParameter",
     "color": "#097969",
     "validation": {
@@ -2211,44 +2174,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto438bio",
-    "title": "PropertyValue orText orURL",
-    "color": "#097969",
-    "validation": {
-      "@type": "PropertyValue orText orURL",
-      "type": "object",
-      "properties": {},
-      "required": []
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "exptm149bio",
-    "title": "PropertyValue orText orURL",
-    "color": "#097969",
-    "validation": {
-      "oneOf": [
-        {
-          "@type": "PropertyValue orText orURL",
-          "type": "object",
-          "properties": {},
-          "required": []
-        },
-        {
-          "type": "array",
-          "items": {
-            "@type": "PropertyValue orText orURL",
-            "type": "object",
-            "properties": {},
-            "required": []
-          }
-        }
-      ]
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "expto911bio",
+    "_id": "extyyk417bio",
     "title": "QuantitativeValue",
     "color": "#097969",
     "validation": {
@@ -2260,7 +2186,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm445bio",
+    "_id": "extyao391bio",
     "title": "QuantitativeValue",
     "color": "#097969",
     "validation": {
@@ -2285,7 +2211,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto969bio",
+    "_id": "extyxi979bio",
     "title": "RNA",
     "color": "#097969",
     "validation": {
@@ -2297,7 +2223,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm532bio",
+    "_id": "extywq404bio",
     "title": "RNA",
     "color": "#097969",
     "validation": {
@@ -2322,7 +2248,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto466bio",
+    "_id": "extywl674bio",
     "title": "CategoryCode",
     "color": "#097969",
     "validation": {
@@ -2334,7 +2260,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm870bio",
+    "_id": "extyyi553bio",
     "title": "CategoryCode",
     "color": "#097969",
     "validation": {
@@ -2359,7 +2285,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto820bio",
+    "_id": "extydj111bio",
     "title": "DataDownload",
     "color": "#097969",
     "validation": {
@@ -2371,7 +2297,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm424bio",
+    "_id": "extyzm105bio",
     "title": "DataDownload",
     "color": "#097969",
     "validation": {
@@ -2396,7 +2322,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto742bio",
+    "_id": "extyvn115bio",
     "title": "DataCatalog",
     "color": "#097969",
     "validation": {
@@ -2440,7 +2366,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm482bio",
+    "_id": "extybk806bio",
     "title": "DataCatalog",
     "color": "#097969",
     "validation": {
@@ -2529,7 +2455,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto159bio",
+    "_id": "extyyq349bio",
     "title": "DNA",
     "color": "#097969",
     "validation": {
@@ -2541,7 +2467,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm233bio",
+    "_id": "extybo441bio",
     "title": "DNA",
     "color": "#097969",
     "validation": {
@@ -2566,7 +2492,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto741bio",
+    "_id": "extyap208bio",
     "title": "SequenceMatchingModel",
     "color": "#097969",
     "validation": {
@@ -2578,7 +2504,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm548bio",
+    "_id": "extydn131bio",
     "title": "SequenceMatchingModel",
     "color": "#097969",
     "validation": {
@@ -2603,7 +2529,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto829bio",
+    "_id": "extyxk519bio",
     "title": "Study",
     "color": "#097969",
     "validation": {
@@ -2688,7 +2614,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm835bio",
+    "_id": "extycp908bio",
     "title": "Study",
     "color": "#097969",
     "validation": {
@@ -2859,7 +2785,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto422bio",
+    "_id": "extyfl245bio",
     "title": "Review",
     "color": "#097969",
     "validation": {
@@ -2871,7 +2797,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm581bio",
+    "_id": "extyvl905bio",
     "title": "Review",
     "color": "#097969",
     "validation": {
@@ -2896,7 +2822,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto862bio",
+    "_id": "extyvi377bio",
     "title": "PriceSpecification",
     "color": "#097969",
     "validation": {
@@ -2908,7 +2834,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm902bio",
+    "_id": "extyai123bio",
     "title": "PriceSpecification",
     "color": "#097969",
     "validation": {
@@ -2933,7 +2859,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto484bio",
+    "_id": "extybj963bio",
     "title": "SequenceAnnotation",
     "color": "#097969",
     "validation": {
@@ -2945,7 +2871,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm415bio",
+    "_id": "extywp735bio",
     "title": "SequenceAnnotation",
     "color": "#097969",
     "validation": {
@@ -2970,44 +2896,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto521bio",
-    "title": "Place orPostalAddress orPropertyValue orText orURL",
-    "color": "#097969",
-    "validation": {
-      "@type": "Place orPostalAddress orPropertyValue orText orURL",
-      "type": "object",
-      "properties": {},
-      "required": []
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "exptm387bio",
-    "title": "Place orPostalAddress orPropertyValue orText orURL",
-    "color": "#097969",
-    "validation": {
-      "oneOf": [
-        {
-          "@type": "Place orPostalAddress orPropertyValue orText orURL",
-          "type": "object",
-          "properties": {},
-          "required": []
-        },
-        {
-          "type": "array",
-          "items": {
-            "@type": "Place orPostalAddress orPropertyValue orText orURL",
-            "type": "object",
-            "properties": {},
-            "required": []
-          }
-        }
-      ]
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "expto565bio",
+    "_id": "extyaj571bio",
     "title": "Action",
     "color": "#097969",
     "validation": {
@@ -3019,7 +2908,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm557bio",
+    "_id": "extyzk467bio",
     "title": "Action",
     "color": "#097969",
     "validation": {
@@ -3044,7 +2933,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto584bio",
+    "_id": "extyym622bio",
     "title": "HowToStep",
     "color": "#097969",
     "validation": {
@@ -3056,7 +2945,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm271bio",
+    "_id": "extybj911bio",
     "title": "HowToStep",
     "color": "#097969",
     "validation": {
@@ -3081,7 +2970,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto945bio",
+    "_id": "extybi774bio",
     "title": "Periodical",
     "color": "#097969",
     "validation": {
@@ -3093,7 +2982,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm111bio",
+    "_id": "extyeq866bio",
     "title": "Periodical",
     "color": "#097969",
     "validation": {
@@ -3118,44 +3007,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto453bio",
-    "title": "DataRecord orURL",
-    "color": "#097969",
-    "validation": {
-      "@type": "DataRecord orURL",
-      "type": "object",
-      "properties": {},
-      "required": []
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "exptm554bio",
-    "title": "DataRecord orURL",
-    "color": "#097969",
-    "validation": {
-      "oneOf": [
-        {
-          "@type": "DataRecord orURL",
-          "type": "object",
-          "properties": {},
-          "required": []
-        },
-        {
-          "type": "array",
-          "items": {
-            "@type": "DataRecord orURL",
-            "type": "object",
-            "properties": {},
-            "required": []
-          }
-        }
-      ]
-    },
-    "belongs_to": "bioschemas"
-  },
-  {
-    "_id": "expto142bio",
+    "_id": "extyfj503bio",
     "title": "AggregateRating",
     "color": "#097969",
     "validation": {
@@ -3167,7 +3019,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm465bio",
+    "_id": "extyzl700bio",
     "title": "AggregateRating",
     "color": "#097969",
     "validation": {
@@ -3192,7 +3044,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto698bio",
+    "_id": "extydl218bio",
     "title": "AlignmentObject",
     "color": "#097969",
     "validation": {
@@ -3204,7 +3056,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm785bio",
+    "_id": "extyai379bio",
     "title": "AlignmentObject",
     "color": "#097969",
     "validation": {
@@ -3229,7 +3081,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto108bio",
+    "_id": "extyvk582bio",
     "title": "AnatomicalStructure",
     "color": "#097969",
     "validation": {
@@ -3241,7 +3093,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm924bio",
+    "_id": "extyzo841bio",
     "title": "AnatomicalStructure",
     "color": "#097969",
     "validation": {
@@ -3266,7 +3118,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto360bio",
+    "_id": "extyap272bio",
     "title": "AnatomicalSystem",
     "color": "#097969",
     "validation": {
@@ -3278,7 +3130,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm947bio",
+    "_id": "extycl788bio",
     "title": "AnatomicalSystem",
     "color": "#097969",
     "validation": {
@@ -3303,7 +3155,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto872bio",
+    "_id": "extyzm827bio",
     "title": "BioSample",
     "color": "#097969",
     "validation": {
@@ -3346,7 +3198,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm572bio",
+    "_id": "extyyq725bio",
     "title": "BioSample",
     "color": "#097969",
     "validation": {
@@ -3433,7 +3285,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto365bio",
+    "_id": "extyan847bio",
     "title": "ChemicalSubstance",
     "color": "#097969",
     "validation": {
@@ -3472,7 +3324,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm621bio",
+    "_id": "extyfi998bio",
     "title": "ChemicalSubstance",
     "color": "#097969",
     "validation": {
@@ -3551,7 +3403,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto705bio",
+    "_id": "extyvq931bio",
     "title": "Comment",
     "color": "#097969",
     "validation": {
@@ -3563,7 +3415,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm148bio",
+    "_id": "extyxk364bio",
     "title": "Comment",
     "color": "#097969",
     "validation": {
@@ -3588,7 +3440,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto416bio",
+    "_id": "extyfp486bio",
     "title": "CorrectionComment",
     "color": "#097969",
     "validation": {
@@ -3600,7 +3452,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm281bio",
+    "_id": "extyel479bio",
     "title": "CorrectionComment",
     "color": "#097969",
     "validation": {
@@ -3625,7 +3477,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto365bio",
+    "_id": "extyem680bio",
     "title": "Course",
     "color": "#097969",
     "validation": {
@@ -3663,7 +3515,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm884bio",
+    "_id": "extydn777bio",
     "title": "Course",
     "color": "#097969",
     "validation": {
@@ -3740,7 +3592,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto834bio",
+    "_id": "extyvi689bio",
     "title": "CourseInstance",
     "color": "#097969",
     "validation": {
@@ -3786,7 +3638,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm286bio",
+    "_id": "extyvq320bio",
     "title": "CourseInstance",
     "color": "#097969",
     "validation": {
@@ -3879,7 +3731,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto811bio",
+    "_id": "extyei392bio",
     "title": "Dataset",
     "color": "#097969",
     "validation": {
@@ -3951,7 +3803,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm743bio",
+    "_id": "extyzn275bio",
     "title": "Dataset",
     "color": "#097969",
     "validation": {
@@ -4096,7 +3948,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto720bio",
+    "_id": "extyck995bio",
     "title": "OwnershipInfo",
     "color": "#097969",
     "validation": {
@@ -4108,7 +3960,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm571bio",
+    "_id": "extywn620bio",
     "title": "OwnershipInfo",
     "color": "#097969",
     "validation": {
@@ -4133,7 +3985,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto915bio",
+    "_id": "extybo253bio",
     "title": "Demand",
     "color": "#097969",
     "validation": {
@@ -4145,7 +3997,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm214bio",
+    "_id": "extydl828bio",
     "title": "Demand",
     "color": "#097969",
     "validation": {
@@ -4170,7 +4022,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto455bio",
+    "_id": "extyfp367bio",
     "title": "EducationalOccupationalCredential",
     "color": "#097969",
     "validation": {
@@ -4182,7 +4034,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm954bio",
+    "_id": "extyyk828bio",
     "title": "EducationalOccupationalCredential",
     "color": "#097969",
     "validation": {
@@ -4207,7 +4059,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto358bio",
+    "_id": "extybi134bio",
     "title": "EventStatusType",
     "color": "#097969",
     "validation": {
@@ -4219,7 +4071,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm951bio",
+    "_id": "extyfl477bio",
     "title": "EventStatusType",
     "color": "#097969",
     "validation": {
@@ -4244,7 +4096,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto214bio",
+    "_id": "extyxq542bio",
     "title": "EventType",
     "color": "#097969",
     "validation": {
@@ -4256,7 +4108,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm829bio",
+    "_id": "extyxq465bio",
     "title": "EventType",
     "color": "#097969",
     "validation": {
@@ -4281,7 +4133,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto134bio",
+    "_id": "extybi619bio",
     "title": "GenderType",
     "color": "#097969",
     "validation": {
@@ -4293,7 +4145,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm311bio",
+    "_id": "extyzq659bio",
     "title": "GenderType",
     "color": "#097969",
     "validation": {
@@ -4318,7 +4170,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto530bio",
+    "_id": "extyej955bio",
     "title": "Grant",
     "color": "#097969",
     "validation": {
@@ -4330,7 +4182,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm751bio",
+    "_id": "extyap800bio",
     "title": "Grant",
     "color": "#097969",
     "validation": {
@@ -4355,7 +4207,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto205bio",
+    "_id": "extycm357bio",
     "title": "HowToSection",
     "color": "#097969",
     "validation": {
@@ -4367,7 +4219,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm375bio",
+    "_id": "extyfp249bio",
     "title": "HowToSection",
     "color": "#097969",
     "validation": {
@@ -4392,7 +4244,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto403bio",
+    "_id": "extywo433bio",
     "title": "AdministrativeArea",
     "color": "#097969",
     "validation": {
@@ -4404,7 +4256,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm573bio",
+    "_id": "extycj374bio",
     "title": "AdministrativeArea",
     "color": "#097969",
     "validation": {
@@ -4429,7 +4281,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto596bio",
+    "_id": "extyvk455bio",
     "title": "MedicalEntity",
     "color": "#097969",
     "validation": {
@@ -4441,7 +4293,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm940bio",
+    "_id": "extyxo884bio",
     "title": "MedicalEntity",
     "color": "#097969",
     "validation": {
@@ -4466,7 +4318,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto347bio",
+    "_id": "extyco830bio",
     "title": "MolecularEntity",
     "color": "#097969",
     "validation": {
@@ -4505,7 +4357,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm451bio",
+    "_id": "extycn585bio",
     "title": "MolecularEntity",
     "color": "#097969",
     "validation": {
@@ -4584,7 +4436,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto929bio",
+    "_id": "extyfo536bio",
     "title": "VirtualLocation",
     "color": "#097969",
     "validation": {
@@ -4596,7 +4448,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm300bio",
+    "_id": "extyak592bio",
     "title": "VirtualLocation",
     "color": "#097969",
     "validation": {
@@ -4621,7 +4473,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto183bio",
+    "_id": "extyfj486bio",
     "title": "Beacon",
     "color": "#097969",
     "validation": {
@@ -4676,7 +4528,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm929bio",
+    "_id": "extyel373bio",
     "title": "Beacon",
     "color": "#097969",
     "validation": {
@@ -4787,7 +4639,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto280bio",
+    "_id": "extyyp814bio",
     "title": "ComputationalTool",
     "color": "#097969",
     "validation": {
@@ -4814,7 +4666,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm344bio",
+    "_id": "extycj993bio",
     "title": "ComputationalTool",
     "color": "#097969",
     "validation": {
@@ -4869,7 +4721,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto753bio",
+    "_id": "extybk453bio",
     "title": "ComputationalWorkflow",
     "color": "#097969",
     "validation": {
@@ -4977,7 +4829,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm974bio",
+    "_id": "extyvi914bio",
     "title": "ComputationalWorkflow",
     "color": "#097969",
     "validation": {
@@ -5194,7 +5046,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto365bio",
+    "_id": "extydk612bio",
     "title": "DataRecord",
     "color": "#097969",
     "validation": {
@@ -5229,7 +5081,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm605bio",
+    "_id": "extybm586bio",
     "title": "DataRecord",
     "color": "#097969",
     "validation": {
@@ -5300,7 +5152,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto349bio",
+    "_id": "extyyj958bio",
     "title": "LabProtocol",
     "color": "#097969",
     "validation": {
@@ -5418,7 +5270,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm165bio",
+    "_id": "extyvk481bio",
     "title": "LabProtocol",
     "color": "#097969",
     "validation": {
@@ -5655,7 +5507,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto778bio",
+    "_id": "extyzq261bio",
     "title": "Phenotype",
     "color": "#097969",
     "validation": {
@@ -5689,7 +5541,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm589bio",
+    "_id": "extyzl820bio",
     "title": "Phenotype",
     "color": "#097969",
     "validation": {
@@ -5758,7 +5610,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto816bio",
+    "_id": "extyep693bio",
     "title": "Protein",
     "color": "#097969",
     "validation": {
@@ -5792,7 +5644,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm583bio",
+    "_id": "extydq363bio",
     "title": "Protein",
     "color": "#097969",
     "validation": {
@@ -5861,7 +5713,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto556bio",
+    "_id": "extyyp136bio",
     "title": "ProteinAnnotation",
     "color": "#097969",
     "validation": {
@@ -5901,7 +5753,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm726bio",
+    "_id": "extydn428bio",
     "title": "ProteinAnnotation",
     "color": "#097969",
     "validation": {
@@ -5982,7 +5834,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto275bio",
+    "_id": "extyvj431bio",
     "title": "ProteinStructure",
     "color": "#097969",
     "validation": {
@@ -6012,7 +5864,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm137bio",
+    "_id": "extyxj852bio",
     "title": "ProteinStructure",
     "color": "#097969",
     "validation": {
@@ -6073,7 +5925,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto662bio",
+    "_id": "extyam935bio",
     "title": "SemanticTextAnnotation",
     "color": "#097969",
     "validation": {
@@ -6096,7 +5948,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm952bio",
+    "_id": "extyzp495bio",
     "title": "SemanticTextAnnotation",
     "color": "#097969",
     "validation": {
@@ -6143,7 +5995,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto555bio",
+    "_id": "extyej205bio",
     "title": "Tool",
     "color": "#097969",
     "validation": {
@@ -6170,7 +6022,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm376bio",
+    "_id": "extyaj970bio",
     "title": "Tool",
     "color": "#097969",
     "validation": {
@@ -6225,7 +6077,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "expto749bio",
+    "_id": "extyck963bio",
     "title": "TrainingMaterial",
     "color": "#097969",
     "validation": {
@@ -6263,7 +6115,7 @@
     "belongs_to": "bioschemas"
   },
   {
-    "_id": "exptm869bio",
+    "_id": "extyep114bio",
     "title": "TrainingMaterial",
     "color": "#097969",
     "validation": {
